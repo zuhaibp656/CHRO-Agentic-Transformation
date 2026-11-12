@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+*.swp
+.env
+.env.*
+ip_risk_report.md
+external_handoff/
+scratch/
+.pytest_cache/

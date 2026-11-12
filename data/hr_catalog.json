@@ -1,0 +1,3074 @@
+{
+  "metadata": {
+    "title": "Agentic for The People — Office of the CHRO Transformation Portal",
+    "subtitle": "From 75% Operational Coordination Tax to Strategic People Leadership with Gemini Enterprise",
+    "eventTitle": "PeopleStrong Xponential 2026 · Executive Keynote Blueprint",
+    "eventMeta": "Mumbai · Nov 18, 2026 · 200+ Enterprise Chief Human Resources Officers (CHROs)",
+    "authors": [
+      "Google Cloud Executive Keynote — PeopleStrong Xponential 2026",
+      "APQC Process Classification Framework (PCF) 7.0 — Human Capital",
+      "Gemini Enterprise + Google Agent Development Kit (ADK) Reference Architecture",
+      "India Digital Personal Data Protection (DPDP) Privacy & Fairness Framework"
+    ],
+    "pillarsCount": 6,
+    "processesCount": 20,
+    "agentsCount": 14,
+    "noCodeLowCodeCount": 6,
+    "highCodeCount": 8,
+    "valueChainsCount": 4,
+    "keynoteSlidesCount": 20,
+    "standardsCompliance": [
+      "APQC Process Classification Framework (PCF) 7.0 — Category 7.0 Develop and Manage Human Capital",
+      "Society for Human Resource Management (SHRM) Competency & Operating Model Benchmarks",
+      "India Digital Personal Data Protection (DPDP) Act Privacy-by-Design & Consent Controls",
+      "Equal Employment Opportunity Four-Fifths (80%) Adverse Impact Statistical Guardrail",
+      "Google Agent Development Kit (ADK), Model Context Protocol (MCP) & Model Armor Security"
+    ],
+    "hrParadox": {
+      "headline": "The HR Paradox: Strategy Suffocated by Coordination Tax",
+      "subhead": "Human Resources exists to shape culture, plan talent, and coach leaders — yet operating silos trap teams in administrative coordination.",
+      "operationalTaxPct": 75,
+      "strategicWorkPct": 25,
+      "operationalBreakdown": [
+        {
+          "label": "Coordinating Across Disconnected Systems",
+          "pct": 25,
+          "color": "#EA4335"
+        },
+        {
+          "label": "Manual Data Entry & Validation",
+          "pct": 20,
+          "color": "#E37400"
+        },
+        {
+          "label": "Chasing Approvals & Email Follow-Ups",
+          "pct": 15,
+          "color": "#FBBC04"
+        },
+        {
+          "label": "Compiling Reports & Outdated Spreadsheets",
+          "pct": 15,
+          "color": "#F27A3B"
+        }
+      ],
+      "strategicBreakdown": [
+        {
+          "label": "Coaching & Advising Business Leaders",
+          "pct": 10,
+          "color": "#34A853"
+        },
+        {
+          "label": "Strategic Workforce & Succession Planning",
+          "pct": 8,
+          "color": "#4285F4"
+        },
+        {
+          "label": "Culture, Retention & Employee Experience",
+          "pct": 7,
+          "color": "#0097A7"
+        }
+      ],
+      "sourceNote": "Source: Industry HR time-allocation studies (Hackett Group, SHRM, Deloitte HR Transformation benchmarks, cited in Google Cloud People Transformation Keynote)."
+    },
+    "fourValueLevers": [
+      {
+        "name": "Automate",
+        "title": "Automate Administrative Work",
+        "desc": "Eliminate cross-system copy-paste handoffs across Applicant Tracking Systems (ATS), Human Capital Management (HCM) suites, and IT Service Management (ITSM).",
+        "color": "#4285F4",
+        "bg": "#E8F0FE"
+      },
+      {
+        "name": "Inform",
+        "title": "Inform with Actionable Insights",
+        "desc": "Fuse internal attrition, interview scorecards, and external Global Capability Center (GCC) labor trends into continuous strategic decisions.",
+        "color": "#34A853",
+        "bg": "#CEEAD6"
+      },
+      {
+        "name": "Personalize",
+        "title": "Personalize Every Milestone",
+        "desc": "Tailor Day 1-30-60-90 onboarding journeys, regional-language role-play coaching, and internal career mobility plans for every worker.",
+        "color": "#7E57C2",
+        "bg": "#E6E7FB"
+      },
+      {
+        "name": "Assist",
+        "title": "Assist Just-in-Time with Guardrails",
+        "desc": "Resolve 60%–75% of routine employee policy, leave, payroll, and benefits questions accurately at the moment of need with clause-level citations.",
+        "color": "#E37400",
+        "bg": "#FFF2CC"
+      }
+    ],
+    "enterpriseProofPoint": {
+      "title": "Enterprise Proof in India: Production HR Agents on Gemini Enterprise",
+      "subtitle": "Anonymized production learnings from deploying grounded Human Resources micro-agents in a large Indian diversified enterprise.",
+      "metrics": [
+        {
+          "value": "400+",
+          "label": "Enterprise Agents Built Across Functions"
+        },
+        {
+          "value": "74%+",
+          "label": "Weekly Active User Retention"
+        },
+        {
+          "value": "4 Live",
+          "label": "No-Code HR Production Assistants"
+        },
+        {
+          "value": "Zero",
+          "label": "Silently Guessed Policy Answers"
+        }
+      ],
+      "liveHrAgents": [
+        {
+          "name": "Policy Pilot",
+          "tier": "No-Code",
+          "desc": "Answers complex leave, travel, and conduct questions strictly from verified HR circulars.",
+          "slideDesc": "Answers leave & policy questions from verified circulars."
+        },
+        {
+          "name": "JD Harmonizer",
+          "tier": "No-Code",
+          "desc": "Standardizes hiring-manager role drafts across business units into unbiased, skill-aligned job descriptions.",
+          "slideDesc": "Unifies hiring drafts into unbiased, skill-first roles."
+        },
+        {
+          "name": "Onboarding Navigator",
+          "tier": "No-Code",
+          "desc": "Guides new joiners step-by-step through pre-boarding forms, Day-1 readiness tasks, and policy checklists.",
+          "slideDesc": "Guides Day-1 readiness tasks and policy checklists."
+        },
+        {
+          "name": "FAQ Generator",
+          "tier": "No-Code",
+          "desc": "Converts dense 30–50 page HR circulars into clean, searchable employee Frequently Asked Questions.",
+          "slideDesc": "Turns 50-page circulars into instant searchable answers."
+        }
+      ],
+      "architectureLessons": [
+        "Right-Size Agent Granularity: Focused micro-agents per HR task outperform broad monolithic chatbots in accuracy and maintainability.",
+        "Model Tiering for Latency & Cost: Route fast Tier-1 policy lookups through Gemini Flash while reserving Gemini Pro reasoning for multi-step synthesis and calibration.",
+        "Enterprise Network & Proxy Bridging: Secure connectors and Model Context Protocol (MCP) bridges handle corporate proxies and on-premise HR databases cleanly."
+      ]
+    },
+    "adoptionPillars": [
+      {
+        "num": "01",
+        "title": "Establish an AI SWAT Team",
+        "desc": "Form a cross-functional governance council spanning HR, Legal, InfoSec, and IT to align agent behavior with internal policies, India's Digital Personal Data Protection (DPDP) Act, and labor codes.",
+        "slideDesc": "HR, Legal, InfoSec & IT governance council."
+      },
+      {
+        "num": "02",
+        "title": "Monitor Adoption & Deflection",
+        "desc": "Track weekly retention, Tier-1 resolution accuracy, and time-saved conversion rather than vanity prompt counts to catch workflow friction early.",
+        "slideDesc": "Track weekly retention and Tier-1 accuracy."
+      },
+      {
+        "num": "03",
+        "title": "Redesign Processes — Don't Pave Cowpaths",
+        "desc": "Eliminate redundant multi-tier email approvals before automating so AI agents compress 4-day cycles to under 1 hour rather than speeding up broken steps.",
+        "slideDesc": "Fix broken loops before automating steps."
+      },
+      {
+        "num": "04",
+        "title": "Invest in Tiered AI Upskilling",
+        "desc": "Train HR Generalists, HR Business Partners (HRBPs), and recruiters across beginner, practitioner (No-Code builder), and orchestrator tracks.",
+        "slideDesc": "Train HRBPs across Practitioner & ADK tiers."
+      }
+    ],
+    "valueCurve": [
+      {
+        "stage": "01 · Day 1 (No-Code Quick Wins)",
+        "horizon": "Week 1–2 Launch",
+        "color": "#34A853",
+        "headline": "Immediate Value in Gemini Enterprise",
+        "bullets": [
+          "Launch No-Code Policy Pilot, FAQ Generator, and Job Description Harmonizer directly in Gemini Enterprise.",
+          "Connect verified HR handbooks, Google Workspace, and policy drives with strict source citations.",
+          "Generate micro-learning scripts and bilingual employee communications immediately."
+        ]
+      },
+      {
+        "stage": "02 · Early Weeks (Grounded Connectors)",
+        "horizon": "Week 3–6 Expansion",
+        "color": "#4285F4",
+        "headline": "Custom Grounded Agents & Governance",
+        "bullets": [
+          "Integrate ATS and Google Calendar / Meet connectors for Zero-Touch Interview Orchestration.",
+          "Deploy Open Knowledge Format (OKF) + Vertex AI Search retrieval with Model Armor guardrails.",
+          "Launch Day-One Onboarding Navigator and Talent Magnet outreach campaigns."
+        ]
+      },
+      {
+        "stage": "03 · Ongoing (Multi-Agent Scale)",
+        "horizon": "Month 2+ Transformation",
+        "color": "#7E57C2",
+        "headline": "Code-First Google ADK & MCP Orchestration",
+        "bullets": [
+          "Coordinate cross-system writes across PeopleStrong, Workday, and ServiceNow via FastMCP tools.",
+          "Operate Career Saathi multilingual voice simulations, Blind Screening, and Employee Pulse early warnings.",
+          "Run continuous Strategic Workforce & Total Rewards Equity analytics under Human-in-the-Loop (HITL) control."
+        ]
+      }
+    ],
+    "keynoteSlidesV2Count": 16
+  },
+  "pillars": {
+    "requisition_screening": {
+      "id": "requisition_screening",
+      "vNum": "01",
+      "apqcBadge": "01 · REQUISITION & SCREENING",
+      "name": "Requisition & Screening",
+      "shortName": "Requisition & Screening",
+      "tagline": "Skill-First Role Design, Micro-Market Sourcing & Blind Triage",
+      "subtitle": "Eliminate slow role approvals, agency sourcing tax, and manual resume screening queues.",
+      "color": "#1A73E8",
+      "softBg": "#E8F0FE",
+      "watermarkType": "talent_magnet",
+      "apqcRef": "APQC 7.2.1–7.2.2 · Plan Sourcing & Screen Candidates",
+      "systems": "PeopleStrong / Workday ATS · Google Workspace · Vertex AI Search · BigQuery · Cloud Data Loss Prevention (DLP)",
+      "coreQuestion": "How do we attract hard-to-find Tier-2, Tier-3, and Global Capability Center (GCC) talent while screening hundreds of applications accurately and without bias?",
+      "toilMetric": "High external agency spend ('sourcing tax') & 300+ unstandardized resumes per open role",
+      "toilBullets": [
+        "Hiring managers write inconsistent, jargon-heavy Job Descriptions (JDs) that trigger delays and narrow diverse pipelines.",
+        "Heavy reliance on external staffing agencies inflates cost-per-hire across emerging Indian and regional talent hubs.",
+        "Recruiters spend 40%–50% of sourcing week manually skimming unstructured PDF resumes across inconsistent formats."
+      ],
+      "impactMetric": "40%–50% Less Screening Effort & Lower Agency Sourcing Tax",
+      "impactBullets": [
+        "Standardizes every requisition into inclusive, skill-mapped templates in minutes (No-Code Job Description Harmonizer).",
+        "Targets Tier-2/Tier-3 and specialized hubs via hyper-local outreach and 24/7 Candidate Concierge (Talent Magnet).",
+        "Screens candidates on verified skills with automated Personal Identifiable Information (PII) masking and Four-Fifths (80%) fairness telemetry."
+      ],
+      "kpis": "Screening Effort (-40%–50%) | Time-to-Shortlist | Agency Dependency Reduction | Four-Fifths Impact Ratio",
+      "vcId": "r2h",
+      "vcLabel": "Open Requisition-to-Hire (R2H) Process →",
+      "processStages": [
+        {
+          "icon": "📋",
+          "name": "1. Skill & Headcount Brief",
+          "sub": "Scope & Level Intake"
+        },
+        {
+          "icon": "✍️",
+          "name": "2. Harmonized JD Authoring",
+          "sub": "Bias & Skill Check"
+        },
+        {
+          "icon": "🧲",
+          "name": "3. Talent Magnet Outreach",
+          "sub": "Tier-2 / GCC Hubs"
+        },
+        {
+          "icon": "🛡️",
+          "name": "4. Blind PII-Safe Parse",
+          "sub": "DPDP Masking"
+        },
+        {
+          "icon": "🎯",
+          "name": "5. Ranked Evidence Shortlist",
+          "sub": "Explainable Fit Score"
+        }
+      ],
+      "agentIds": [
+        "jd_harmonizer_agent",
+        "talent_magnet_agent",
+        "blind_screening_agent"
+      ],
+      "slideMetric": "40%–50% Faster",
+      "slideMetricSub": "Lower screening toil & agency spend",
+      "slideChallenge": "Jargon-heavy job specs and manual CV triage slow hiring.",
+      "slideShortStages": [
+        "1. Skill Brief",
+        "2. Harmonized JD",
+        "3. Talent Magnet",
+        "4. Blind Parse",
+        "5. Ranked Shortlist"
+      ],
+      "slideMixPill": "3 Agents · No-Code + Low-Code + ADK"
+    },
+    "candidate_hiring": {
+      "id": "candidate_hiring",
+      "vNum": "02",
+      "apqcBadge": "02 · CANDIDATE HIRING",
+      "name": "Candidate Hiring & Selection",
+      "shortName": "Candidate Hiring",
+      "tagline": "Zero-Touch Scheduling, Structured Evaluation & Compliant Offers",
+      "subtitle": "Compress multi-day interview logistics from 4 days to under 1 hour with objective feedback loops.",
+      "color": "#185ABC",
+      "softBg": "#D2E3FC",
+      "watermarkType": "interview_clock",
+      "apqcRef": "APQC 7.2.3 · Interview, Assess & Select Candidates",
+      "systems": "Google Calendar & Meet · PeopleStrong / Greenhouse ATS · Cloud Spanner · Model Armor · Human-in-the-Loop (HITL) Offer Gate",
+      "coreQuestion": "How do we eliminate multi-day panel scheduling ping-pong and fragmented interview notes so hiring teams close top candidates before competitors do?",
+      "toilMetric": "4-day scheduling delays & inconsistent unstructured interview feedback",
+      "toilBullets": [
+        "Recruiting coordinators exchange dozens of emails negotiating panel calendars across global time zones and business priorities.",
+        "Panelists enter interviews without calibrated rubrics or ask overlapping questions, producing noisy hiring signals.",
+        "Offer drafting stalls waiting for cross-checks against internal compensation bands and sign-off chains."
+      ],
+      "impactMetric": "Interview Turnaround: 4 Days → < 1 Hour (Keynote Benchmark)",
+      "impactBullets": [
+        "Negotiates candidate and multi-interviewer calendars autonomously while dispatching rubric prep packs (No-Code/Connector).",
+        "Synthesizes multi-interviewer scorecards into calibrated consensus summaries with conflict highlighting (ADK Agent).",
+        "Generates band-compliant offer packages routed through mandatory Human-in-the-Loop (HITL) compensation approval."
+      ],
+      "kpis": "Scheduling Cycle (4d → <1h) | Time-to-Offer | Scorecard Completion Rate | Candidate Net Promoter Score (NPS)",
+      "vcId": "r2h",
+      "vcLabel": "Open Requisition-to-Hire (R2H) Process →",
+      "processStages": [
+        {
+          "icon": "📅",
+          "name": "1. Panel Availability Sync",
+          "sub": "Calendar & Time-Zone"
+        },
+        {
+          "icon": "⚡",
+          "name": "2. Zero-Touch Slot Lock",
+          "sub": "<1 Hour Booking"
+        },
+        {
+          "icon": "📝",
+          "name": "3. Role Rubric Prep Kit",
+          "sub": "Panel Briefing"
+        },
+        {
+          "icon": "🔬",
+          "name": "4. Macro-Analytics Loop",
+          "sub": "Scorecard Synthesis"
+        },
+        {
+          "icon": "🤝",
+          "name": "5. Band-Checked Offer",
+          "sub": "HITL Executive Sign-Off"
+        }
+      ],
+      "agentIds": [
+        "interview_orchestrator_agent",
+        "interview_offer_decision_agent"
+      ],
+      "slideMetric": "4 Days -> <1 Hr",
+      "slideMetricSub": "Zero-touch panel interview scheduling",
+      "slideChallenge": "Calendar ping-pong and unstructured notes lose top talent.",
+      "slideShortStages": [
+        "1. Calendar Sync",
+        "2. Slot Lock",
+        "3. Rubric Prep",
+        "4. Feedback Loop",
+        "5. Band Offer"
+      ],
+      "slideMixPill": "2 Agents · No-Code + High-Code ADK"
+    },
+    "onboarding": {
+      "id": "onboarding",
+      "vNum": "03",
+      "apqcBadge": "03 · ONBOARDING",
+      "name": "Personalized Onboarding",
+      "shortName": "Personalized Onboarding",
+      "tagline": "Cross-System Day-1 Provisioning & Personalized 1-30-60-90 Experience",
+      "subtitle": "Deliver effortless Day-1 readiness across HR, IT, Facilities, and personalized role assimilation.",
+      "color": "#007B83",
+      "softBg": "#E4F7FB",
+      "watermarkType": "dayone_hub",
+      "apqcRef": "APQC 7.2.4 · Onboard New Hires",
+      "systems": "PeopleStrong / Workday HCM · ServiceNow ITSM · Google Workspace · FastMCP · Okta / Identity Management",
+      "coreQuestion": "How do we guarantee every new joiner receives working credentials, hardware, local buddy support, and a tailored 90-day roadmap from Day 1?",
+      "toilMetric": "Dropped handoffs across HR, IT, and Facilities & >3-month ramp curves",
+      "toilBullets": [
+        "Signed offers trigger brittle manual emails across HR Operations, IT Service Desk, Security, and Branch Facilities.",
+        "New joiners lose productive weeks hunting down local branch protocols, benefits elections, and team directories.",
+        "One-size-fits-all Day-1 slide decks fail frontline retail, engineering, and regional cohorts equally."
+      ],
+      "impactMetric": ">95% Day-7 Compliance & 15%–25% Faster Time-to-Productivity",
+      "impactBullets": [
+        "Provides every new hire an interactive 1/30/60/90-day Virtual Buddy Hub grounded in site & role guides (No-Code Onboarding Navigator).",
+        "Orchestrates atomic cross-system writebacks via FastMCP: creating worker profiles, ServiceNow laptop/access tickets, and compliance enrollments.",
+        "Tracks pre-boarding blockers proactively before Day 1 so teams focus on warm human welcome."
+      ],
+      "kpis": "Day-1 Hardware & Access Readiness | Day-7 Compliance (>95%) | Time-to-Productivity (-15%–25%) | Early 90-Day Retention",
+      "vcId": "o2p",
+      "vcLabel": "Open Offer-to-Productive (O2P) Process →",
+      "processStages": [
+        {
+          "icon": "🎉",
+          "name": "1. Signed Offer Trigger",
+          "sub": "Pre-Boarding Kickoff"
+        },
+        {
+          "icon": "💻",
+          "name": "2. Parallel MCP Provision",
+          "sub": "HCM + ITSM + Badge"
+        },
+        {
+          "icon": "🗺️",
+          "name": "3. Day-One Experience Hub",
+          "sub": "1/30/60/90 Roadmap"
+        },
+        {
+          "icon": "💬",
+          "name": "4. Localized Virtual Buddy",
+          "sub": "24/7 Branch & Policy Q&A"
+        },
+        {
+          "icon": "📈",
+          "name": "5. Milestone Readiness",
+          "sub": "30/60/90 Ramp Audit"
+        }
+      ],
+      "agentIds": [
+        "onboarding_navigator_agent",
+        "cross_system_provisioning_agent"
+      ],
+      "slideMetric": ">95% Day-7 Ready",
+      "slideMetricSub": "15%–25% faster time to productivity",
+      "slideChallenge": "Manual email handoffs stall laptops, badges, and onboarding.",
+      "slideShortStages": [
+        "1. Offer Signed",
+        "2. Parallel MCP",
+        "3. Day-1 Hub",
+        "4. Local Buddy",
+        "5. 90-Day Pulse"
+      ],
+      "slideMixPill": "2 Agents · No-Code + High-Code ADK"
+    },
+    "continuous_learning": {
+      "id": "continuous_learning",
+      "vNum": "04",
+      "apqcBadge": "04 · CONTINUOUS LEARNING & DEV",
+      "name": "Continuous Learning & Internal Mobility",
+      "shortName": "Continuous Learning & Mobility",
+      "tagline": "Career Saathi Mobility Engine, Conversational Simulators & Micro-Learning Reels",
+      "subtitle": "Turn 50-page compliance manuals into 3-minute habits and map visible growth paths before talent leaves.",
+      "color": "#1E8E3E",
+      "softBg": "#E6F4EA",
+      "watermarkType": "career_saathi",
+      "apqcRef": "APQC 7.3 & 7.6 · Develop Capabilities & Redeploy Talent",
+      "systems": "Learning Management System (LMS) · Google ADK · Gemini Live / Voice Sim · Vertex AI Memory Bank · Enterprise Skill Graph",
+      "coreQuestion": "When Gen Z talent stays an average of 1.1 years because they don't see growth pathways, how do we make internal reskilling and compliance engaging and visible?",
+      "toilMetric": "1.1-yr Gen Z average tenure ('growth-hunting') & low completion on static 50-page training PDFs",
+      "toilBullets": [
+        "1 in 3 early-career employees plan a job switch within 12 months when internal mobility pathways remain opaque (Randstad 2025 benchmark).",
+        "Frontline associates and busy specialists skim or ignore long regulatory compliance manuals.",
+        "Employees lack safe, realistic practice environments to rehearse tough customer negotiations or managerial coaching."
+      ],
+      "impactMetric": "Micro-Learning Mastery in 3 Min & Internal Pipeline Acceleration",
+      "impactBullets": [
+        "Converts regulatory circulars and SOPs into 3-minute regional-language micro-reels and searchable FAQs (No-Code Learning Studio).",
+        "Maps individual skills against future roles (e.g., Retail Relationship Manager → Phygital Branch Manager) via Career Saathi.",
+        "Runs live regional-language conversational customer & coaching simulations with gamified mastery checkpoints."
+      ],
+      "kpis": "Internal Fill Rate | Mandatory Training Completion | Skill-Gap Closure Velocity | High-Potential Retention",
+      "vcId": "s2r",
+      "vcLabel": "Open Skill-to-Role (S2R) Process →",
+      "processStages": [
+        {
+          "icon": "🧬",
+          "name": "1. Skill Graph Baseline",
+          "sub": "Current vs. Target Role"
+        },
+        {
+          "icon": "🎬",
+          "name": "2. Regulatory Reels & FAQs",
+          "sub": "3-Min Micro-Modules"
+        },
+        {
+          "icon": "🎙️",
+          "name": "3. Multilingual Role-Play",
+          "sub": "Simulated Scenarios"
+        },
+        {
+          "icon": "🏅",
+          "name": "4. Mastery & Certification",
+          "sub": "Verified Readiness"
+        },
+        {
+          "icon": "🚀",
+          "name": "5. Internal Role Match",
+          "sub": "Internal Mobility Placement"
+        }
+      ],
+      "agentIds": [
+        "regulatory_learning_studio_agent",
+        "career_saathi_agent"
+      ],
+      "slideMetric": "3-Min Mastery",
+      "slideMetricSub": "Guided mobility curbs early-career churn",
+      "slideChallenge": "Dense PDF training and opaque growth drive 1-in-3 exits.",
+      "slideShortStages": [
+        "1. Skill Baseline",
+        "2. 3-Min Reels",
+        "3. Voice Role-Play",
+        "4. Mastery Check",
+        "5. Career Match"
+      ],
+      "slideMixPill": "2 Agents · No-Code + High-Code ADK"
+    },
+    "people_ops": {
+      "id": "people_ops",
+      "vNum": "05",
+      "apqcBadge": "05 · PEOPLE OPS",
+      "name": "People Ops & Employee Service Delivery",
+      "shortName": "People Ops & Service",
+      "tagline": "Zero-Touch HR Concierge (70% Deflection), Policy Pilot & Employee Pulse Early Warnings",
+      "subtitle": "Make Operations meet people wherever they work — resolving routine tickets in seconds while detecting burnout early.",
+      "color": "#4285F4",
+      "softBg": "#E8F0FE",
+      "watermarkType": "concierge_pulse",
+      "apqcRef": "APQC 7.4, 7.7 & 7.8 · Employee Relations, HRIS & Communications",
+      "systems": "PeopleStrong / Workday HCM · ServiceNow HRSD · Open Knowledge Format (OKF) · Model Armor · Cloud DLP · BigQuery Sentiment Core",
+      "coreQuestion": "How do we deflect ~70% of repetitive policy, payroll, tax, and leave tickets without compromising strict compliance or missing quiet employee burnout signals?",
+      "toilMetric": "HR Specialists buried under repetitive Tier-1 tickets & reactive exit-interview surprises",
+      "toilBullets": [
+        "HR teams answer thousands of identical leave balance, expense cap, tax form, and benefits questions every month.",
+        "Generic bots hallucinate prohibited policy exceptions, creating legal and audit exposure.",
+        "Managers only discover attrition risk during exit interviews after institutional knowledge is already walking out."
+      ],
+      "impactMetric": "60%–75% (~70%) Tier-1 Deflection & Proactive Burnout Intervention",
+      "impactBullets": [
+        "Delivers zero-guessing policy answers grounded in Open Knowledge Format (OKF) & handbook clauses (No-Code Policy Pilot).",
+        "Executes live transactional self-service across HCM and ITSM via FastMCP (leave booking, tax downloads, ticket routing), escalating the complex 30% with full summary.",
+        "Analyzes anonymized pulse & support trends under India DPDP consent controls to trigger supportive Human Resources Business Partner (HRBP) check-ins."
+      ],
+      "kpis": "Tier-1 Ticket Deflection (60%–75%) | First-Contact Resolution (<30s) | Policy Citation Accuracy (100%) | Prevented Regrettable Attrition",
+      "vcId": "q2r",
+      "vcLabel": "Open Query-to-Resolution & Pulse (Q2R) Process →",
+      "processStages": [
+        {
+          "icon": "💬",
+          "name": "1. Omnichannel Intake",
+          "sub": "Chat / Mobile / Portal"
+        },
+        {
+          "icon": "📚",
+          "name": "2. Strict Policy Gate",
+          "sub": "OKF / RAG Grounding"
+        },
+        {
+          "icon": "⚙️",
+          "name": "3. Live HCM / ITSM Action",
+          "sub": "70% Auto-Resolution"
+        },
+        {
+          "icon": "🧠",
+          "name": "4. Privacy Pulse Core",
+          "sub": "DPDP Anonymized Trends"
+        },
+        {
+          "icon": "🩺",
+          "name": "5. HRBP Complex Escalation",
+          "sub": "30% High-Empathy Cases"
+        }
+      ],
+      "agentIds": [
+        "hr_policy_pilot_agent",
+        "zero_touch_hr_concierge_agent",
+        "employee_pulse_agent"
+      ],
+      "slideMetric": "~70% Deflection",
+      "slideMetricSub": "Zero guessed answers + proactive care",
+      "slideChallenge": "Repeated policy tickets bury HRBPs before burnout shows.",
+      "slideShortStages": [
+        "1. Unified Intake",
+        "2. Policy Gate",
+        "3. Live MCP Action",
+        "4. Privacy Pulse",
+        "5. Human Care"
+      ],
+      "slideMixPill": "3 Agents · No-Code + High-Code ADK"
+    },
+    "hr_strategy_rewards": {
+      "id": "hr_strategy_rewards",
+      "vNum": "06",
+      "apqcBadge": "06 · HR STRATEGY & REWARDS",
+      "name": "HR Strategy, Workforce Analytics & Total Rewards",
+      "shortName": "HR Strategy & Rewards",
+      "tagline": "Strategic Workforce Projections, Macro Intelligence & Pay Equity Governance",
+      "subtitle": "Unite the cross-cutting strategic foundation: transform backward-looking spreadsheets into live CHRO decision intelligence.",
+      "color": "#5E35B1",
+      "softBg": "#E6E7FB",
+      "watermarkType": "workforce_radar",
+      "apqcRef": "APQC 7.1 & 7.5 · Manage HR Strategy, Compensation & Governance",
+      "systems": "BigQuery Enterprise Warehouse · Time-Series Forecasting · Enterprise Compensation Tables · Cloud DLP · Executive HITL Calibration Portal",
+      "coreQuestion": "How does the CHRO reclaim time from stitching 40 spreadsheets per quarter to model future skills, headcount scenarios, and <1% unexplained pay equity variance?",
+      "toilMetric": "15% of all HR capacity lost compiling outdated quarterly reports & reactive annual comp reviews",
+      "toilBullets": [
+        "Boardroom headcount, attrition, and hiring-projection decks take weeks to reconcile manually across finance and business units.",
+        "Annual compensation and promotion calibrations miss mid-year pay compression and unexplained equity drift.",
+        "Multi-rater performance appraisals overwhelm managers during calibration cycles, burying actionable coaching insights."
+      ],
+      "impactMetric": "Real-Time Scenario Planning & <1%–2% Pay Variance Target",
+      "impactBullets": [
+        "Synthesizes internal workforce composition, exit drivers, and external industry labor benchmarks in minutes (Strategic Workforce Agent).",
+        "Runs continuous regression pay-equity audits and unbiased multi-rater appraisal aggregation with strict Cloud DLP & Human-in-the-Loop (HITL) approval gates.",
+        "Directly unlocks the 75% → 25% HR Paradox inversion so HR partners CEOs and CFOs on enterprise growth."
+      ],
+      "kpis": "Reporting Latency (Weeks → Minutes) | Forecast Variance | Unexplained Pay Gap (<1%–2%) | Calibration Cycle Reduction (-50%)",
+      "vcId": "s2r",
+      "vcLabel": "Open Skill-to-Role & Workforce Process →",
+      "processStages": [
+        {
+          "icon": "📊",
+          "name": "1. Census & Exit Fusion",
+          "sub": "Internal Supply Signal"
+        },
+        {
+          "icon": "🌏",
+          "name": "2. Macro Talent Research",
+          "sub": "GCC & Industry Trends"
+        },
+        {
+          "icon": "📐",
+          "name": "3. Headcount Scenario Sim",
+          "sub": "Hiring & Cost Envelope"
+        },
+        {
+          "icon": "⚖️",
+          "name": "4. Pay Equity & Appraisal",
+          "sub": "Cloud DLP Redaction"
+        },
+        {
+          "icon": "🏛️",
+          "name": "5. CHRO & CFO Sign-Off",
+          "sub": "HITL Governance Gate"
+        }
+      ],
+      "agentIds": [
+        "strategic_workforce_agent",
+        "total_rewards_equity_agent"
+      ],
+      "slideMetric": "<1–2% Variance",
+      "slideMetricSub": "Weeks -> minutes planning & pay equity",
+      "slideChallenge": "40 manual spreadsheets delay CHRO workforce decisions.",
+      "slideShortStages": [
+        "1. Census Fusion",
+        "2. Market Radar",
+        "3. Scenario Twin",
+        "4. Pay Equity",
+        "5. Executive Sign-Off"
+      ],
+      "slideMixPill": "2 Agents · High-Code ADK + BigQuery"
+    }
+  },
+  "valueChains": {
+    "r2h": {
+      "id": "r2h",
+      "shortTitle": "Requisition-to-Hire (R2H)",
+      "title": "Requisition-to-Hire (R2H) Agentic Process Flow",
+      "flowBadge": "Pillars 01 & 02 · Workforce Need → Compliant Offer Signed",
+      "cardSubtitle": "Connects Skill-First JD Harmonization, Talent Magnet Outreach, Blind Resume Triage, Zero-Touch Calendar Scheduling, and Offer Calibration.",
+      "cardFooterLeft": "5 Connected Process Stages · 5 Agents · No-Code + High-Code",
+      "color": "#1A73E8",
+      "headlineStat": "4 Days → < 1 Hr",
+      "headlineLabel": "Interview Scheduling Turnaround & 40%–50% Lower Screening Toil",
+      "toilHoursBefore": "35–45 days fragmented email coordination",
+      "toilHoursAfter": "Rapid transparent pipeline with Human-in-the-Loop offer control",
+      "summary": "Transforms hiring from sequential inbox bottlenecks into an auditable pipeline combining No-Code employer branding with privacy-preserving Google ADK screening and scheduling.",
+      "problem": "Hiring managers wait weeks for approved role specs, rely on costly third-party agencies for emerging hubs, manually scan hundreds of CVs, and endure 4-day multi-panel scheduling delays.",
+      "solution": "No-Code agents standardize JDs and amplify organic Tier-2/GCC campaigns, while High-Code ADK agents mask Personal Identifiable Information (PII), coordinate panel calendars autonomously, and aggregate structured scorecards.",
+      "advantage": "Cuts screening toil 40%–50%, slashes interview scheduling from 4 days to under 1 hour, reduces external recruiter agency fees, and logs Four-Fifths fairness audits automatically.",
+      "stages": [
+        {
+          "num": "Stage 01",
+          "name": "Inclusive JD Authoring",
+          "pillar": "01 · Requisition & Screening",
+          "agentId": "jd_harmonizer_agent",
+          "agentName": "Job Description Harmonizer",
+          "tier": "No-Code",
+          "summary": "Converts rough hiring notes into skill-calibrated, bias-free role specifications aligned with enterprise bands."
+        },
+        {
+          "num": "Stage 02",
+          "name": "Micro-Market Outreach",
+          "pillar": "01 · Requisition & Screening",
+          "agentId": "talent_magnet_agent",
+          "agentName": "Talent Magnet Campaign Agent",
+          "tier": "Low-Code",
+          "summary": "Maps Tier-2/Tier-3/GCC talent hotspots and launches regional-language reels plus 24/7 Candidate Concierge Q&A."
+        },
+        {
+          "num": "Stage 03",
+          "name": "DPDP Blind Screening",
+          "pillar": "01 · Requisition & Screening",
+          "agentId": "blind_screening_agent",
+          "agentName": "Skills Extraction & Blind Screening",
+          "tier": "High-Code",
+          "summary": "Extracts verified competency graphs, redacts PII, checks Four-Fifths adverse impact ratios, and builds ranked shortlists."
+        },
+        {
+          "num": "Stage 04",
+          "name": "Zero-Touch Scheduling",
+          "pillar": "02 · Candidate Hiring",
+          "agentId": "interview_orchestrator_agent",
+          "agentName": "Zero-Touch Interview Orchestrator",
+          "tier": "No-Code",
+          "summary": "Auto-negotiates interviewer panels across Google Calendar and Meet, compressing scheduling from 4 days to under 1 hour."
+        },
+        {
+          "num": "Stage 05",
+          "name": "Calibration & Offer Gate",
+          "pillar": "02 · Candidate Hiring",
+          "agentId": "interview_offer_decision_agent",
+          "agentName": "Interview Rubric & Offer Decision",
+          "tier": "High-Code",
+          "summary": "Synthesizes interview scorecards into unbiased decision briefs and drafts band-verified offers for executive approval."
+        }
+      ],
+      "proofTitle": "Recruiter Velocity & Adverse-Impact Audit Benchmark",
+      "proofBenchmark": "Google Cloud People Transformation Framework & Enterprise Recruiting Industry Benchmarks.",
+      "proofDetail": "Organizations pairing automated JD harmonization with calendar-integrated interview orchestration and blind rubric synthesis shorten screening effort by 40%–50% and multi-round scheduling latency from 4 days to under 1 hour while maintaining Four-Fifths fairness traceability."
+    },
+    "o2p": {
+      "id": "o2p",
+      "shortTitle": "Offer-to-Productive (O2P)",
+      "title": "Offer-to-Productive (O2P · Day 1–90 Onboarding) Process Flow",
+      "flowBadge": "Pillars 02, 03 & 05 · Signed Offer → Day-90 Autonomous Productivity",
+      "cardSubtitle": "Unites signed offers, zero-touch HR/IT/Facilities provisioning via FastMCP, localized Day-One Virtual Buddy, and Policy Pilot support.",
+      "cardFooterLeft": "4 Connected Process Stages · 4 Agents · No-Code + High-Code",
+      "color": "#007B83",
+      "headlineStat": ">95% Day-7 Ready",
+      "headlineLabel": "Compliance Completion & 15%–25% Faster Time-to-Productivity",
+      "toilHoursBefore": "Manual ticket chasing across HR, IT & Facilities",
+      "toilHoursAfter": "Zero-touch provisioning before 9:00 AM on Day 1",
+      "summary": "Turns the high-drop-off gap between offer signature and Day-90 contribution into a choreographed experience combining atomic MCP provisioning with warm Day-One guidance.",
+      "problem": "New hires routinely arrive on Day 1 without laptops, access credentials, or local context while HR Operations chases ServiceNow, HCM, and security spreadsheets manually.",
+      "solution": "Upon offer acceptance, the Cross-System Provisioning Agent coordinates HCM worker creation and ServiceNow equipment/access tickets via FastMCP, while the No-Code Onboarding Navigator and Policy Pilot serve as an always-on 1/30/60/90 Virtual Buddy.",
+      "advantage": "Achieves >95% Day-7 compliance completion, cuts time-to-productivity by 15%–25%, and frees HR specialists from pre-boarding status chasing.",
+      "stages": [
+        {
+          "num": "Stage 01",
+          "name": "Offer Finalization",
+          "pillar": "02 · Candidate Hiring",
+          "agentId": "interview_offer_decision_agent",
+          "agentName": "Offer Decision & Readiness Gate",
+          "tier": "High-Code",
+          "summary": "Captures signed offer metadata and triggers downstream pre-boarding workflows automatically."
+        },
+        {
+          "num": "Stage 02",
+          "name": "HCM + ITSM Provisioning",
+          "pillar": "03 · Onboarding",
+          "agentId": "cross_system_provisioning_agent",
+          "agentName": "Zero-Touch Provisioning Agent",
+          "tier": "High-Code",
+          "summary": "Synchronizes PeopleStrong/Workday worker creation with ServiceNow laptop, Identity, and badge tasks via FastMCP."
+        },
+        {
+          "num": "Stage 03",
+          "name": "Personalized Day-1–90 Hub",
+          "pillar": "03 · Onboarding",
+          "agentId": "onboarding_navigator_agent",
+          "agentName": "Onboarding Navigator & Buddy",
+          "tier": "No-Code",
+          "summary": "Delivers adaptive 1/30/60/90-day milestones, branch/office maps, team intros, and 24/7 buddy Q&A."
+        },
+        {
+          "num": "Stage 04",
+          "name": "Grounded Policy Confidence",
+          "pillar": "05 · People Ops",
+          "agentId": "hr_policy_pilot_agent",
+          "agentName": "HR Policy Pilot Assistant",
+          "tier": "No-Code",
+          "summary": "Resolves leave, benefits enrollment, and expense questions on Day 1 with exact policy citations."
+        }
+      ],
+      "proofTitle": "Enterprise Time-to-Productivity & Multi-System MCP Integration Pattern",
+      "proofBenchmark": "Enterprise HR Reference Blueprint (HCM + ITSM FastMCP) & Personalized Day-One Experience Framework.",
+      "proofDetail": "Synchronizing pre-boarding identity, laptop provisioning, and personalized 1/30/60/90 guidance compresses ramp time by 15%–25% and sustains >95% Day-7 mandatory compliance."
+    },
+    "s2r": {
+      "id": "s2r",
+      "shortTitle": "Skill-to-Role & Career Saathi (S2R)",
+      "title": "Skill-to-Role (S2R · Continuous Reskilling & Mobility) Process Flow",
+      "flowBadge": "Pillars 04 & 06 · Skill Gap Sensing → Verified Internal Placement",
+      "cardSubtitle": "Connects Strategic Workforce Skill Forecasts, 3-Min Regulatory Learning Reels, Career Saathi Multilingual Role-Play, and Fair Calibration.",
+      "cardFooterLeft": "4 Connected Process Stages · 4 Agents · No-Code + High-Code",
+      "color": "#1E8E3E",
+      "headlineStat": "1.1-Yr Churn Fix",
+      "headlineLabel": "Turns Early-Career 'Growth-Hunting' into Internal Career Mobility",
+      "toilHoursBefore": "Static 50-page training PDFs & opaque promotion paths",
+      "toilHoursAfter": "3-minute micro-habits + multilingual Career Saathi coaching",
+      "summary": "Operationalizes the frontline-to-leadership Career Saathi transformation: translating future enterprise skill demand into bite-sized learning reels, live customer simulations, and equitable internal progression.",
+      "problem": "Gen Z workers switch jobs at 1.1 years not from disloyalty but because internal pathways are invisible (Randstad 2025), while dry compliance handbooks yield low retention.",
+      "solution": "Workforce Intelligence flags future skill deficits; No-Code Studio converts 50-page compliance docs into 3-minute regional micro-reels; Career Saathi simulates real client/coaching scenarios; and Total Rewards Equity ensures unbiased readiness calibration.",
+      "advantage": "Builds an internal leadership pipeline (e.g., Retail Relationship Manager → Phygital Branch Manager), lifts compliance retention, and lowers external replacement hiring cost.",
+      "stages": [
+        {
+          "num": "Stage 01",
+          "name": "Future Skill Demand Signal",
+          "pillar": "06 · HR Strategy & Rewards",
+          "agentId": "strategic_workforce_agent",
+          "agentName": "Strategic Workforce Intelligence",
+          "tier": "High-Code",
+          "summary": "Identifies rising capability gaps (Digital Analytics, SME Credit, AI Fluency) across business units and hubs."
+        },
+        {
+          "num": "Stage 02",
+          "name": "3-Min Micro-Learning Reels",
+          "pillar": "04 · Continuous L&D",
+          "agentId": "regulatory_learning_studio_agent",
+          "agentName": "Regulatory Learning & FAQ Studio",
+          "tier": "No-Code",
+          "summary": "Transforms 50-page compliance handbooks into regional-language 3-minute scripts, reels, and quizzes."
+        },
+        {
+          "num": "Stage 03",
+          "name": "Conversational Role-Play",
+          "pillar": "04 · Continuous L&D",
+          "agentId": "career_saathi_agent",
+          "agentName": "Career Saathi Mobility Coach",
+          "tier": "High-Code",
+          "summary": "Runs multilingual customer & leadership simulations (e.g., negotiating credit with a local factory owner) and charts skill paths."
+        },
+        {
+          "num": "Stage 04",
+          "name": "Objective Promotion Calibration",
+          "pillar": "06 · HR Strategy & Rewards",
+          "agentId": "total_rewards_equity_agent",
+          "agentName": "Total Rewards & Calibration Agent",
+          "tier": "High-Code",
+          "summary": "Synthesizes readiness certifications and multi-rater feedback while auditing internal compensation parity."
+        }
+      ],
+      "proofTitle": "Randstad 2025 Gen Z Blueprint & Career Saathi Phygital Mobility Case",
+      "proofBenchmark": "Google Cloud People Transformation Framework & Career Saathi Architectural Blueprint.",
+      "proofDetail": "Combining bite-sized multimodal learning with skill-graph mobility coaching directly addresses the 1 in 3 Gen Z turnover intent driven by perceived lack of internal growth."
+    },
+    "q2r": {
+      "id": "q2r",
+      "shortTitle": "Query-to-Resolution & Pulse (Q2R)",
+      "title": "Query-to-Resolution & Retention Pulse (Q2R) Process Flow",
+      "flowBadge": "Pillars 05 & 06 · Employee Moment of Need → Early Burnout Prevention",
+      "cardSubtitle": "Connects Grounded Policy Pilot, Transactional Zero-Touch HR Concierge (~70% Deflection), Privacy-Safe Employee Pulse, and Executive Retention Analytics.",
+      "cardFooterLeft": "4 Connected Process Stages · 4 Agents · No-Code + High-Code",
+      "color": "#4285F4",
+      "headlineStat": "~70% Deflection",
+      "headlineLabel": "Zero-Touch Tier-1 Ticket Resolution + Proactive Burnout Intervention",
+      "toilHoursBefore": "Overloaded HR queues + reactive exit-interview autopsies",
+      "toilHoursAfter": "Seconds-to-resolve self-service + private early wellbeing care",
+      "summary": "Embodies 'Make Ops Meet My People, Wherever They Are': deflecting routine transactional tickets instantly while protecting the 30% high-empathy human cases and spotting attrition clusters early.",
+      "problem": "HR specialists drown in repetitive leave, payroll, tax, and policy tickets while burned-out high performers resign quietly before leadership sees any warning signal.",
+      "solution": "No-Code Policy Pilot enforces exact handbook grounding; High-Code Concierge executes HCM & ITSM transactions safely behind Model Armor & Cloud DLP; and Employee Pulse aggregates DPDP-compliant anonymized wellbeing trends.",
+      "advantage": "Deflects 60%–75% (~70%) of routine inquiries automatically, cuts Tier-1 resolution from days to seconds, eliminates unauthorized policy guesses, and empowers timely HRBP interventions.",
+      "stages": [
+        {
+          "num": "Stage 01",
+          "name": "Zero-Guess Policy Grounding",
+          "pillar": "05 · People Ops",
+          "agentId": "hr_policy_pilot_agent",
+          "agentName": "HR Policy Pilot (OKF / Docs)",
+          "tier": "No-Code",
+          "summary": "Validates leave, expense, and conduct questions strictly against approved policies with clause citations."
+        },
+        {
+          "num": "Stage 02",
+          "name": "Cross-System Transaction",
+          "pillar": "05 · People Ops",
+          "agentId": "zero_touch_hr_concierge_agent",
+          "agentName": "Zero-Touch HR Concierge",
+          "tier": "High-Code",
+          "summary": "Checks live HCM balances, books PTO, retrieves tax docs, and creates ServiceNow tickets (70% automated; 30% escalated)."
+        },
+        {
+          "num": "Stage 03",
+          "name": "DPDP-Safe Pulse Aggregation",
+          "pillar": "05 · People Ops",
+          "agentId": "employee_pulse_agent",
+          "agentName": "Employee Pulse & Burnout Shield",
+          "tier": "High-Code",
+          "summary": "Analyzes anonymized ticket spikes and survey verbatims to alert HRBPs early without invasive surveillance."
+        },
+        {
+          "num": "Stage 04",
+          "name": "Executive Retention Strategy",
+          "pillar": "06 · HR Strategy & Rewards",
+          "agentId": "strategic_workforce_agent",
+          "agentName": "Strategic Workforce Intelligence",
+          "tier": "High-Code",
+          "summary": "Connects department burnout signals to staffing capacity, backfill budgets, and CHRO retention interventions."
+        }
+      ],
+      "proofTitle": "Enterprise Policy Pilot Proof & Tier-1 Deflection Benchmarks",
+      "proofBenchmark": "Google Cloud People Transformation Blueprint, Dual-Retrieval Architecture, & Large Indian Enterprise Production Benchmarks.",
+      "proofDetail": "Separating grounded policy lookup from transactional MCP writes under Model Armor achieves 60%–75% ticket deflection while maintaining strict auditability."
+    }
+  },
+  "agents": {
+    "jd_harmonizer_agent": {
+      "id": "jd_harmonizer_agent",
+      "num": "01",
+      "code": "Jd",
+      "pillarId": "requisition_screening",
+      "pillarName": "Requisition & Screening",
+      "pillarColor": "#1A73E8",
+      "processName": "Workforce Requisition & Inclusive Job Architecture",
+      "name": "Job Description Harmonizer",
+      "buildTier": "No-Code",
+      "platformLayer": "Gemini Enterprise Agent Studio · Verified Competency Library",
+      "outcomeBadge": "Minutes vs. Days · Standardized Skill Architecture",
+      "baselineVsTarget": "Fragmented unit JDs (3–5 days rework) → Calibrated skill-first JDs (<10 mins)",
+      "personasServed": [
+        "Hiring Manager",
+        "Talent Acquisition (TA) Partner",
+        "Compensation & Job Architecture Lead"
+      ],
+      "shortDesc": "Transforms raw hiring manager notes into bias-free, skill-calibrated Job Descriptions (JDs) aligned with enterprise grade bands.",
+      "problem": "Hiring managers routinely recycle stale or exclusionary JDs across regions and business units, delaying requisition approvals and shrinking qualified candidate pools.",
+      "solution": "A No-Code Gemini Enterprise agent grounded in approved enterprise leveling matrices and inclusive language standards converts rough role bullets into consistent, searchable job specifications.",
+      "advantage": "Proven in production inside a large Indian enterprise's Gemini Enterprise HR deployment: enforces uniform capability taxonomies while cutting back-and-forth requisition approval cycles.",
+      "systems": [
+        "Gemini Enterprise Agent Studio",
+        "Corporate Competency & Grade Matrix (Google Drive)",
+        "PeopleStrong / Workday Requisition Templates",
+        "Google Workspace Docs Connector"
+      ],
+      "mcpTools": [
+        "CompetencyTaxonomyRetriever (Enterprise Search)",
+        "InclusiveLanguageChecker (Prompt Guardrail)",
+        "ATSRequisitionDraftExporter (Workspace / Doc Export)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "JD Harmonizer (Gemini Flash · No-Code)",
+        "specialists": [
+          "Skill-Matrix Grounder",
+          "Inclusive Language Linter",
+          "Level & Band Validator"
+        ],
+        "connectors": [
+          "Approved HR Templates",
+          "PeopleStrong / Workday Job Catalog",
+          "Google Docs Output"
+        ],
+        "guardrail": "Human Hiring Manager + TA Partner approval required before publishing external requisition."
+      },
+      "samplePrompt": "Convert these 5 hiring manager bullet points for a Bengaluru Phygital SME Credit Lead (Grade M4) into our harmonized template, align required skills to our competency framework, and flag any exclusionary wording.",
+      "sampleTrace": "1. Retrieved Grade M4 Retail Banking Competency Rubric via grounded Drive Search.\n2. Converted '10+ yrs aggressive ninja' -> 'Proven SME credit underwriting & hybrid team coaching experience'.\n3. Generated Search-Engine-Optimized (SEO) skills checklist ready for PeopleStrong / Workday ATS.",
+      "guardrails": "No-Code zero-hallucination grounding strictly restricted to approved HR competency docs; final salary band & posting click remain human-owned.",
+      "slideOutcome": "Skill-first job descriptions in minutes.",
+      "slideProcessShort": "Role Authoring",
+      "simpleName": "Job Description Harmonizer",
+      "howItWorks": {
+        "trigger": "Hiring Manager enters rough bullet points for a new opening",
+        "inputs": [
+          "Hiring Manager notes (role, location, grade, 4-5 rough bullets)",
+          "Official Grade & Skill Matrix stored in corporate Google Drive",
+          "Approved inclusivity & job-posting compliance rules"
+        ],
+        "steps": [
+          {
+            "title": "Match Role to Skill Band",
+            "detail": "Looks up the official Grade & Competency taxonomy so must-have vs. nice-to-have skills fit company pay grades."
+          },
+          {
+            "title": "Rewrite Biased Phrases",
+            "detail": "Flags exclusionary terms (for example 'aggressive ninja') and replaces them with clear outcome-focused criteria."
+          },
+          {
+            "title": "Format & Package Requisition",
+            "detail": "Builds a search-friendly Job Description (JD) plus interview evaluation criteria in the standard corporate template."
+          }
+        ],
+        "readsFrom": [
+          "Corporate Competency Matrix (Drive)",
+          "Grade & Compensation Band Table"
+        ],
+        "writesTo": [
+          "Draft Requisition in Google Docs",
+          "Ready-to-Post Template for Applicant Tracking System (ATS)"
+        ],
+        "outputs": [
+          "Standardized, bias-checked Job Description document",
+          "Structured skill checklist for interviewers",
+          "Search-optimized external job board summary"
+        ],
+        "humanCheckpoint": "Hiring Manager and Talent Acquisition Partner review salary band and click Post in the ATS.",
+        "exampleBefore": "Rough 5-line email note: 'Need aggressive Grade M4 Bengaluru SME credit ninja with 10+ yrs.'",
+        "exampleAfter": "Balanced Grade M4 Bengaluru Role Spec + 6 verified skills + fair interview rubric in 90 seconds."
+      }
+    },
+    "talent_magnet_agent": {
+      "id": "talent_magnet_agent",
+      "num": "02",
+      "code": "Tm",
+      "pillarId": "requisition_screening",
+      "pillarName": "Requisition & Screening",
+      "pillarColor": "#1A73E8",
+      "processName": "Hyper-Local Sourcing & 24/7 Candidate Engagement",
+      "name": "Talent Magnet & Micro-Market Agent",
+      "buildTier": "Low-Code",
+      "platformLayer": "Gemini Enterprise + Deep Research + Multimodal Asset Studio",
+      "outcomeBadge": "Lower External Agency Tax · Tier-2/Tier-3 Funnel Lift",
+      "baselineVsTarget": "High staffing agency fees & urban-only reach → Micro-market organic pipeline",
+      "personasServed": [
+        "Employer Brand Lead",
+        "Talent Sourcing Specialist",
+        "Prospective Candidate"
+      ],
+      "shortDesc": "Maps emerging Tier-2, Tier-3, and Global Capability Center (GCC) talent hubs, generates localized outreach campaigns, and powers 24/7 Candidate Concierge Q&A.",
+      "problem": "Over-reliance on expensive external staffing agencies creates a steep 'sourcing tax' while generic English-only job boards fail to attract ambitious talent in regional Indian cities.",
+      "solution": "Combines periodic macro labor research with Gemini multimodal content workflows to identify micro-market talent clusters, craft localized social/short-video outreach scripts, and answer candidate FAQs around the clock.",
+      "advantage": "Illustrated in Radha's Tier-3 frontline hiring journey & Talent Magnet blueprint: expands organic applicant reach while protecting consistent employer brand tone.",
+      "systems": [
+        "Gemini Enterprise Deep Research Agent",
+        "Gemini Multimodal Studio (Short-Video / Social Scripts)",
+        "Career Portal 24/7 Candidate Concierge",
+        "BigQuery Talent Funnel Analytics"
+      ],
+      "mcpTools": [
+        "RegionalSkillHotspotSearcher (Deep Research)",
+        "MultilingualCampaignDrafter (Brand Style Grounded)",
+        "CandidateFAQResponder (Verified Careers Corpus)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Talent Magnet Orchestrator (Gemini Pro / Flash)",
+        "specialists": [
+          "Micro-Market Hotspot Researcher",
+          "Multilingual Content Drafter",
+          "24/7 Candidate Concierge"
+        ],
+        "connectors": [
+          "Public Labor & University Signals",
+          "Approved Employer Brand Kit",
+          "Career Site Chat Widget"
+        ],
+        "guardrail": "All external social campaigns require Employer Brand review; Candidate Concierge cannot disclose unapproved salary quotes."
+      },
+      "samplePrompt": "Identify high-density Tier-2/Tier-3 talent hubs in Gujarat and Madhya Pradesh for Bilingual Retail Relationship Officers and draft a Hinglish + Gujarati YouTube Shorts outreach script paired with candidate FAQs.",
+      "sampleTrace": "1. Mapped regional commerce & banking university density across Indore, Surat, Vadodara, and Rajkot.\n2. Generated compliant 45-second outreach script emphasizing internal Phygital Branch Manager career growth.\n3. Synced localized FAQ responses with verified Careers site eligibility criteria.",
+      "guardrails": "Brand tone lock + verified benefit/eligibility corpus prevents unauthorized promises during public candidate conversations.",
+      "slideOutcome": "Reaches Tier-2/3 talent in regional languages.",
+      "slideOutcomeLong": "Direct micro-market hiring without agency tax.",
+      "slideProcessShort": "Micro-Market Sourcing",
+      "simpleName": "Talent Magnet",
+      "howItWorks": {
+        "trigger": "Recruiting Lead launches hiring in an emerging city or answers candidate questions",
+        "inputs": [
+          "Approved Job Requisition & target Indian hubs (e.g., Surat, Indore, Kochi)",
+          "Employer brand voice guidelines & approved benefits/eligibility sheet",
+          "Real-time candidate questions on the Careers portal chat"
+        ],
+        "steps": [
+          {
+            "title": "Research Local Talent Hotspots",
+            "detail": "Scans university density, competitor footprints, and skill pools across Tier-2 and Tier-3 cities."
+          },
+          {
+            "title": "Draft Regional Outreach Content",
+            "detail": "Creates short-video scripts and social posts in Hinglish or regional languages anchored strictly in approved brand copy."
+          },
+          {
+            "title": "Answer Candidate Questions 24/7",
+            "detail": "Responds to shift, location, and role-growth questions using only verified Careers documentation."
+          }
+        ],
+        "readsFrom": [
+          "Public University & Labor Signals",
+          "Verified Careers & Benefits Repository"
+        ],
+        "writesTo": [
+          "Localized Social / Short-Video Campaign Drafts",
+          "Careers Site Candidate Concierge Chat"
+        ],
+        "outputs": [
+          "City-level sourcing heatmap & micro-market brief",
+          "45-second Hinglish / regional outreach scripts & FAQs",
+          "Verified 24/7 candidate answers with zero unapproved salary quotes"
+        ],
+        "humanCheckpoint": "Employer Brand Lead approves every external campaign script before social publishing.",
+        "exampleBefore": "Slow external recruiter agency dependency in Tier-2 hubs + unanswered weekend candidate chats.",
+        "exampleAfter": "Focused campaign across 4 Gujarat/MP hubs + 24/7 bilingual Careers Q&A grounded in policy."
+      }
+    },
+    "blind_screening_agent": {
+      "id": "blind_screening_agent",
+      "num": "03",
+      "code": "Bs",
+      "pillarId": "requisition_screening",
+      "pillarName": "Requisition & Screening",
+      "pillarColor": "#1A73E8",
+      "processName": "Resume Parsing, Skill Graph Matching & Bias-Safe Shortlisting",
+      "name": "Skills Extraction & Blind Screening",
+      "buildTier": "High-Code",
+      "platformLayer": "Google Agent Development Kit (ADK) + Cloud DLP + BigQuery",
+      "outcomeBadge": "-40%–50% Manual Review Time · Four-Fifths Fairness Audit",
+      "baselineVsTarget": "300+ unredacted PDFs reviewed manually → PII-masked evidence ranking",
+      "personasServed": [
+        "Technical Recruiter",
+        "Hiring Panel Chair",
+        "Compliance & Equal Opportunity Auditor"
+      ],
+      "shortDesc": "Parses messy multi-format resumes into structured skills, masks demographic identifiers for DPDP compliance, and explains shortlist rankings transparently.",
+      "problem": "High-volume requisitions overwhelm recruiters with 300+ inconsistent CVs while unconscious name/college bias and Personal Identifiable Information (PII) exposure risk DPDP and fairness violations.",
+      "solution": "A code-first ADK pipeline runs deterministic Cloud Data Loss Prevention (DLP) redaction before LLM skill extraction, evaluates candidates against explicit job rubric weights, and tracks Four-Fifths (80%) adverse-impact ratios.",
+      "advantage": "Cuts manual screening effort 40%–50% while generating explainable skill evidence cards — never a black-box auto-reject.",
+      "systems": [
+        "Google Agent Development Kit (ADK) on Vertex AI Agent Engine",
+        "Google Cloud Data Loss Prevention (DLP)",
+        "Document AI Resume Parser & BigQuery",
+        "PeopleStrong / Workday ATS MCP Server"
+      ],
+      "mcpTools": [
+        "CloudDLPRedactPII (Deterministic Pre-Screen Strip)",
+        "SkillGraphMatcher (Weighted Rubric Evaluator)",
+        "AdverseImpactMonitor (Four-Fifths 80% Telemetry)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "ADK Screening Coordinator",
+        "specialists": [
+          "Cloud DLP PII Masker",
+          "Skill & Evidence Extractor",
+          "Fairness Impact Auditor"
+        ],
+        "connectors": [
+          "PeopleStrong / Workday ATS (MCP)",
+          "BigQuery Rubric Warehouse",
+          "Recruiter HITL Console"
+        ],
+        "guardrail": "Zero autonomous auto-rejection: humans review borderline candidates; PII stripped prior to scoring per India DPDP Act."
+      },
+      "samplePrompt": "Parse the 184 applications on Req #IND-2041 (Cloud Platform Engineer), redact all names, gender, addresses, and college names via Cloud DLP, score strictly against Python/Kubernetes/FinOps rubrics, and return the top 15 explainable profiles.",
+      "sampleTrace": "1. Invoked CloudDLP across 184 PDFs -> masked 100% personal & demographic identifiers.\n2. Extracted verified project skills and mapped evidence spans.\n3. Verified shortlist selection parity ratio at 0.91 (>0.80 threshold) and queued top candidates for TA Partner sign-off.",
+      "guardrails": "Deterministic Cloud DLP pre-processing, India DPDP purpose-limitation tagging, and mandatory human shortlist approval.",
+      "slideOutcome": "PII-masked screening with Four-Fifths audit.",
+      "slideProcessShort": "Fairness Screening",
+      "slideBefore": "300+ unmasked CVs reviewed manually.",
+      "slideAfter": "40%–50% faster masked skill shortlists.",
+      "slideOrch": "ADK Screening Coordinator",
+      "slideSpecs": [
+        "Cloud DLP Masker",
+        "Fairness Impact Audit"
+      ],
+      "slideSystems": [
+        "PeopleStrong / Workday",
+        "Recruiter Approval"
+      ],
+      "slideGuardrail": "Deterministic PII masking + mandatory human shortlist sign-off.",
+      "simpleName": "Blind Screening",
+      "howItWorks": {
+        "trigger": "Talent Acquisition Partner uploads incoming resume batch for an open requisition",
+        "inputs": [
+          "Batch of unredacted candidate resumes (PDF / Word format)",
+          "Weighted Job Skill Rubric from the hiring manager",
+          "India Digital Personal Data Protection (DPDP) masking & Four-Fifths fairness rules"
+        ],
+        "steps": [
+          {
+            "title": "Strip Personal Identifiers First",
+            "detail": "Deterministically masks names, gender clues, addresses, phone numbers, and college names via Cloud Data Loss Prevention (DLP) before AI sees them."
+          },
+          {
+            "title": "Extract & Score Verified Skills",
+            "detail": "Parses projects and tools from redacted CVs and scores each match against explicit rubric weights with supporting quotes."
+          },
+          {
+            "title": "Run Fairness Parity Check",
+            "detail": "Calculates cohort selection ratios (Four-Fifths 80% rule) and attaches full explanation cards for every shortlisted profile."
+          }
+        ],
+        "readsFrom": [
+          "PeopleStrong / Workday ATS Resume Queue",
+          "BigQuery Role Skill Rubrics"
+        ],
+        "writesTo": [
+          "Recruiter Human-in-the-Loop (HITL) Review Queue",
+          "Fairness Audit Log in BigQuery"
+        ],
+        "outputs": [
+          "Ranked, identity-masked shortlist with exact skill-evidence citations",
+          "Four-Fifths adverse-impact parity scorecard",
+          "Borderline candidate flag list for manual human inspection"
+        ],
+        "humanCheckpoint": "Zero autonomous rejections: Recruiter inspects borderline candidates and clicks Advance or Decline.",
+        "exampleBefore": "184 raw PDFs containing names/colleges stacked in an inbox requiring 6+ hours of manual skimming.",
+        "exampleAfter": "Top 15 anonymized skill-evidence cards + 0.91 fairness ratio ready for Recruiter sign-off."
+      }
+    },
+    "interview_orchestrator_agent": {
+      "id": "interview_orchestrator_agent",
+      "num": "04",
+      "code": "Io",
+      "pillarId": "candidate_hiring",
+      "pillarName": "Candidate Hiring & Selection",
+      "pillarColor": "#185ABC",
+      "processName": "Multi-Panel Interview Scheduling & Logistics Automation",
+      "name": "Zero-Touch Interview Orchestrator",
+      "buildTier": "No-Code",
+      "platformLayer": "Gemini Enterprise + Google Workspace Calendar / Meet + ATS Connector",
+      "outcomeBadge": "4 Days → < 1 Hour Turnaround",
+      "baselineVsTarget": "4-day email scheduling ping-pong → <60-min multi-panel confirmation",
+      "personasServed": [
+        "Recruiting Coordinator",
+        "Interview Panelist",
+        "Hiring Manager",
+        "Candidate"
+      ],
+      "shortDesc": "Eliminates manual calendar tag by negotiating candidate slots, matching qualified panel backups, booking Meet links, and sending structured prep kits.",
+      "problem": "Even after screening a star candidate, top talent drops off during 4-day email back-and-forth across busy engineering and business interviewers.",
+      "solution": "Connected securely to Google Calendar, Meet, and ATS panel pools inside Gemini Enterprise, the orchestrator inspects real-time free/busy rules, respects interviewer load limits, and locks loops automatically.",
+      "advantage": "Directly delivers the keynote headline compression ('Interview Rounds — from 4 days to 1 hour') while cutting panelist no-shows and preparation gaps.",
+      "systems": [
+        "Gemini Enterprise Connector",
+        "Google Calendar & Google Meet API",
+        "ATS Interviewer Load-Balance Pool",
+        "Role-Calibrated Question Bank"
+      ],
+      "mcpTools": [
+        "PanelLoadBalancer (Weekly Interview Cap Check)",
+        "CalendarConflictResolver (Multi-TZ Slot Negotiation)",
+        "InterviewPrepPackDispatcher (Calibrated Rubric + Context)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Scheduling Connector Agent (Gemini Flash)",
+        "specialists": [
+          "Time-Zone & Load Optimizer",
+          "Backup Panelist Matcher",
+          "Rubric Kit Assembler"
+        ],
+        "connectors": [
+          "Google Calendar / Meet",
+          "PeopleStrong / Workday ATS",
+          "Candidate Email / SMS Concierge"
+        ],
+        "guardrail": "Respects interviewer private calendar privacy (free/busy only) and enforces candidate consent & rescheduling rights."
+      },
+      "samplePrompt": "Schedule a 3-round panel (Technical System Design, Behavioral, Hiring Manager) within the next 48 hours for Shortlist Group A without exceeding any interviewer's 4-interview weekly cap.",
+      "sampleTrace": "1. Checked free/busy availability across 14 calibrated panelists in Bengaluru & Mumbai.\n2. Detected conflict for Panelist B -> swapped qualified Shadow Panelist D automatically.\n3. Booked 3 Google Meet rooms + dispatched role-specific evaluation guides in 42 seconds.",
+      "guardrails": "Reads free/busy availability metadata only (zero calendar event body snooping) and preserves instant human override.",
+      "slideOutcome": "4-day calendar ping-pong cut under 1 hour.",
+      "slideProcessShort": "Panel Scheduling",
+      "simpleName": "Interview Scheduler",
+      "howItWorks": {
+        "trigger": "Recruiter marks candidates as shortlisted for multi-round interviews",
+        "inputs": [
+          "Shortlisted candidate emails & preferred time windows",
+          "Approved interviewer pool (e.g., System Design, Behavioral, Hiring Manager)",
+          "Weekly interview load cap (maximum 4 interviews per panelist)"
+        ],
+        "steps": [
+          {
+            "title": "Read Free/Busy Availability Only",
+            "detail": "Checks Google Calendar availability slots across calibrated panelists without reading private meeting titles or bodies."
+          },
+          {
+            "title": "Auto-Swap Overloaded Panelists",
+            "detail": "Detects conflicts or fatigued interviewers hitting their weekly limit and rotates in qualified shadow panelists."
+          },
+          {
+            "title": "Book Rooms & Dispatch Prep Guides",
+            "detail": "Sends multi-round calendar invites, Google Meet links, and role-specific interview rubrics to both sides."
+          }
+        ],
+        "readsFrom": [
+          "Google Calendar Free/Busy Metadata",
+          "Interviewer Calibration Pool & Load Caps"
+        ],
+        "writesTo": [
+          "Google Calendar & Google Meet Invites",
+          "Calibrated Interview Prep Emails to Panelists"
+        ],
+        "outputs": [
+          "Confirmed 3-round interview sequence in under 1 hour",
+          "Balanced panelist workload report",
+          "Structured evaluation guide attached to every panelist invite"
+        ],
+        "humanCheckpoint": "Recruiter or candidate can reschedule or swap any proposed slot with one click.",
+        "exampleBefore": "4 days of back-and-forth emails chasing 3 busy engineers across Bengaluru & Mumbai calendars.",
+        "exampleAfter": "All 3 rounds + Meet links + calibrated scorecards booked and dispatched in 42 seconds."
+      }
+    },
+    "interview_offer_decision_agent": {
+      "id": "interview_offer_decision_agent",
+      "num": "05",
+      "code": "Od",
+      "pillarId": "candidate_hiring",
+      "pillarName": "Candidate Hiring & Selection",
+      "pillarColor": "#185ABC",
+      "processName": "Feedback Aggregation, Decision Debrief & Offer Generation",
+      "name": "Interview Rubric & Offer Decision",
+      "buildTier": "High-Code",
+      "platformLayer": "Google ADK + Cloud Spanner + Model Armor + HITL Offer Gate",
+      "outcomeBadge": "Faster Offer Acceptance · 100% Pay-Band Compliance",
+      "baselineVsTarget": "Delayed debriefs & ad-hoc salary guesswork → Instant calibrated offer brief",
+      "personasServed": [
+        "Talent Acquisition (TA) Lead",
+        "Compensation Partner",
+        "Hiring Executive"
+      ],
+      "shortDesc": "Synthesizes interview panel scorecards into neutral evidence summaries, flags divergent signals, and drafts compensation-band-compliant offer letters.",
+      "problem": "Recruiters wait days for fragmented panelist feedback and then wrestle over compensation bands, letting competing offers poach finalists.",
+      "solution": "An ADK Macro-Analytics Feedback Agent collates rubric scores inside Cloud Spanner, isolates factual discrepancies (e.g., Architecture high vs. Coding concern), and pre-populates compliant offer terms within approved internal parity bands.",
+      "advantage": "Ensures every hire/no-hire and compensation rationale is auditable while requiring explicit human compensation sign-off before releasing an offer.",
+      "systems": [
+        "Google ADK Multi-Agent Engine",
+        "Cloud Spanner (Offer & Approval State)",
+        "BigQuery Comp Band Repository",
+        "Model Armor Input/Output Filter"
+      ],
+      "mcpTools": [
+        "ScorecardSynthesisTool (Rubric Citation Aggregation)",
+        "ParityBandChecker (Peer Equity Validation)",
+        "OfferPackageDraftAPI (HITL Approval Queue)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "ADK Selection & Offer Coordinator",
+        "specialists": [
+          "Rubric Feedback Synthesizer",
+          "Compensation Band Verifier",
+          "HITL Offer Drafter"
+        ],
+        "connectors": [
+          "ATS Scorecard Stream",
+          "BigQuery Peer Parity DB",
+          "Executive E-Sign Workflow"
+        ],
+        "guardrail": "Mandatory Human-in-the-Loop (HITL) compensation approval; agent never commits binding salary or start dates autonomously."
+      },
+      "samplePrompt": "Synthesize all 4 interviewer scorecards for Finalist #C-892, highlight evidence divergences, check Grade E3 Bengaluru peer pay parity, and prepare a draft offer memo for Compensation Partner approval.",
+      "sampleTrace": "1. Aggregated 4 scorecards -> flagged strong system design vs. partial SQL tuning gap for follow-up.\n2. Checked internal E3 equity band (₹32L–₹38L; peer median ₹35.4L) with <1.2% variance.\n3. Queued draft offer brief at ₹35.5L pending Compensation Partner click-to-approve.",
+      "guardrails": "Model Armor + strict RBAC blocks unauthorized salary exposure; no binding offer leaves without named human approval.",
+      "slideOutcome": "Synthesizes scorecards & flags band drift.",
+      "slideProcessShort": "Debrief & Offers",
+      "simpleName": "Interview & Offer Coach",
+      "howItWorks": {
+        "trigger": "Final interview panel submits all completed round scorecards",
+        "inputs": [
+          "Completed interviewer scorecards from all 3–4 rounds",
+          "Candidate target grade & location pay equity band",
+          "Standard offer letter & approval workflow policy"
+        ],
+        "steps": [
+          {
+            "title": "Compare & Reconcile Feedback",
+            "detail": "Reads every interviewer note, highlights consensus strengths, and surfaces conflicting ratings (e.g., strong architecture vs. SQL concern)."
+          },
+          {
+            "title": "Check Internal Pay Parity",
+            "detail": "Compares proposed offer against existing peers in the same grade/city to prevent pay compression."
+          },
+          {
+            "title": "Assemble Draft Offer Memo",
+            "detail": "Prepares a citation-backed debrief brief and draft compensation summary ready for calibration."
+          }
+        ],
+        "readsFrom": [
+          "ATS Interview Scorecards",
+          "Restricted Compensation Equity Band Table"
+        ],
+        "writesTo": [
+          "Compensation Partner & Hiring Manager Approval Queue"
+        ],
+        "outputs": [
+          "Structured Debrief Brief spotlighting signal vs. divergence",
+          "Peer pay parity check (<2% dispersion verification)",
+          "Draft Offer Letter queued for human executive approval"
+        ],
+        "humanCheckpoint": "Strict Human Gate: No binding offer ever leaves the system without named Compensation & Hiring Manager sign-off.",
+        "exampleBefore": "Scattered feedback docs across 4 panelists + slow spreadsheet checks delaying offer generation.",
+        "exampleAfter": "Unified 1-page Debrief Brief + parity-verified ₹35.5L draft memo waiting on Compensation approval."
+      }
+    },
+    "onboarding_navigator_agent": {
+      "id": "onboarding_navigator_agent",
+      "num": "06",
+      "code": "On",
+      "pillarId": "onboarding",
+      "pillarName": "Personalized Onboarding",
+      "pillarColor": "#007B83",
+      "processName": "Adaptive Day 1-30-60-90 Onboarding & Virtual Buddy",
+      "name": "Onboarding Navigator & Virtual Buddy",
+      "buildTier": "No-Code",
+      "platformLayer": "Gemini Enterprise + Grounded Site Guides + Personalized Milestone Plan",
+      "outcomeBadge": ">95% Day-7 Compliance · Personalized Day-1 Delight",
+      "baselineVsTarget": "Generic static PDF welcome packets → Interactive 1/30/60/90 Buddy Hub",
+      "personasServed": [
+        "New Joiner",
+        "Onboarding Manager",
+        "Assigned Peer Buddy"
+      ],
+      "shortDesc": "Generates role- and location-specific 1/30/60/90-day onboarding plans and acts as a 24/7 multilingual Virtual Buddy across policy and branch queries.",
+      "problem": "Static welcome decks leave new hires overwhelmed on Day 1, hesitant to bother busy managers with basic location, benefits, or tool questions.",
+      "solution": "Grounded in proven enterprise Onboarding Navigator patterns and the Personalized Day One Dashboard framework, this No-Code assistant adapts checklists to role, branch/office, and start cohort.",
+      "advantage": "Maintains >95% first-week compliance completion while freeing managers and peer buddies to focus on authentic cultural belonging.",
+      "systems": [
+        "Gemini Enterprise App",
+        "Role & Location Playbooks (Drive / SharePoint)",
+        "Google Workspace Chat & Calendar Reminders",
+        "Open Knowledge Format (OKF) Checklists"
+      ],
+      "mcpTools": [
+        "RoleItineraryPersonalizer (Day 1/30/60/90 Builder)",
+        "BranchLocalGuideLookup (Facility & Transport Q&A)",
+        "ChecklistNudgeScheduler (Gentle Milestone Reminders)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Onboarding Navigator (No-Code · Gemini Enterprise)",
+        "specialists": [
+          "Day 1/30/60/90 Planner",
+          "Branch / Site Concierge",
+          "New-Joiner FAQ Guide"
+        ],
+        "connectors": [
+          "Local Branch & Campus Guides",
+          "Team Org Directory",
+          "Google Chat / Portal"
+        ],
+        "guardrail": "Strictly grounded in site-specific handbooks; sensitive HR grievance or medical accommodation queries escalate privately to HRBP."
+      },
+      "samplePrompt": "Generate a Personalized Day-One to Day-90 onboarding plan for a new Retail Branch Relationship Manager joining Pune Camp Branch, including key facility details, compliance milestones, and stakeholder intro cadence.",
+      "sampleTrace": "1. Built interactive 4-phase plan: Day 1 Badge & Branch Tour -> Day 30 KYC/Product Mastery -> Day 60 Portfolio Shadow -> Day 90 Branch Quota Autonomy.\n2. Surfacing parking permit rules, branch POS escalation contact, and assigned peer buddy details.",
+      "guardrails": "Verified site guides prevent outdated facility info; escalates personal/payroll exceptions safely to HR Operations.",
+      "slideOutcome": "Personalized 1/30/60/90 guides per location.",
+      "slideProcessShort": "Day-1 Experience",
+      "simpleName": "Onboarding Buddy",
+      "howItWorks": {
+        "trigger": "Candidate signs offer letter or New Joiner asks a Day 1–90 question",
+        "inputs": [
+          "New hire role, department, assigned buddy & office/branch location",
+          "Mandatory compliance & training deadlines (Day 1, Day 30, Day 60, Day 90)",
+          "Office-specific playbooks (parking, badge desk, cafeteria, local leads)"
+        ],
+        "steps": [
+          {
+            "title": "Personalize 90-Day Roadmap",
+            "detail": "Generates a customized 1/30/60/90-day checklist tailored specifically to the joiner's role and branch."
+          },
+          {
+            "title": "Answer Day-One Questions Immediately",
+            "detail": "Guides new hires on dress code, shuttle routes, laptop setup, and compliance modules via Open Knowledge Format (OKF) checklists."
+          },
+          {
+            "title": "Schedule Gentle Check-In Nudges",
+            "detail": "Prompts the manager and peer buddy ahead of key Day 7 and Day 30 milestones so nobody slips."
+          }
+        ],
+        "readsFrom": [
+          "Role & Location Playbooks (Drive / OKF)",
+          "Assigned Manager & Peer Buddy Directory"
+        ],
+        "writesTo": [
+          "Personalized Joiner Chat Hub",
+          "Google Calendar Milestone Reminders"
+        ],
+        "outputs": [
+          "Interactive Day 1–30–60–90 onboarding itinerary",
+          "Local branch/campus quick-reference guide",
+          ">95% Day-7 compliance checklist completion nudges"
+        ],
+        "humanCheckpoint": "Escalates any personal, visa, or payroll anomaly directly to HR Operations Specialists.",
+        "exampleBefore": "New hire arrives confused on Day 1 searching 15 generic onboarding PDFs.",
+        "exampleAfter": "Role-tailored Pune Branch itinerary + peer buddy intro + instant badge & parking answers."
+      }
+    },
+    "cross_system_provisioning_agent": {
+      "id": "cross_system_provisioning_agent",
+      "num": "07",
+      "code": "Xp",
+      "pillarId": "onboarding",
+      "pillarName": "Personalized Onboarding",
+      "pillarColor": "#007B83",
+      "processName": "Multi-System Pre-Boarding (HRIS + ITSM + Access)",
+      "name": "Zero-Touch Provisioning Agent",
+      "buildTier": "High-Code",
+      "platformLayer": "Google ADK + FastMCP (PeopleStrong / Workday + ServiceNow) + Agent Engine",
+      "outcomeBadge": "-15%–25% Time-to-Productivity · Zero Day-1 Blockers",
+      "baselineVsTarget": "Manual email handoffs across 5 IT/HR tools → Atomic MCP orchestration",
+      "personasServed": [
+        "HR Operations Specialist",
+        "IT Service Desk",
+        "Facilities & Security Lead"
+      ],
+      "shortDesc": "Orchestrates parallel backend provisioning upon contract signature — syncing HCM worker profiles, ServiceNow hardware/software tickets, and security badges.",
+      "problem": "Hiring teams close great talent only for new joiners to spend Day 1 to Day 4 locked out of laptops, repositories, and payroll portals due to broken inter-system handoffs.",
+      "solution": "Built directly on the Enterprise HR Multi-Agent FastMCP blueprint (`hr_orchestrator` -> `hcm_specialist` + `itsm_specialist`), the agent automates cross-system state checks and ticket orchestration with idempotent retries.",
+      "advantage": "Eliminates repetitive pre-boarding spreadsheet trackers and compresses overall new-hire time-to-productivity by 15%–25%.",
+      "systems": [
+        "Google ADK Orchestrator (Vertex AI Agent Engine)",
+        "FastMCP HCM Server (PeopleStrong / Workday)",
+        "FastMCP ITSM Server (ServiceNow HRSD / ITSM)",
+        "Model Armor & IAM Service Governance"
+      ],
+      "mcpTools": [
+        "create_worker_profile (HCM FastMCP)",
+        "provision_equipment_and_access (ServiceNow FastMCP)",
+        "verify_day1_readiness_sla (Cross-System Health Check)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Enterprise HR Provisioning Orchestrator (ADK)",
+        "specialists": [
+          "HCM Profile Specialist (MCP)",
+          "ServiceNow ITSM Specialist (MCP)",
+          "SLA Exception Watcher"
+        ],
+        "connectors": [
+          "PeopleStrong / Workday API",
+          "ServiceNow Hardware & IAM",
+          "IT/HR Ops Exception Alerting"
+        ],
+        "guardrail": "Zero silent partial-failure downgrades: failed downstream IT tickets trigger explicit SLA alerts rather than false completion."
+      },
+      "samplePrompt": "Run Day-1 readiness orchestration for the 12 new engineers starting Monday in Hyderabad: verify HCM worker IDs, confirm MacBook/VMware ticket states in ServiceNow, and flag any unfulfilled badge dependencies.",
+      "sampleTrace": "1. Polled HCM MCP -> 12/12 active worker profiles confirmed.\n2. Polled ServiceNow MCP -> 11 laptops dispatched; 1 IAM security-group approval stalled (Ticket #INC-90421).\n3. Triggered P1 IT Ops alert + notified Hiring Manager proactively 72 hours ahead of Day 1.",
+      "guardrails": "Strict gatekeeper invariant: enforces role-least-privilege IAM templates and refuses unapproved elevated admin access requests.",
+      "slideOutcome": "Zero Day-1 blockers across HCM & ITSM.",
+      "slideProcessShort": "Parallel Provisioning",
+      "slideBefore": "Manual email handoffs delay Day-1 setup.",
+      "slideAfter": ">95% Day-1 hardware & access readiness.",
+      "slideOrch": "ADK Provisioning Hub",
+      "slideSpecs": [
+        "HCM Worker Sync",
+        "ITSM Laptop & IAM"
+      ],
+      "slideSystems": [
+        "PeopleStrong / Workday",
+        "ServiceNow ITSM"
+      ],
+      "slideGuardrail": "Pre-offer state-lock prevents premature IT provisioning.",
+      "simpleName": "Day-1 Provisioning",
+      "howItWorks": {
+        "trigger": "Offer signed event fires (7–14 days before Day 1) or morning Day-1 readiness audit",
+        "inputs": [
+          "Signed candidate record (start date, work city, cost center, role profile)",
+          "Role-based laptop, badge & software access template",
+          "Open provisioning ticket states from PeopleStrong / Workday and ServiceNow"
+        ],
+        "steps": [
+          {
+            "title": "Create Worker Profile in HCM",
+            "detail": "Calls FastMCP HCM tools to initialize worker ID, reporting line, and payroll cost center automatically."
+          },
+          {
+            "title": "Trigger Laptop, Badge & Access Tickets",
+            "detail": "Submits coordinated ServiceNow IT & Facilities requests matched strictly to least-privilege role templates."
+          },
+          {
+            "title": "Detect Silent Stalls 72 Hours Early",
+            "detail": "Continuously reconciles HRIS vs. IT ticket statuses and escalates stuck approvals before Day 1 morning."
+          }
+        ],
+        "readsFrom": [
+          "PeopleStrong / Workday HCM (FastMCP)",
+          "ServiceNow IT & Facilities Tickets (FastMCP)"
+        ],
+        "writesTo": [
+          "Worker Record in HCM",
+          "ServiceNow Provisioning Tickets",
+          "IT & Hiring Manager Day-1 Blocker Alerts"
+        ],
+        "outputs": [
+          "Synced Employee ID across HR and IT systems before Day 1",
+          "Dispatched laptop, badge, and baseline Identity credentials",
+          "Live pre-boarding readiness report flagging any stalled ticket early"
+        ],
+        "humanCheckpoint": "Refuses unapproved elevated admin access requests; IT/Security approves exception tickets manually.",
+        "exampleBefore": "12 engineers start Monday while HR chases 36 manual email threads across HRIS, IT, and Facilities.",
+        "exampleAfter": "12/12 HCM IDs confirmed, 11 laptops shipped, and 1 stalled security ticket flagged 72 hrs early."
+      }
+    },
+    "regulatory_learning_studio_agent": {
+      "id": "regulatory_learning_studio_agent",
+      "num": "08",
+      "code": "Rl",
+      "pillarId": "continuous_learning",
+      "pillarName": "Continuous Learning & Mobility",
+      "pillarColor": "#1E8E3E",
+      "processName": "Compliance Content Transformation & Micro-Learning Authoring",
+      "name": "Regulatory Learning & FAQ Studio",
+      "buildTier": "No-Code",
+      "platformLayer": "Gemini Enterprise + Multimodal Learning Pipeline (Enterprise FAQ Pattern)",
+      "outcomeBadge": "50-Page PDFs → 3-Min Regional Micro-Reels",
+      "baselineVsTarget": "Low engagement on dense annual policy PDFs → High-retention 3-min modules",
+      "personasServed": [
+        "Learning & Development (L&D) Designer",
+        "Compliance & Legal Officer",
+        "Frontline Branch / Plant Associate"
+      ],
+      "shortDesc": "Converts dense compliance circulars, Prevention of Sexual Harassment (POSH) mandates, and product SOPs into 3-minute regional-language learning reels and searchable FAQs.",
+      "problem": "Organizations push 50-page compliance handbooks to frontline teams with shortening attention spans, resulting in checkbox clicking instead of real operational judgment.",
+      "solution": "Fuses the Regulatory Learning Reel architecture with proven No-Code FAQ generation patterns: ingesting authoritative circulars to emit scenario scripts, multilingual voiceover storyboards, micro-quizzes, and FAQ hubs.",
+      "advantage": "Slashes L&D content turnaround from weeks to hours while delivering vernacular comprehension for distributed branches, stores, and factories.",
+      "systems": [
+        "Gemini Enterprise Multimodal Content Studio",
+        "Verified Policy & Regulatory Repository",
+        "Learning Management System (LMS) SCORM / FAQ Export",
+        "Regional Language Localization Review"
+      ],
+      "mcpTools": [
+        "CircularToFAQExtractor (Policy Citation Grounded)",
+        "MicroReelStoryboardBuilder (3-Min Script + Quiz)",
+        "VernacularToneAdapter (Hindi, Marathi, Tamil, Telugu, Bengali)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Learning & FAQ Studio (No-Code · Gemini Enterprise)",
+        "specialists": [
+          "FAQ Clause Synthesizer",
+          "3-Min Micro-Reel Scripter",
+          "Multilingual Quiz Builder"
+        ],
+        "connectors": [
+          "Regulatory PDF Circulars",
+          "Enterprise LMS Catalog",
+          "Legal Sign-Off Queue"
+        ],
+        "guardrail": "Compliance Officer sign-off mandatory before publishing external/regulatory training modules to employees."
+      },
+      "samplePrompt": "Transform this 48-page Anti-Money Laundering (AML) & KYC Banking Circular into a 3-minute scenario-based Learning Reel script (English + Hindi) plus 10 branch FAQ cards.",
+      "sampleTrace": "1. Extracted 6 critical branch red-flag scenarios from Sections 4.2 and 7.1 with exact clause footnotes.\n2. Scripted 3-min interactive customer dialogue + 3-question rapid comprehension check.\n3. Exported searchable FAQ pack for frontline mobile LMS.",
+      "guardrails": "Strict source-clause anchoring eliminates fabricated penalties or simplified legal misstatements.",
+      "slideOutcome": "Turns 50-page compliance PDFs into 3-min reels.",
+      "slideProcessShort": "Micro-Learning",
+      "simpleName": "Micro-Learning Studio",
+      "howItWorks": {
+        "trigger": "Compliance or Learning & Development (L&D) uploads a new regulatory circular or SOP",
+        "inputs": [
+          "Dense regulatory circular, Anti-Money Laundering (AML) manual, or Safety PDF",
+          "Target frontline role & regional Indian languages (Hindi, Marathi, Tamil, Telugu, Bengali)",
+          "Approved corporate tone & compliance accuracy rules"
+        ],
+        "steps": [
+          {
+            "title": "Extract Must-Know Rules & Clauses",
+            "detail": "Identifies the critical real-world risk scenarios and red-flag triggers while keeping exact section/clause numbers."
+          },
+          {
+            "title": "Script 3-Minute Micro-Reels",
+            "detail": "Converts legal jargon into relatable 3-minute customer/floor scenarios plus 3 quick knowledge-check questions."
+          },
+          {
+            "title": "Translate & Export Searchable FAQs",
+            "detail": "Adapts scripts into natural regional spoken language and packages mobile Learning Management System (LMS) cards."
+          }
+        ],
+        "readsFrom": [
+          "Verified Compliance Circulars & Standard Operating Procedures (SOPs)"
+        ],
+        "writesTo": [
+          "LMS Micro-Learning Modules & SCORM Packs",
+          "Frontline Mobile FAQ Library"
+        ],
+        "outputs": [
+          "3-minute bilingual micro-learning video storyboard & script",
+          "10 clause-cited frontline FAQ quick-reference cards",
+          "3-question mastery quiz verifying comprehension"
+        ],
+        "humanCheckpoint": "Compliance & Legal Officer approves final scripts before publishing to frontline associates.",
+        "exampleBefore": "48-page dense regulatory PDF that busy branch staff skim or leave unread.",
+        "exampleAfter": "Engaging 3-min Hindi/English role-play script + 10 instant mobile FAQ cards with exact clause tags."
+      }
+    },
+    "career_saathi_agent": {
+      "id": "career_saathi_agent",
+      "num": "09",
+      "code": "Cs",
+      "pillarId": "continuous_learning",
+      "pillarName": "Continuous Learning & Mobility",
+      "pillarColor": "#1E8E3E",
+      "processName": "Internal Career Pathing & Multilingual Role-Play Coaching",
+      "name": "Career Saathi (Mobility & Coach)",
+      "buildTier": "High-Code",
+      "platformLayer": "Google ADK + Gemini Multimodal Coaching + Vertex AI Memory Bank + Skill Graph",
+      "outcomeBadge": "Transforms 1.1-Yr Churn into Internal Mobility",
+      "baselineVsTarget": "Opaque promotion ladders → Guided skill mapping & live scenario coaching",
+      "personasServed": [
+        "Mid-Career Employee",
+        "Frontline People Manager",
+        "Talent Mobility Partner"
+      ],
+      "shortDesc": "Maps an employee's live skills against target internal roles and coaches them through realistic, multilingual high-stakes workplace simulations.",
+      "problem": "High-potential associates (such as Gen Z retail branch staff) quit at ~1.1 years because they cannot see how to reach roles like Phygital Branch Manager or lack safe practice for tough client conversations.",
+      "solution": "Built on the Career Saathi ADK architecture and Radha frontline progression journey: queries the enterprise Skill Graph, prescribes targeted reskilling sprints, and acts as an irate-client / SME-negotiation / junior-coaching simulator in regional Indian and English languages.",
+      "advantage": "Turns internal mobility from an annual PDF form into a daily 3-minute digital habit that builds ready-now internal leadership pipelines.",
+      "systems": [
+        "Google ADK + Vertex AI Agent Engine",
+        "Vertex AI Memory Bank (Longitudinal Coaching Progress)",
+        "Enterprise Skill & Role Competency Graph (Spanner / BigQuery)",
+        "Multimodal Audio & Chat Role-Play Interface"
+      ],
+      "mcpTools": [
+        "SkillGapGraphMapper (Current vs. Target Role Diff)",
+        "RegionalRolePlaySimulator (Demanding HNI / SME Client Persona)",
+        "InternalJobMatchRecommender (Mobility Feed Sync)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Career Saathi Coach (ADK · Gemini Pro/Flash)",
+        "specialists": [
+          "Skill-Path Graph Architect",
+          "Multilingual Role-Play Simulator",
+          "Readiness Evaluator"
+        ],
+        "connectors": [
+          "Enterprise LMS & Skill Graph",
+          "Internal Talent Marketplace",
+          "Memory Bank Progress Store"
+        ],
+        "guardrail": "Private developmental coaching transcripts are isolated from punitive appraisal records unless employee opts to share certification badges."
+      },
+      "samplePrompt": "Evaluate my 2 years as Retail Relationship Manager against the Phygital Branch Manager competency profile, show my top 3 skill gaps, and launch a 3-minute Hindi-English simulation negotiating an SME working-capital line with a skeptical factory owner.",
+      "sampleTrace": "1. Mapped Skill Diff: Strong customer rapport (92%), Growth needed in SME Credit Ratio Analysis (58%) & Hybrid Team Coaching (64%).\n2. Started live conversational simulation with 'Rajesh Textiles Owner' persona.\n3. Scored empathetic objection handling + recommended 2 micro-labs toward certification.",
+      "guardrails": "Psychological safety boundary: practice simulations remain private developmental coaching data, never auto-fed into disciplinary scoring.",
+      "slideOutcome": "Internal career paths & multilingual coaching.",
+      "slideProcessShort": "Career Mobility",
+      "slideBefore": "Opaque ladders push early-career exits.",
+      "slideAfter": "Guided internal role match & practice.",
+      "slideOrch": "Career Saathi ADK Coach",
+      "slideSpecs": [
+        "Skill-Gap Mapper",
+        "Voice Role-Play Sim"
+      ],
+      "slideSystems": [
+        "Enterprise LMS",
+        "Talent Marketplace"
+      ],
+      "slideGuardrail": "Practice simulations stay strictly off performance ratings.",
+      "simpleName": "Career Saathi",
+      "howItWorks": {
+        "trigger": "Employee explores next career step or launches a practice coaching session",
+        "inputs": [
+          "Employee current role, tenure, completed certifications & skill profile",
+          "Target internal role competency specification (e.g., Phygital Branch Manager)",
+          "Live voice or chat responses during simulated customer/team negotiation"
+        ],
+        "steps": [
+          {
+            "title": "Compute Skill Gap Map",
+            "detail": "Compares the employee's current verified skills against the target role to pinpoint 2–3 specific growth gaps."
+          },
+          {
+            "title": "Run Realistic Multilingual Role-Play",
+            "detail": "Plays a skeptical customer or team member (in English, Hindi, or regional mix) so employees practice safely."
+          },
+          {
+            "title": "Coach & Recommend Internal Roles",
+            "detail": "Scores empathy and technical clarity privately and prescribes bite-sized micro-labs plus matching open internal roles."
+          }
+        ],
+        "readsFrom": [
+          "Enterprise Skill Graph (Spanner / BigQuery)",
+          "Open Internal Job Requisitions"
+        ],
+        "writesTo": [
+          "Private Employee Learning Progress Memory Bank",
+          "Suggested Internal Mobility Matches"
+        ],
+        "outputs": [
+          "Personalized current-vs-target role readiness gap chart",
+          "Private coaching scorecard on negotiation & empathy",
+          "Curated internal job & reskilling path recommendations"
+        ],
+        "humanCheckpoint": "Psychological safety lock: practice simulations stay 100% private to the employee and are never fed into appraisals.",
+        "exampleBefore": "Early-career Relationship Manager exits after 1.1 years because next internal role feels invisible.",
+        "exampleAfter": "Sees exact gap (SME Credit Analysis), practices a Hindi SME pitch safely, and unlocks internal branch track."
+      }
+    },
+    "hr_policy_pilot_agent": {
+      "id": "hr_policy_pilot_agent",
+      "num": "10",
+      "code": "Pp",
+      "pillarId": "people_ops",
+      "pillarName": "People Ops & Service Delivery",
+      "pillarColor": "#4285F4",
+      "processName": "Grounded HR Policy Advisory & Circular Compliance",
+      "name": "HR Policy Pilot (OKF & Search)",
+      "buildTier": "No-Code",
+      "platformLayer": "Gemini Enterprise + Open Knowledge Format (OKF) / Verified Docs Search",
+      "outcomeBadge": "100% Citation Grounding · Zero Guessing",
+      "baselineVsTarget": "52-page unread handbooks & risky guesses → Clause-cited answers in 3s",
+      "personasServed": [
+        "All Employees",
+        "Line Managers",
+        "Regional HR Business Partner (HRBP)"
+      ],
+      "shortDesc": "Answers nuanced leave, expense, business-courtesy, and statutory policy questions strictly from verified handbooks with exact section citations and trap-rule refusal.",
+      "problem": "Employees rarely read 50-page policy PDFs, while tricky edge cases (e.g., an expense under a dollar threshold that is still strictly prohibited, like gift cards) cause compliance breaches when bots guess.",
+      "solution": "Combines proven production Policy Pilot patterns with the Open Knowledge Format (OKF) cross-linked Markdown policy tree: deliberately traversing related clauses and refusing out-of-scope questions rather than hallucinating.",
+      "advantage": "Ensures identical, audit-traceable answers across regions and eliminates policy contradictions.",
+      "systems": [
+        "Gemini Enterprise App & Verified Data Store",
+        "Open Knowledge Format (OKF) Policy Tree / Vertex AI Search",
+        "Regional Leave & Statutory Addenda",
+        "Audit Log & Feedback Capture"
+      ],
+      "mcpTools": [
+        "list_policy_concepts (OKF Concept Navigator)",
+        "read_policy_clause (Cross-Referenced Section Reader)",
+        "StrictRefusalGuard (Out-of-Policy Escalation)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Policy Pilot Advisor (No-Code · Gemini Flash)",
+        "specialists": [
+          "OKF Cross-Link Navigator",
+          "Edge-Case Exception Checker",
+          "Clause Citation Formatter"
+        ],
+        "connectors": [
+          "Approved Employee Handbook",
+          "Local Statutory Circulars",
+          "HR Escalation Queue"
+        ],
+        "guardrail": "Strict Grounded-Only Mandate: declines gracefully with HR contact if policy is silent or contains an explicit prohibition."
+      },
+      "samplePrompt": "Can I expense a ₹2,000 digital gift card as a thank-you courtesy for a vendor since it is under our ₹5,000 discretionary meal cap?",
+      "sampleTrace": "1. Traversed `expense_policy.md` -> cross-linked `business_courtesies_prohibitions.md`.\n2. Caught cash-equivalent exception: Cash and gift cards are explicitly prohibited regardless of amount (§4.3.2).\n3. Returned clear refusal + exact clause citation (avoiding compliance trap).",
+      "guardrails": "Never infers exceptions or waives prohibitions; always links canonical policy document version date.",
+      "slideOutcome": "100% cited policy answers, zero guessing.",
+      "slideProcessShort": "Policy Advisory",
+      "simpleName": "Policy Pilot",
+      "howItWorks": {
+        "trigger": "Employee or Manager asks a leave, travel, expense, or statutory policy question",
+        "inputs": [
+          "Natural-language question from employee or manager",
+          "Open Knowledge Format (OKF) canonical HR handbook & addenda",
+          "Regional office & employee grade eligibility rules"
+        ],
+        "steps": [
+          {
+            "title": "Walk Linked Policy Graph",
+            "detail": "Searches the Open Knowledge Format (OKF) index and follows cross-references (such as exception or prohibition clauses)."
+          },
+          {
+            "title": "Enforce Strict Clause Check",
+            "detail": "Catches subtle exclusions (e.g., gift-card prohibitions inside meal-allowance rules) before formulating an answer."
+          },
+          {
+            "title": "Deliver Citation-Backed Answer or Refusal",
+            "detail": "Responds with the exact rule, clause number, and effective date — or refuses clearly instead of guessing."
+          }
+        ],
+        "readsFrom": [
+          "Verified OKF Policy Repository (Read-Only)"
+        ],
+        "writesTo": [
+          "Read-Only Advisory Answer in Chat (Zero HRIS Writes)"
+        ],
+        "outputs": [
+          "Sub-second, 100% cited policy answer or safe refusal",
+          "Exact policy clause & version link",
+          "Optional feedback flag to Policy Owners when rules are ambiguous"
+        ],
+        "humanCheckpoint": "Never invents exceptions or waives policy; directs edge-case exception requests to Regional HRBP.",
+        "exampleBefore": "Waiting 2 days for a ticket reply on whether a ₹2,000 vendor gift card violates travel/meal rules.",
+        "exampleAfter": "Instant answer in 2 seconds citing §4.3.2: gift cards are cash-equivalents and prohibited regardless of cap."
+      }
+    },
+    "zero_touch_hr_concierge_agent": {
+      "id": "zero_touch_hr_concierge_agent",
+      "num": "11",
+      "code": "Hc",
+      "pillarId": "people_ops",
+      "pillarName": "People Ops & Service Delivery",
+      "pillarColor": "#4285F4",
+      "processName": "Tier-1 Transactional HR Helpdesk & Multi-System Ticket Resolution",
+      "name": "Zero-Touch HR Concierge",
+      "buildTier": "High-Code",
+      "platformLayer": "Google ADK + FastMCP (PeopleStrong / Workday + ServiceNow) + Model Armor",
+      "outcomeBadge": "60%–75% (~70%) Routine Ticket Deflection",
+      "baselineVsTarget": "Days waiting on Tier-1 HR tickets → <30s autonomous execution",
+      "personasServed": [
+        "Every Employee",
+        "HR Operations Team",
+        "Payroll & Benefits Administrator"
+      ],
+      "shortDesc": "Executes routine employee requests end-to-end inside chat — checking leave balances, applying PTO, fetching Form-16/tax slips, and routing complex 30% cases to HR Specialists.",
+      "problem": "HR service desks stay clogged because employees bounce between HRIS portals, payroll apps, and IT helpdesks for simple tasks like leave bookings, overtime rules, and bank/tax updates.",
+      "solution": "Follows the Zero-Touch HR Concierge & Multi-Agent `hr_orchestrator` ADK architecture: Model Armor scrubs inputs, then specialized FastMCP tools read/write HCM and ServiceNow records while passing summarized context on the ~30% sensitive escalations.",
+      "advantage": "Deflects ~70% of routine Tier-1 inquiry volume cleanly while reserving human empathy for the complex 30% involving life events, disputes, or medical needs.",
+      "systems": [
+        "Google ADK + Vertex AI Agent Engine",
+        "Model Armor Prompt-Injection & PII Shield",
+        "FastMCP HCM + ServiceNow HRSD Connectors",
+        "Corporate Knowledge & Mailbox Context Grounding"
+      ],
+      "mcpTools": [
+        "get_leave_balance & submit_leave_request (HCM MCP)",
+        "retrieve_payroll_tax_statement (Restricted RBAC MCP)",
+        "create_hrsd_specialist_case (30% Context Handoff)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "HR Concierge Orchestrator (ADK + Model Armor)",
+        "specialists": [
+          "HCM Transactional Specialist (MCP)",
+          "HRSD Case Router (MCP)",
+          "Policy Gatekeeper Agent"
+        ],
+        "connectors": [
+          "PeopleStrong / Workday API",
+          "ServiceNow HRSD",
+          "Specialist Agent Console"
+        ],
+        "guardrail": "Scoped per-user OAuth / Role-Based Access Control (RBAC): employees can mutate only their own permitted self-service fields; high-risk payroll/termination actions blocked."
+      },
+      "samplePrompt": "Check how many earned leave days I have left, verify if our Diwali bridge holiday overlaps, and submit PTO for next Thursday and Friday.",
+      "sampleTrace": "1. Model Armor verified clean user prompt + active employee identity scope.\n2. Queried HCM MCP -> 14.5 Earned Leave days available; checked Regional Holiday Calendar.\n3. Displayed confirmation preview -> upon user click, submitted Leave Request #LV-77412 in HCM.",
+      "guardrails": "Explicit two-step confirmation before write mutations; Model Armor + Cloud DLP shield against prompt injection and cross-user data leakage.",
+      "slideOutcome": "Executes routine leave & HRSD tickets fast.",
+      "slideProcessShort": "Tier-1 Service",
+      "simpleName": "HR Concierge",
+      "howItWorks": {
+        "trigger": "Employee requests a live HR transaction (leave, tax form, payroll ticket) in Chat or Portal",
+        "inputs": [
+          "Authenticated employee request (e.g., leave booking, Form 16, address/benefits update)",
+          "Live employee leave balance, holiday calendar & role permissions",
+          "Model Armor prompt-injection & privacy guardrails"
+        ],
+        "steps": [
+          {
+            "title": "Verify Identity & Safety Shield",
+            "detail": "Runs Model Armor to block prompt injection and locks access strictly to the logged-in employee's own records."
+          },
+          {
+            "title": "Fetch Live HR Data via FastMCP",
+            "detail": "Queries live HCM leave balances, regional holiday calendars, or ServiceNow ticket history in real time."
+          },
+          {
+            "title": "Preview Write & Route Complex 30%",
+            "detail": "Displays an explicit confirmation card for routine writes, or escalates sensitive/complex issues with a complete context packet."
+          }
+        ],
+        "readsFrom": [
+          "PeopleStrong / Workday HCM (FastMCP)",
+          "Regional Holiday & Payroll Tables"
+        ],
+        "writesTo": [
+          "HCM Leave / Request Transaction (After Click)",
+          "ServiceNow HR Specialist Escalation Ticket"
+        ],
+        "outputs": [
+          "Instant self-service execution (~70% routine ticket deflection)",
+          "Downloaded verified tax statement or Leave Confirmation ID",
+          "Warm, zero-repeat-explanation specialist handoff for complex 30% cases"
+        ],
+        "humanCheckpoint": "Two-step confirmation required before every system write; sensitive disputes go straight to an HR specialist.",
+        "exampleBefore": "Wait 24–72 hours after logging into 3 separate portals just to check leave balance and apply for PTO.",
+        "exampleAfter": "Shows 14.5 Earned Leave days + Diwali bridge overlap and books Request #LV-77412 on one confirm click."
+      }
+    },
+    "employee_pulse_agent": {
+      "id": "employee_pulse_agent",
+      "num": "12",
+      "code": "Ep",
+      "pillarId": "people_ops",
+      "pillarName": "People Ops & Service Delivery",
+      "pillarColor": "#4285F4",
+      "processName": "Anonymous Sentiment Sensing & Burnout Risk Prevention",
+      "name": "Employee Pulse & Burnout Shield",
+      "buildTier": "High-Code",
+      "platformLayer": "Google ADK + BigQuery Sentiment Analytics + DPDP K-Anonymity Aggregation",
+      "outcomeBadge": "Early Burnout Detection · Proactive Retention Care",
+      "baselineVsTarget": "Surprise resignations in exit interviews → Early supportive wellbeing check-ins",
+      "personasServed": [
+        "HR Business Partner (HRBP)",
+        "Chief Wellbeing Officer",
+        "Department Head"
+      ],
+      "shortDesc": "Fuses anonymized pulse surveys, anonymized helpdesk category spikes, and exit-theme telemetry into early burnout risk signals for supportive HRBP outreach.",
+      "problem": "Critical teams experience silent overload months before resignation letters arrive, leaving HR reacting in post-exit interviews when talent is already lost.",
+      "solution": "Implements the `Employee Pulse Analytics Core` architecture: clusters anonymized multi-modal survey comments and macro workload trends using strict k-anonymity thresholds (>=10 respondents per cohort).",
+      "advantage": "Enables early workload balancing and wellbeing interventions while safeguarding employee trust through privacy-by-design aggregation.",
+      "systems": [
+        "BigQuery Privacy-Preserving Analytics Core",
+        "Google ADK Theme Clustering Agent",
+        "Pulse Survey & Anonymous Helpline Intake",
+        "HRBP Early-Intervention Alert Workflow"
+      ],
+      "mcpTools": [
+        "kAnonymousCohortAggregator (Min-N=10 Privacy Gate)",
+        "BurnoutClusterDetector (Survey + Workload Spikes)",
+        "WellbeingCheckInRecommender (Non-Punitive Action Playbook)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Employee Pulse Analytics Core (ADK)",
+        "specialists": [
+          "DPDP K-Anonymity Enforcer",
+          "Multimodal Theme Synthesizer",
+          "Supportive Intervention Planner"
+        ],
+        "connectors": [
+          "Pulse & Exit Survey Feeds",
+          "Aggregated Ticket Category Telemetry",
+          "HRBP Action Portal"
+        ],
+        "guardrail": "Zero individual employee keystroke/surveillance tracking: suppresses any cohort slice under 10 people to honor India DPDP Act & workplace trust."
+      },
+      "samplePrompt": "Analyze Q3 anonymized engagement verbatims and HR ticket spikes across Customer Support hubs (cohorts >= 15 employees) to highlight top structural stressors and recommended manager support interventions.",
+      "sampleTrace": "1. Applied k-anonymity filter (all cohorts n>=18).\n2. Detected +34% weekend shift-swap & leave-extension queries in Pune Hub linked to Q3 billing migration.\n3. Alerted HRBP with privacy-protected burnout-risk briefing & recommended temporary shift-relief pool.",
+      "guardrails": "Hard privacy prohibition on individual scoring, message surveillance, or disciplinary triggers; strictly cohort-level supportive insights.",
+      "slideOutcome": "Early team burnout radar with N>=10 privacy.",
+      "slideProcessShort": "Wellbeing & Pulse",
+      "slideBefore": "Burnout surfaces only at exit interviews.",
+      "slideAfter": "Cohort-level retention care weeks earlier.",
+      "slideOrch": "Pulse Analytics Core",
+      "slideSpecs": [
+        "K-Anonymity Lock",
+        "Theme Synthesizer"
+      ],
+      "slideSystems": [
+        "Aggregated Pulse",
+        "HRBP Care Portal"
+      ],
+      "slideGuardrail": "Strict K-anonymity (N>=10) blocks individual scoring.",
+      "simpleName": "Employee Pulse",
+      "howItWorks": {
+        "trigger": "Scheduled weekly wellbeing scan or Quarterly Engagement Survey ingestion",
+        "inputs": [
+          "Anonymized pulse survey verbatims & closed-loop comment feeds",
+          "Aggregated HR support ticket volume patterns (by hub/department)",
+          "Strict India DPDP K-Anonymity threshold (minimum cohort size N >= 10)"
+        ],
+        "steps": [
+          {
+            "title": "Enforce K-Anonymity Cohort Gate",
+            "detail": "Drops or suppresses any group smaller than 10 employees so no individual response can ever be reverse-engineered."
+          },
+          {
+            "title": "Detect Structural Stress Clusters",
+            "detail": "Combines anonymized feedback themes with support-query spikes (e.g., shift overload or billing transition stress)."
+          },
+          {
+            "title": "Recommend Supportive Interventions",
+            "detail": "Suggests non-punitive operational fixes (such as temporary shift relief or manager listening sessions) to the HRBP."
+          }
+        ],
+        "readsFrom": [
+          "Anonymized Pulse Survey Vault (BigQuery)",
+          "Aggregated HR Support Categories"
+        ],
+        "writesTo": [
+          "HR Business Partner Early-Care Briefings"
+        ],
+        "outputs": [
+          "Privacy-locked hub stress trend digest (never individual scores)",
+          "Root-cause operational driver summary (e.g., billing cutover spikes)",
+          "Supportive care playbook for managers & HRBPs"
+        ],
+        "humanCheckpoint": "Hard architectural ban on individual tracking, chat snooping, or punitive scoring; HRBP decides supportive outreach.",
+        "exampleBefore": "Leaders only learn a hub is burning out months later during exit interviews.",
+        "exampleAfter": "Spots +34% weekend shift-swap strain in Pune Support (cohort n>=18) and triggers supportive relief."
+      }
+    },
+    "strategic_workforce_agent": {
+      "id": "strategic_workforce_agent",
+      "num": "13",
+      "code": "Sw",
+      "pillarId": "hr_strategy_rewards",
+      "pillarName": "HR Strategy & Total Rewards",
+      "pillarColor": "#5E35B1",
+      "processName": "Strategic Workforce Planning, Attrition Forecasting & Macro Research",
+      "name": "Strategic Workforce Intelligence",
+      "buildTier": "High-Code",
+      "platformLayer": "Google ADK + BigQuery + Time-Series Forecasting + Deep Research",
+      "outcomeBadge": "Weeks → Minutes · Reclaims the 75% Coordination Tax",
+      "baselineVsTarget": "Static quarterly HR spreadsheets → Live CHRO & CFO scenario twin",
+      "personasServed": [
+        "Chief Human Resources Officer (CHRO)",
+        "VP HR Strategy & Workforce Planning",
+        "Chief Financial Officer (CFO) Business Partner"
+      ],
+      "shortDesc": "Unifies internal headcount, attrition projections, and external talent market trends to model hiring budgets, span-of-control shifts, and AI productivity uplift.",
+      "problem": "HR teams spend 15% of their week manually reconciling stale headcount and attrition spreadsheets — arriving at quarterly board meetings with backward-looking numbers.",
+      "solution": "Combines Talent Continuum external-demand vs. internal-supply modeling with BigQuery time-series attrition forecasting and Gemini Deep Research across competitor/GCC skill shifts.",
+      "advantage": "Transforms HR Strategy into a forward-looking business partner capable of modeling build-vs-buy-vs-upskill scenarios live with the CEO and CFO.",
+      "systems": [
+        "BigQuery Workforce & Cost Warehouse",
+        "Vertex AI Time-Series Forecasting (Hiring & Attrition)",
+        "Gemini Enterprise Deep Research (Macro Talent Trends)",
+        "CHRO Control Tower Dashboard"
+      ],
+      "mcpTools": [
+        "run_attrition_cohort_forecast (BigQuery ML / TimesFM)",
+        "macro_talent_supply_researcher (GCC & Industry Trends)",
+        "simulate_build_vs_upskill_budget (Headcount Scenario Engine)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "CHRO Strategy Coordinator (ADK · Gemini Pro)",
+        "specialists": [
+          "Internal Attrition Forecaster",
+          "Macro Labor Market Researcher",
+          "Finance Headcount Simulator"
+        ],
+        "connectors": [
+          "HCM Headcount & Exit Ledger",
+          "External Labor Benchmark Feeds",
+          "CHRO / CFO Scenario View"
+        ],
+        "guardrail": "Scenario outputs cite exact census cutoff dates and explicit model confidence intervals for executive capital allocation."
+      },
+      "samplePrompt": "Model our FY27 Cloud & AI Engineering headcount gap across Bengaluru and Pune: factor 14% projected market attrition, Career Saathi internal reskilling yield, and external GCC salary inflation to compare External Hiring vs. Internal Reskilling cost.",
+      "sampleTrace": "1. Projected baseline net demand of 145 AI/Data engineers over 4 quarters.\n2. Simulated Internal Reskilling path (Career Saathi cohort of 55 Java/Data staff) saving ₹4.8 Cr in external hiring fees and 58 days average ramp delay.\n3. Exported board-ready comparison brief for CHRO + CFO alignment.",
+      "guardrails": "Scenario assumptions (attrition priors, wage inflation sources) are surfaced transparently with sensitivity ranges.",
+      "slideOutcome": "Live CHRO & CFO headcount scenario modeling.",
+      "slideProcessShort": "Workforce Twin",
+      "simpleName": "Workforce Planner",
+      "howItWorks": {
+        "trigger": "Quarterly board prep or CHRO/CFO scenario planning request",
+        "inputs": [
+          "Internal workforce census, grade pyramid & historical attrition data (BigQuery)",
+          "Career Saathi internal reskilling pipeline readiness yield",
+          "External industry salary inflation & Global Capability Center (GCC) talent trends"
+        ],
+        "steps": [
+          {
+            "title": "Forecast Role Supply vs. Demand",
+            "detail": "Runs time-series attrition and growth models to quantify upcoming skill deficits by city and role over 4–8 quarters."
+          },
+          {
+            "title": "Compare Build vs. Buy Scenarios",
+            "detail": "Models the exact rupee cost and ramp-time trade-off between external agency hiring and Career Saathi internal reskilling."
+          },
+          {
+            "title": "Generate Executive Decision Brief",
+            "detail": "Outputs transparent assumption ranges and board-ready headcount plans in minutes instead of stitching 40 spreadsheets."
+          }
+        ],
+        "readsFrom": [
+          "BigQuery Workforce & Cost Warehouse",
+          "Career Saathi Skill Yield",
+          "Macro Labor Research"
+        ],
+        "writesTo": [
+          "CHRO & CFO Executive Scenario Briefs",
+          "Headcount Planning Dashboard"
+        ],
+        "outputs": [
+          "4-quarter attrition & hiring gap forecast by location",
+          "Side-by-side Build vs. Reskill vs. Buy financial comparison",
+          "Transparent sensitivity range report for Finance alignment"
+        ],
+        "humanCheckpoint": "Assumptions and hiring budget envelopes stay transparent and require CHRO + CFO joint approval.",
+        "exampleBefore": "CHRO analysts spend 3 weeks reconciling 40 stale spreadsheets across finance and business units.",
+        "exampleAfter": "Models 145-role AI engineering gap in minutes showing ₹4.8 Cr savings via internal reskilling of 55 staff."
+      }
+    },
+    "total_rewards_equity_agent": {
+      "id": "total_rewards_equity_agent",
+      "num": "14",
+      "code": "Tr",
+      "pillarId": "hr_strategy_rewards",
+      "pillarName": "HR Strategy & Total Rewards",
+      "pillarColor": "#5E35B1",
+      "processName": "Pay Equity Regression, Merit Modeling & Appraisal Synthesis",
+      "name": "Total Rewards & Calibration Agent",
+      "buildTier": "High-Code",
+      "platformLayer": "Google ADK + BigQuery Statistical Audit + Cloud DLP + Executive HITL",
+      "outcomeBadge": "<1%–2% Pay Variance Target · -50% Calibration Prep",
+      "baselineVsTarget": "Reactive annual comp cleanups & messy reviews → Continuous equity & unbiased synthesis",
+      "personasServed": [
+        "Total Rewards Director",
+        "Compensation & Benefits Analyst",
+        "Executive Calibration Committee"
+      ],
+      "shortDesc": "Detects unexplained compensation gaps across comparable cohorts continuously, models merit/bonus budgets, and synthesizes unbiased multi-rater performance appraisals.",
+      "problem": "Annual compensation cycles catch salary compression and equity drift too late, while calibrating hundreds of inconsistent manager review narratives consumes leadership weeks.",
+      "solution": "Runs deterministic statistical regression in BigQuery under Cloud DLP isolation to pinpoint unexplained pay variance (<1%–2% threshold) and uses Gemini Pro strictly grounded in peer-review artifacts to draft neutral calibration summaries.",
+      "advantage": "Protects internal pay transparency and statutory compliance while halving executive calibration preparation cycles under strict Human-in-the-Loop governance.",
+      "systems": [
+        "BigQuery Compensation & Payroll Tables (Restricted Vault)",
+        "Cloud DLP Identity Masking",
+        "Google ADK Calibration Synthesizer",
+        "Executive Approval & Audit Trail"
+      ],
+      "mcpTools": [
+        "compute_pay_equity_regression (Cohort Variance Engine)",
+        "synthesize_appraisal_evidence (Peer Review Summarizer)",
+        "model_merit_budget_envelope (Fixed-Pool Optimizer)"
+      ],
+      "architectureNodes": {
+        "orchestrator": "Total Rewards & Calibration Agent (ADK · Zero-Leak Vault)",
+        "specialists": [
+          "Statistical Pay-Equity Auditor",
+          "Unbiased Appraisal Summarizer",
+          "Merit & Bonus Optimizer"
+        ],
+        "connectors": [
+          "Masked Payroll & Band Ledger",
+          "360° Feedback Repository",
+          "CHRO / Comp Committee Sign-Off"
+        ],
+        "guardrail": "Highest Tier RBAC + Cloud DLP + Mandatory Human Calibration Vote: AI never determines final ratings, bonuses, or salary changes unilaterally."
+      },
+      "samplePrompt": "Audit mid-level Product & Engineering compensation across Grades P3–P5 for unexplained pay dispersion >2%, estimate the exact remediation budget, and generate neutral calibration briefs summarizing manager and peer evidence.",
+      "sampleTrace": "1. Executed multivariate regression across 1,420 masked P3–P5 records (controlling for tenure, location, performance).\n2. Flagged 28 compressed roles averaging -3.4% below cohort parity (total remediation cost: 0.42% of payroll pool).\n3. Generated citation-linked appraisal summaries for Executive Calibration Committee decision.",
+      "guardrails": "Strict zero-training data isolation on compensation vaults + mandatory Human-in-the-Loop executive sign-off on all pay adjustments.",
+      "slideOutcome": "Continuous pay-equity audit under HITL lock.",
+      "slideProcessShort": "Pay Equity",
+      "simpleName": "Pay Equity & Rewards",
+      "howItWorks": {
+        "trigger": "Mid-year equity audit or Annual Compensation & Performance Calibration cycle",
+        "inputs": [
+          "Identity-masked payroll & grade records (Grades P3–P5, tenure, city, rating)",
+          "Multi-rater peer reviews & manager evaluation narratives",
+          "Fixed merit-increase budget pool & target dispersion cap (<1%–2%)"
+        ],
+        "steps": [
+          {
+            "title": "Mask Identities Before Modeling",
+            "detail": "Applies Cloud DLP identity redaction inside a zero-training restricted compensation vault."
+          },
+          {
+            "title": "Run Multivariate Pay Equity Audit",
+            "detail": "Controls for role, city, tenure, and rating to pinpoint statistical pay compression and calculate exact remediation cost."
+          },
+          {
+            "title": "Synthesize Unbiased Calibration Briefs",
+            "detail": "Condenses noisy peer and manager reviews into structured, citation-backed promotion readiness summaries."
+          }
+        ],
+        "readsFrom": [
+          "Restricted BigQuery Compensation Vault (Cloud DLP Masked)",
+          "Peer & Manager Appraisals"
+        ],
+        "writesTo": [
+          "Executive Calibration Committee Approval Portal (Draft Only)"
+        ],
+        "outputs": [
+          "Statistical pay-dispersion & compressed-role heatmap",
+          "Optimized merit-budget allocation scenario (% of payroll pool)",
+          "Citation-linked performance calibration briefs (-50% prep time)"
+        ],
+        "humanCheckpoint": "Mandatory Human-in-the-Loop executive sign-off before any compensation, bonus, or promotion record changes.",
+        "exampleBefore": "Managers drown in multi-rater text while pay compression slips unnoticed until key engineers resign.",
+        "exampleAfter": "Flags 28 compressed P3–P5 roles across 1,420 masked records (0.42% pool fix) with neutral calibration briefs."
+      }
+    }
+  },
+  "keynoteSlides": [
+    {
+      "num": "01",
+      "layout": "hero",
+      "eyebrow": "PEOPLESTRONG XPONENTIAL 2026 · EXECUTIVE KEYNOTE",
+      "title": "Agentic for The People",
+      "subtitle": "Reshaping the Hire-to-Retire Operating Model with Gemini Enterprise",
+      "highlights": [
+        "Audience: 200+ Chief Human Resources Officers",
+        "Thesis: Dissolve the ~75% HR Coordination Tax",
+        "Portfolio: 6 HR Pillars · 14 Process Agents"
+      ],
+      "notes": "Open by framing PeopleStrong Xponential as an operating model inflection point for every CHRO in the room, not another SaaS feature showcase."
+    },
+    {
+      "num": "02",
+      "layout": "split_metrics",
+      "eyebrow": "THE HR PARADOX (INDUSTRY BENCHMARK)",
+      "title": "HR Exists to Be Strategic — Yet Runs Operational",
+      "subtitle": "Where HR capacity goes is an operating-model bottleneck, not a talent gap.",
+      "leftTitle": "~75% Administrative Tax",
+      "leftItems": [
+        "25% — Disconnected system handoffs",
+        "20% — Manual entry & tracking",
+        "15% — Email & calendar ping-pong",
+        "15% — Boardroom report prep"
+      ],
+      "rightTitle": "~25% Strategic People Value",
+      "rightItems": [
+        "10% — Leadership & manager coaching",
+        "8% — Workforce & succession strategy",
+        "7% — Culture, listening & retention"
+      ],
+      "notes": "Pause on the 75/25 split: ask the CHROs how many hours their HRBPs spent stitching spreadsheets this week instead of coaching leaders."
+    },
+    {
+      "num": "03",
+      "layout": "pillars4",
+      "eyebrow": "THE NEW WORKFORCE PARADIGM",
+      "title": "The Future HR Team: Orchestrator, Not Just a Doer",
+      "subtitle": "Four Gemini Enterprise levers decouple talent impact from admin headcount.",
+      "cards": [
+        {
+          "title": "1. Automate",
+          "metric": "Zero-Touch Workflows",
+          "desc": "Execute clean multi-system handoffs automatically.",
+          "color": "#4285F4"
+        },
+        {
+          "title": "2. Inform",
+          "metric": "Live Workforce Radar",
+          "desc": "Fuse internal skills with market benchmarks.",
+          "color": "#34A853"
+        },
+        {
+          "title": "3. Personalize",
+          "metric": "Day-1 to Leadership",
+          "desc": "Tailor onboarding and Career Saathi journeys.",
+          "color": "#7E57C2"
+        },
+        {
+          "title": "4. Assist",
+          "metric": "~70% Tier-1 Deflection",
+          "desc": "Cited answers first; human empathy always.",
+          "color": "#E37400"
+        }
+      ],
+      "notes": "Highlight The Rise of the Human Premium: Empathy, Strategic Judgment, Ethical Oversight, and High-Trust Relationships rise in value when AI handles routine coordination."
+    },
+    {
+      "num": "04",
+      "layout": "section_break",
+      "eyebrow": "PART 1 · THE CHRO ARCHITECTURE",
+      "title": "6 HR Pillars. 14 Process Agents.",
+      "subtitle": "Organizing agents by business process — uniting No-Code studio speed with High-Code ADK precision.",
+      "accent": "#4285F4",
+      "chips": [
+        {
+          "num": "01",
+          "label": "Requisition",
+          "color": "#4285F4"
+        },
+        {
+          "num": "02",
+          "label": "Hiring",
+          "color": "#EA4335"
+        },
+        {
+          "num": "03",
+          "label": "Onboarding",
+          "color": "#0097A7"
+        },
+        {
+          "num": "04",
+          "label": "Mobility",
+          "color": "#7E57C2"
+        },
+        {
+          "num": "05",
+          "label": "People Ops",
+          "color": "#34A853"
+        },
+        {
+          "num": "06",
+          "label": "Strategy",
+          "color": "#E37400"
+        }
+      ],
+      "notes": "Pause briefly before entering the architecture. Emphasize why we organize by HR process rather than isolated personas."
+    },
+    {
+      "num": "05",
+      "layout": "pillar_map",
+      "eyebrow": "OFFICE OF THE CHRO · APQC 7.0 ALIGNED",
+      "title": "Six Function Pillars Across Hire-to-Retire",
+      "subtitle": "6 No/Low-Code speedsters paired with 8 High-Code ADK + FastMCP orchestrators.",
+      "notes": "Walk through the exact Slide 17 architecture: 5 operational Hire-to-Retire pillars anchored on top of 1 cross-cutting HR Strategy & Total Rewards foundation."
+    },
+    {
+      "num": "06",
+      "layout": "pillar_deepdive",
+      "eyebrow": "PILLAR 01 · REQUISITION & SCREENING",
+      "title": "Skill-First Hiring, Micro-Market Reach & Blind Screening",
+      "pillarId": "requisition_screening",
+      "notes": "Contrast the high cost of external agency sourcing tax with Talent Magnet and DPDP-masked Blind Screening."
+    },
+    {
+      "num": "07",
+      "layout": "pillar_deepdive",
+      "eyebrow": "PILLAR 02 · CANDIDATE HIRING",
+      "title": "Interview Scheduling: From 4 Days to Under 1 Hour",
+      "pillarId": "candidate_hiring",
+      "notes": "Zero-Touch Interview Orchestrator solves the #1 candidate drop-off driver; ADK Rubric Agent eliminates subjective debrief delays."
+    },
+    {
+      "num": "08",
+      "layout": "pillar_deepdive",
+      "eyebrow": "PILLAR 03 · PERSONALIZED ONBOARDING",
+      "title": "Day-One Delight & Cross-System FastMCP Provisioning",
+      "pillarId": "onboarding",
+      "notes": "Show both the warm human UX (Day-One Buddy Hub) and the gritty enterprise plumbing (HCM + ServiceNow FastMCP)."
+    },
+    {
+      "num": "09",
+      "layout": "pillar_deepdive",
+      "eyebrow": "PILLAR 04 · CONTINUOUS LEARNING & MOBILITY",
+      "title": "Career Saathi & 3-Minute Regulatory Learning Reels",
+      "pillarId": "continuous_learning",
+      "notes": "Cite Randstad 2025: 1.1-year Gen Z tenure is growth-hunting, not disloyalty. Career Saathi makes growth visible."
+    },
+    {
+      "num": "10",
+      "layout": "pillar_deepdive",
+      "eyebrow": "PILLAR 05 · PEOPLE OPS & SERVICE DELIVERY",
+      "title": "Make Ops Meet People: 70% Deflection & Early Care",
+      "pillarId": "people_ops",
+      "notes": "Zero-Touch HR Concierge frees specialists for complex 30% human cases while k-anonymity protects Pulse privacy under India DPDP."
+    },
+    {
+      "num": "11",
+      "layout": "pillar_deepdive",
+      "eyebrow": "PILLAR 06 · HR STRATEGY & TOTAL REWARDS",
+      "title": "Continuous Workforce Planning & <1%–2% Pay Equity",
+      "pillarId": "hr_strategy_rewards",
+      "notes": "Connect Strategic Workforce Intelligence and Total Rewards Equity back to dissolving the 75% CHRO spreadsheet tax."
+    },
+    {
+      "num": "12",
+      "layout": "section_break",
+      "eyebrow": "PART 2 · FLAGSHIP WORKFLOWS IN ACTION",
+      "title": "Four Signature Agents Across the Lifecycle",
+      "subtitle": "How connected orchestrators eliminate delays while enforcing India DPDP privacy and human oversight.",
+      "accent": "#34A853",
+      "chips": [
+        {
+          "num": "01",
+          "label": "Blind Screening",
+          "color": "#4285F4"
+        },
+        {
+          "num": "02",
+          "label": "Day-1 FastMCP",
+          "color": "#0097A7"
+        },
+        {
+          "num": "03",
+          "label": "Career Saathi",
+          "color": "#7E57C2"
+        },
+        {
+          "num": "04",
+          "label": "Pulse Shield",
+          "color": "#34A853"
+        }
+      ],
+      "notes": "Transition into the 4 deepest flagship stories: fair screening, Day-1 provisioning across HRIS/ITSM, Career Saathi mobility, and privacy-locked burnout prevention."
+    },
+    {
+      "num": "13",
+      "layout": "agent_spotlight",
+      "eyebrow": "FLAGSHIP #1 · RESPONSIBLE AI HIRING",
+      "title": "Blind Screening with Cloud DLP & Four-Fifths Fairness",
+      "agentId": "blind_screening_agent",
+      "notes": "CHROs demand explainability and legal safety: highlight zero autonomous rejection and full DPDP redaction before LLM scoring."
+    },
+    {
+      "num": "14",
+      "layout": "agent_spotlight",
+      "eyebrow": "FLAGSHIP #2 · DAY-1 VELOCITY VIA FASTMCP",
+      "title": "Zero-Touch Provisioning Across HCM & ServiceNow",
+      "agentId": "cross_system_provisioning_agent",
+      "notes": "Highlight zero silent partial failures — when a laptop or badge ticket stalls, IT & HR Ops know 72 hours before Day 1."
+    },
+    {
+      "num": "15",
+      "layout": "agent_spotlight",
+      "eyebrow": "FLAGSHIP #3 · RETENTION & MULTILINGUAL GROWTH",
+      "title": "Career Saathi: Guided Internal Mobility & Role-Play",
+      "agentId": "career_saathi_agent",
+      "notes": "Show how a 3-minute regional-language simulation builds confidence faster than 50-page static PDFs."
+    },
+    {
+      "num": "16",
+      "layout": "agent_spotlight",
+      "eyebrow": "FLAGSHIP #4 · ETHICAL PEOPLE INTELLIGENCE",
+      "title": "Early Burnout Prevention with K-Anonymity (N>=10) Lock",
+      "agentId": "employee_pulse_agent",
+      "notes": "Reassure CHROs: Pulse senses structural overload at cohort level without employee keystroke spying."
+    },
+    {
+      "num": "17",
+      "layout": "enterprise_proof",
+      "eyebrow": "INDIA ENTERPRISE PROOF · LIVE IN PRODUCTION",
+      "title": "Indian Conglomerate Benchmark: 400+ Agents & 74%+ Retention",
+      "subtitle": "Production impact from grounded No-Code HR assistants in a large Indian enterprise.",
+      "notes": "Share practical enterprise lessons without disclosing customer identity: small focused micro-agents beat monolithic mega-prompts, and model tiering (Flash vs Pro) controls latency and cost."
+    },
+    {
+      "num": "18",
+      "layout": "architecture_layers",
+      "eyebrow": "PLATFORM ARCHITECTURE · TRUST BY DESIGN",
+      "title": "Gemini Enterprise Stack & Open Knowledge Format",
+      "subtitle": "6 No/Low-Code speedsters + 8 ADK orchestrators protected by Model Armor & Cloud DLP.",
+      "notes": "Explain how HR owns the Workbench: policy Q&A starts No-Code with OKF strict citations; multi-system writes scale via ADK + FastMCP."
+    },
+    {
+      "num": "19",
+      "layout": "adoption_curve",
+      "eyebrow": "HOW LEADING CHROS SUCCEED",
+      "title": "3-Horizon Value Curve & 4 Adoption Pillars",
+      "subtitle": "Ship Day-1 No-Code quick wins while building multi-system ADK orchestration.",
+      "notes": "Walk across Day 1 -> Early Weeks -> Ongoing, anchored by AI SWAT governance, adoption tracking, process redesign, and tiered upskilling."
+    },
+    {
+      "num": "20",
+      "layout": "closing",
+      "eyebrow": "HANDS-ON BUILDER WORKSHOP & NEXT STEPS",
+      "title": "Build Your First HR Agent Today — Scale Tomorrow",
+      "subtitle": "Join the Builder Lab and launch a 30-day CHRO Discovery Sprint.",
+      "notes": "Invite the 200+ CHROs and their builder teams to join the sidelines hands-on AI lab and pick one high-friction HR bottleneck per quarter."
+    }
+  ],
+  "keynoteSlidesV2": [
+    {
+      "num": "01",
+      "eyebrow": "PEOPLESTRONG XPONENTIAL 2026 · CHIEF HUMAN RESOURCES OFFICER (CHRO) KEYNOTE",
+      "title": "Agentic for The People",
+      "subtitle": "Reclaim the ~75% HR Coordination Tax and Put Human Leadership Back at the Center",
+      "layout": "hero",
+      "highlights": [
+        "Dissolve Multi-Portal Work: Employees get answers and finish HR tasks in plain language",
+        "6 HR Pillars & 25 Business Functions: From Tier-2/3 Hiring to Internal Career Mobility",
+        "Trust, Fairness & India DPDP Act Compliance: Privacy masking and human sign-off built in"
+      ],
+      "notes": "Open on the human promise for CHROs: this is not a technology showcase for IT — it is how HR stops acting as a ticket router and reclaims time for culture, coaching, and leadership growth."
+    },
+    {
+      "num": "02",
+      "eyebrow": "01 · THE ZERO-UI WORKPLACE SHIFT",
+      "title": "Passive Portals End Here: Welcome to the Zero-UI Workplace",
+      "subtitle": "Consumers stopped hunting across 10 blue links — now employees expect the exact same simplicity at work",
+      "layout": "macro_shift",
+      "heroImage": "assets/zero_ui_workplace.jpg",
+      "cards": [
+        {
+          "icon": "assets/gcp_icons/Collaboration-512-color.png",
+          "accent": "#1a73e8",
+          "title": "Goal-Driven Over Form-Driven",
+          "desc": "Employees stop clicking across HRIS, payroll, and leave tabs — they state a goal once in plain language."
+        },
+        {
+          "icon": "assets/gcp_icons/IntegrationServices-512-color.png",
+          "accent": "#34a853",
+          "title": "Seamless Across Legacy Systems",
+          "desc": "Work flows quietly across recruiting, calendars, IT provisioning, and payroll without replacing existing HR tools."
+        },
+        {
+          "icon": "assets/gcp_icons/Agents-512-color.png",
+          "accent": "#5e35b1",
+          "title": "Meet People Where They Work",
+          "desc": "24/7 natural conversations inside web, mobile, WhatsApp, and regional Indian languages."
+        }
+      ],
+      "statBanner": "Behavioral Shift: 800% year-over-year rise in conversational queries — your workforce already brings consumer expectations to HR.",
+      "notes": "Draw from everyday life: just as consumers now delegate multi-step research and bookings to conversational assistants, employees will no longer tolerate five portals to change tax declarations or book interviews."
+    },
+    {
+      "num": "03",
+      "eyebrow": "02 · THE HR PARADOX (INDUSTRY BENCHMARK)",
+      "title": "The HR Paradox: ~75% Coordination Tax vs. ~25% Strategy",
+      "subtitle": "People teams exist to shape culture and talent — yet three-quarters of every week disappears into coordination plumbing",
+      "layout": "split_metrics",
+      "leftLabel": "Operational Tax (~75%)",
+      "leftItems": [
+        "25% — Coordinating across HR, IT & hiring systems",
+        "20% — Manual data entry & spreadsheet validation",
+        "15% — Chasing email approvals & follow-ups",
+        "15% — Compiling quarterly slides & spreadsheets"
+      ],
+      "rightLabel": "Strategic Impact (~25%)",
+      "rightItems": [
+        "10% — Coaching & advising business leaders",
+        "8% — Strategic workforce & skills planning",
+        "7% — Culture, inclusion & employee experience"
+      ],
+      "notes": "This benchmark resonates in every CHRO boardroom: HR does not suffer from a lack of strategic ambition — it suffers from an operating model that taxes 75% of human bandwidth on chasing forms and approvals."
+    },
+    {
+      "num": "04",
+      "eyebrow": "03 · THE RISE OF THE HUMAN PREMIUM",
+      "title": "The Rise of the Human Premium: Silicon Runs Routine, HR Leads People",
+      "subtitle": "AI absorbs scheduling, triage, and status chasing so people leaders double down on empathy and judgment",
+      "layout": "human_premium",
+      "heroImage": "assets/human_premium.jpg",
+      "pillars": [
+        {
+          "icon": "assets/icons/badge_sparkle.png",
+          "color": "#4285f4",
+          "title": "Decouple Growth From Admin Headcount",
+          "desc": "Handle 5x seasonal hiring surges and 50,000+ employee requests without burning out HR teams."
+        },
+        {
+          "icon": "assets/icons/pillar_engage.png",
+          "color": "#34a853",
+          "title": "Elevate Empathy & Coaching",
+          "desc": "Return hours every day to leadership coaching, hard career conversations, and workplace belonging."
+        },
+        {
+          "icon": "assets/icons/badge_shield.png",
+          "color": "#5e35b1",
+          "title": "Humans Lead Every High-Stakes Call",
+          "desc": "AI prepares verified shortlists and salary options — people decide who is hired, promoted, or rewarded."
+        }
+      ],
+      "quote": "\"When software handles forms and follow-ups, HR reclaims the Human Premium — trust, empathy, and strategic judgment.\"",
+      "notes": "Turn AI anxiety into executive confidence: routine coordination drops to near zero while human judgment, ethical oversight, and high-trust coaching become your highest-value differentiator."
+    },
+    {
+      "num": "05",
+      "eyebrow": "04 · HIRE-TO-RETIRE TRANSFORMATION",
+      "title": "Automate · Inform · Personalize · Assist Across 8 Employee Touchpoints",
+      "subtitle": "Turning executive excitement into measurable daily productivity at every moment from candidate to alumni",
+      "layout": "touchpoints_grid",
+      "levers": [
+        {
+          "title": "1. Automate",
+          "desc": "Eliminate manual routing & admin checklists",
+          "color": "#4285f4"
+        },
+        {
+          "title": "2. Inform",
+          "desc": "Deliver verified, cited answers in seconds",
+          "color": "#34a853"
+        },
+        {
+          "title": "3. Personalize",
+          "desc": "Tailor journeys by role, hub & language",
+          "color": "#5e35b1"
+        },
+        {
+          "title": "4. Assist",
+          "desc": "24/7 guidance inside tools people already use",
+          "color": "#e37400"
+        }
+      ],
+      "touchpoints": [
+        {
+          "title": "Candidate",
+          "desc": "Instant role answers & scheduling save thousands of recruiter hours.",
+          "icon": "assets/icons/pillar_attract.png",
+          "color": "#1a73e8"
+        },
+        {
+          "title": "Onboarding",
+          "desc": "Guides new hires smoothly through Day-1 paperwork and tools.",
+          "icon": "assets/icons/pillar_perform.png",
+          "color": "#185abc"
+        },
+        {
+          "title": "New Associate",
+          "desc": "Fast, local access to branch maps, IT setup & team buddies.",
+          "icon": "assets/icons/badge_sparkle.png",
+          "color": "#0097a7"
+        },
+        {
+          "title": "Learning & Growth",
+          "desc": "Role-specific micro-learning and internal career pathing.",
+          "icon": "assets/icons/pillar_develop.png",
+          "color": "#34a853"
+        },
+        {
+          "title": "Performance Mgmt",
+          "desc": "Objective goal tracking and calibrated review preparation.",
+          "icon": "assets/icons/badge_check.png",
+          "color": "#5e35b1"
+        },
+        {
+          "title": "Health & Benefits",
+          "desc": "Clear, empathetic answers on leave, claims & life events.",
+          "icon": "assets/icons/pillar_engage.png",
+          "color": "#ea4335"
+        },
+        {
+          "title": "Internal Mobility",
+          "desc": "Matches hidden employee skills to open internal roles early.",
+          "icon": "assets/icons/pillar_workforce.png",
+          "color": "#e37400"
+        },
+        {
+          "title": "Offboarding",
+          "desc": "Respectful exit handovers and structured retention insights.",
+          "icon": "assets/icons/pillar_ops.png",
+          "color": "#5f6368"
+        }
+      ],
+      "notes": "Synthesizes the Hire-to-Retire transformation model: 4 business action levers applied across the exact 8 touchpoints every CHRO owns."
+    },
+    {
+      "num": "06",
+      "eyebrow": "05 · THE 6 HR PILLARS & 25 BUSINESS FUNCTIONS",
+      "title": "Six HR Pillars & Core Functions: Where Business Value Unlocks",
+      "subtitle": "Every operational HR function mapped cleanly from Requisition to Workforce Strategy — zero tech jargon",
+      "layout": "pillar_functions_map",
+      "banner": "OFFICE OF THE CHRO · 6 PILLARS · 25 BUSINESS FUNCTIONS ACROSS HIRE-TO-RETIRE",
+      "pillarsData": [
+        {
+          "pillarId": "requisition_screening",
+          "outcome": "40%–50% Less Screening",
+          "functions": [
+            "Skills Extraction",
+            "Job Description Authoring",
+            "Application Processing",
+            "Fair Resume Screening"
+          ]
+        },
+        {
+          "pillarId": "candidate_hiring",
+          "outcome": "4 Days -> <1 Hr Scheduling",
+          "functions": [
+            "Panel Scheduling",
+            "Interview Readiness",
+            "Feedback Aggregation",
+            "Offer Management"
+          ]
+        },
+        {
+          "pillarId": "onboarding",
+          "outcome": "100% Day-1 Ready",
+          "functions": [
+            "Process Automation",
+            "New Hire Buddy",
+            "1-30-60-90 Journey",
+            "Day-1 Access Setup"
+          ]
+        },
+        {
+          "pillarId": "continuous_learning",
+          "outcome": "50 Pages -> 3 Min Reels",
+          "functions": [
+            "Personalized Training",
+            "Micro-Reel Creation",
+            "Skill & Roleplay Drills",
+            "Career Pathing"
+          ]
+        },
+        {
+          "pillarId": "people_ops",
+          "outcome": "~70% Instant Deflection",
+          "functions": [
+            "Employee Service Tickets",
+            "HR Policy Approvals",
+            "Appraisal Synthesis",
+            "Burnout Case Triage"
+          ]
+        },
+        {
+          "pillarId": "hr_strategy_rewards",
+          "outcome": "<1–2% Unexplained Pay Gap",
+          "functions": [
+            "Compensation Analysis",
+            "Pay Benchmarking",
+            "Workforce Composition",
+            "Hiring Projections"
+          ]
+        }
+      ],
+      "notes": "Directly preserves the 6 HR Function Pillars and all 25 core business functions from Slide 17 — structured so CHROs immediately see which business KPI improves in every sub-function."
+    },
+    {
+      "num": "07",
+      "eyebrow": "06 · PILLARS 01 & 02 · TALENT ACQUISITION VALUE",
+      "title": "Cut Agency Sourcing Tax & Shrink Interview Loops From 4 Days to <1 Hour",
+      "subtitle": "How Talent Acquisition captures Tier-2 and Tier-3 hubs without adding recruiting headcount",
+      "layout": "pillar_value_pair",
+      "topBanner": "TALENT ACQUISITION PAYOFF: Reduce external recruiter spend, boost organic regional applications & stop losing finalists to scheduling delays",
+      "cards": [
+        {
+          "badge": "PILLAR 01 · REQUISITION & SCREENING",
+          "title": "Micro-Market Talent Magnet & Skill-First Triage",
+          "metric": "40%–50%",
+          "metricLbl": "LESS SCREENING EFFORT",
+          "color": "#1a73e8",
+          "icon": "assets/icons/pillar_attract.png",
+          "problem": "Over-reliance on external staffing agencies inflates sourcing costs while jargon-heavy JDs and 300+ CVs stall shortlists.",
+          "solution": "Localized outreach across Tier-2/3 hubs, skill-based role templates in minutes, 24/7 Candidate Q&A, and blind skill triage.",
+          "value": "Lower agency dependency, broader diverse reach, and faster quality shortlists."
+        },
+        {
+          "badge": "PILLAR 02 · CANDIDATE HIRING & SELECTION",
+          "title": "Zero-Touch Panel Scheduling & Calibrated Selection",
+          "metric": "4d -> <1h",
+          "metricLbl": "INTERVIEW TURNAROUND",
+          "color": "#185abc",
+          "icon": "assets/icons/pillar_perform.png",
+          "problem": "Exchanging dozens of emails across time zones takes ~4 days per round; noisy interviewer notes delay offers.",
+          "solution": "Autonomous calendar negotiation across candidate & panel, role rubrics, objective scorecard synthesis, and band-checked offers.",
+          "value": "Minimal candidate drop-off, fair interview calibration, and faster close rates."
+        }
+      ],
+      "notes": "Connects Requisition & Screening plus Candidate Hiring directly to revenue protection: winning scarce talent days before competitors even confirm interview slots."
+    },
+    {
+      "num": "08",
+      "eyebrow": "07 · PILLARS 03 & 04 · DAY-ONE DELIGHT & CAREER SAATHI",
+      "title": "Turn Growth-Hunting Into Loyalty: Personalized Day-1 & 3-Minute Learning",
+      "subtitle": "Modern employees rarely quit over salary alone — they leave when Day-1 feels overwhelming and growth paths feel invisible",
+      "layout": "pillar_value_pair",
+      "topBanner": "RANDSTAD WORKFORCE INSIGHT (2025): 1.1-yr average Gen Z tenure reflects growth-hunting, not disloyalty — 1 in 3 switch without clear development pathways",
+      "cards": [
+        {
+          "badge": "PILLAR 03 · PERSONALIZED ONBOARDING",
+          "title": "Day-One Experience Hub & Always-On Virtual Buddy",
+          "metric": "100%",
+          "metricLbl": "DAY-1 TOOL & BUDDY READY",
+          "color": "#0097a7",
+          "icon": "assets/icons/badge_sparkle.png",
+          "problem": "New hires wait days for laptops, facility passes, and answers to local branch policies across disconnected onboarding portals.",
+          "solution": "Interactive 1-30-60-90 Day welcome plan, local facility map, instant Virtual Buddy Q&A, and pre-arrival IT & badge setup.",
+          "value": "Immediate Day-1 confidence, warmer cultural belonging, and weeks shaved off ramp time."
+        },
+        {
+          "badge": "PILLAR 04 · CONTINUOUS LEARNING & MOBILITY",
+          "title": "Career Saathi: 3-Minute Reels & Guided Internal Paths",
+          "metric": "50p -> 3m",
+          "metricLbl": "REGULATORY MICRO-LEARNING",
+          "color": "#34a853",
+          "icon": "assets/icons/pillar_develop.png",
+          "problem": "50-page policy and regulatory manuals fail modern attention spans; internal talent exits because promotion criteria stay opaque.",
+          "solution": "Converts dense rules into 3-minute regional-language reels, customer negotiation roleplay, and personalized internal career roadmaps.",
+          "value": "Daily habit compliance, ready frontline confidence, and higher internal leadership fills."
+        }
+      ],
+      "notes": "Highlights two signature keynote crowd-pleasers: the Day-One Delight experience and Career Saathi transforming boring compliance docs into 3-minute regional habits."
+    },
+    {
+      "num": "09",
+      "eyebrow": "08 · PILLARS 05 & 06 · PEOPLE OPS & LIVE CHRO STRATEGY",
+      "title": "Resolve 70% of Routine HR Queries Instantly & Spot Burnout Early",
+      "subtitle": "Make Operations meet people where they work — while turning quarterly spreadsheet drills into live CHRO foresight",
+      "layout": "pillar_value_pair",
+      "topBanner": "SERVICE & STRATEGY SHIFT: 70% routine tickets deflected instantly — freeing HRBPs for the 30% empathetic moments and strategic workforce planning",
+      "cards": [
+        {
+          "badge": "PILLAR 05 · PEOPLE OPS & SERVICE DELIVERY",
+          "title": "Zero-Touch HR Concierge & Early Burnout Intervention",
+          "metric": "~70%",
+          "metricLbl": "INSTANT TICKET DEFLECTION",
+          "color": "#e37400",
+          "icon": "assets/icons/pillar_ops.png",
+          "problem": "HR specialists spend hours answering leave, payroll, and tax tickets while employee stress signals only surface at exit interviews.",
+          "solution": "Resolves routine requests in under 30 seconds from verified policies and escalates complex 30% cases with empathy context and early pulse warnings.",
+          "value": "Happier employees on mobile & chat plus early, supportive retention outreach."
+        },
+        {
+          "badge": "PILLAR 06 · HR STRATEGY & TOTAL REWARDS",
+          "title": "Live Workforce Planning & Pay Equity Assurance",
+          "metric": "<1%–2%",
+          "metricLbl": "UNEXPLAINED PAY GAP TARGET",
+          "color": "#5e35b1",
+          "icon": "assets/icons/pillar_workforce.png",
+          "problem": "Compiling 40 spreadsheets delays boardroom hiring forecasts, external talent hotspot tracking, and fair pay-compression checks.",
+          "solution": "Fuses internal skills, exit drivers, and external market trends into live headcount scenarios and regression-tested pay equity checks.",
+          "value": "Weeks of reporting shrunk to minutes and proactive retention across critical hubs."
+        }
+      ],
+      "notes": "Closes the 6-Pillar value walk by pairing everyday Employee Delight (~70% instant answers) with boardroom CHRO decision velocity."
+    },
+    {
+      "num": "10",
+      "eyebrow": "09 · THE HUMAN STORY BEHIND ALL 6 PILLARS",
+      "title": "One Employee Story: From Tier-3 Applicant to Phygital Branch Leader",
+      "subtitle": "How all 6 HR Pillars work invisibly behind one frontline retail associate over two years (anonymized benchmark)",
+      "layout": "moments_matter",
+      "heroImage": "assets/moments_matter.jpg",
+      "moments": [
+        {
+          "step": "01",
+          "title": "Tier-3 Reach",
+          "metric": "Regional",
+          "metricLbl": "YouTube & Reels",
+          "color": "#1a73e8",
+          "icon": "assets/icons/pillar_attract.png",
+          "desc": "Discovers branch role in her regional language on social feeds with an inclusive, jargon-free description."
+        },
+        {
+          "step": "02",
+          "title": "Fast Hiring",
+          "metric": "24/7 + <1h",
+          "metricLbl": "WhatsApp & Slots",
+          "color": "#185abc",
+          "icon": "assets/icons/pillar_perform.png",
+          "desc": "Clarifies role pay in plain chat, receives fair skill triage, and books her panel interview in minutes."
+        },
+        {
+          "step": "03",
+          "title": "Warm Day-1",
+          "metric": "90-Day",
+          "metricLbl": "Virtual Buddy Hub",
+          "color": "#0097a7",
+          "icon": "assets/icons/badge_sparkle.png",
+          "desc": "Walks into the branch with logins active, a branch map, and a custom 90-day onboarding buddy."
+        },
+        {
+          "step": "04",
+          "title": "Daily Mastery",
+          "metric": "2-Min",
+          "metricLbl": "Sales & Compliance",
+          "color": "#34a853",
+          "icon": "assets/icons/pillar_develop.png",
+          "desc": "Practices real customer & compliance conversations in short bursts during branch downtime."
+        },
+        {
+          "step": "05",
+          "title": "Leader Leap",
+          "metric": "2x Speed",
+          "metricLbl": "Career Saathi",
+          "color": "#5e35b1",
+          "icon": "assets/icons/pillar_workforce.png",
+          "desc": "Maps skills, practices SME negotiation sims, and steps into Phygital Branch Leadership."
+        }
+      ],
+      "notes": "Tell Radha's anonymized story from the deck: AI never appears as cold software — to her, it feels like an employer who discovered her talent, respected her time, and invested in her leadership."
+    },
+    {
+      "num": "11",
+      "eyebrow": "10 · AGENT PORTFOLIO MIND MAP (PART 1 OF 2)",
+      "title": "Talent & Day-1 Mind Map: 3 Pillars · 7 Solutions · Personas Served",
+      "subtitle": "Every capability stays anchored to an HR Pillar and the exact People Personas it serves — zero isolated bots",
+      "layout": "mindmap_agents",
+      "part": "Part 1 of 2",
+      "hubTitle": "Talent & Day-1 Pillars",
+      "hubSub": "Pillars 01–03 · 7 Agents",
+      "pillarIds": [
+        "requisition_screening",
+        "candidate_hiring",
+        "onboarding"
+      ],
+      "notes": "Show briefly on stage: Pillars 01–03 map cleanly to 7 specialized solutions and their exact personas — Recruiting Leads, Hiring Managers, Interview Panels, Candidates, and New Hires."
+    },
+    {
+      "num": "12",
+      "eyebrow": "11 · AGENT PORTFOLIO MIND MAP (PART 2 OF 2)",
+      "title": "Growth, Ops & Strategy Mind Map: 3 Pillars · 7 Solutions · Personas Served",
+      "subtitle": "Empowering Frontline Teams, Learning Leads, HR Business Partners, Total Rewards & the CHRO",
+      "layout": "mindmap_agents",
+      "part": "Part 2 of 2",
+      "hubTitle": "Growth, Ops & Strategy",
+      "hubSub": "Pillars 04–06 · 7 Agents",
+      "pillarIds": [
+        "continuous_learning",
+        "people_ops",
+        "hr_strategy_rewards"
+      ],
+      "notes": "Complete the 14-agent portfolio in one glance: Career Saathi, Micro-Learning Reels, HR Concierge, Burnout Pulse, and Strategic Workforce & Total Rewards Equity."
+    },
+    {
+      "num": "13",
+      "eyebrow": "12 · INDIA PRODUCTION PROOF TODAY",
+      "title": "Production Benchmark Today: 400+ Live Agents · 74%+ Retention",
+      "subtitle": "Diversified Indian conglomerate deployment across HR, Retail, Banking & Enterprise Analytics",
+      "layout": "enterprise_proof",
+      "notes": "Ground the vision in reality: over 400 production agents live across an Indian enterprise with 74%+ ongoing monthly retention and 30% faster leadership decisions."
+    },
+    {
+      "num": "14",
+      "eyebrow": "13 · TRUST, FAIRNESS & INDIA DPDP ACT COMPLIANCE",
+      "title": "Why Chief Human Resources Officers Trust This System by Design",
+      "subtitle": "Bias safeguards, employee privacy, regional consent, and named human sign-off embedded into every workflow",
+      "layout": "governance_dpdp",
+      "heroImage": "assets/governance_dpdp.jpg",
+      "cards": [
+        {
+          "icon": "assets/gcp_icons/SecurityIdentity-512-color.png",
+          "color": "#1a73e8",
+          "title": "Skill-First Blind Evaluation",
+          "desc": "Candidate names, age, gender, and home pins are automatically hidden during early shortlisting with ongoing fairness checks."
+        },
+        {
+          "icon": "assets/icons/badge_shield.png",
+          "color": "#185abc",
+          "title": "India DPDP Act Aligned",
+          "desc": "Purpose-bound employee consent records, Indian data residency, and automatic deletion when retention windows close."
+        },
+        {
+          "icon": "assets/icons/pillar_ops.png",
+          "color": "#1e8e3e",
+          "title": "Privacy-Safe Well-Being Pulse",
+          "desc": "Burnout alerts aggregate strictly at team sizes of 10 or more so HR supports teams early without exposing individuals."
+        },
+        {
+          "icon": "assets/icons/badge_check.png",
+          "color": "#e37400",
+          "title": "Human Final Authority Always",
+          "desc": "Every offer letter, compensation adjustment, promotion, and disciplinary record requires an explicit human sign-off."
+        }
+      ],
+      "notes": "Reassure Legal, Risk, and CHROs in plain business terms: fairness, privacy, and human accountability come first — never black-box automated people decisions."
+    },
+    {
+      "num": "15",
+      "eyebrow": "14 · ORGANIZATIONAL AI READINESS",
+      "title": "No Workforce Left Behind: Unlocking Strategic Time at Every Tier",
+      "subtitle": "How ambient support lifts strategic capacity across CHROs, HRBPs, People Managers & Frontline Associates",
+      "layout": "workforce_readiness",
+      "chartImage": "assets/charts/workforce_readiness_chart.png",
+      "personas": [
+        {
+          "role": "Chief Human Resources Officer (CHRO)",
+          "lift": "32% -> 78% Strategic",
+          "color": "#5e35b1",
+          "icon": "assets/icons/pillar_workforce.png",
+          "action": "Scenarios skills, attrition & pay equity live instead of waiting weeks for spreadsheet packs."
+        },
+        {
+          "role": "HR Business Partner (HRBP)",
+          "lift": "24% -> 68% Coaching",
+          "color": "#4285f4",
+          "icon": "assets/icons/pillar_ops.png",
+          "action": "Trades ticket escalations for talent calibration, leader coaching & proactive care."
+        },
+        {
+          "role": "People & Hiring Managers",
+          "lift": "18% -> 56% Mentoring",
+          "color": "#1e8e3e",
+          "icon": "assets/icons/pillar_perform.png",
+          "action": "Eliminates panel scheduling ping-pong and speeds up structured hiring & growth reviews."
+        },
+        {
+          "role": "Frontline Associates",
+          "lift": "15% -> 48% Learning",
+          "color": "#e37400",
+          "icon": "assets/icons/pillar_develop.png",
+          "action": "Uses 3-minute regional Career Saathi reels & instant policy answers in daily work."
+        }
+      ],
+      "notes": "Point to every row on the chart: transformation succeeds because it unlocks meaningful time at every tier of the organization, from the boardroom down to regional branches."
+    },
+    {
+      "num": "16",
+      "eyebrow": "15 · FOUR ADOPTION PILLARS & MONDAY MORNING PLAYBOOK",
+      "title": "Four Proven Adoption Pillars & Your 90-Day Launch Plan",
+      "subtitle": "What separates stalled pilots from enterprise-wide HR transformation — start cleanly on Monday morning",
+      "layout": "adoption_close",
+      "heroImage": "assets/roadmap_launch.jpg",
+      "adoptionPillars": [
+        {
+          "num": "01",
+          "title": "Cross-Functional Governance",
+          "desc": "Align HR, Legal & IT upfront on privacy, fairness & policy rules.",
+          "color": "#4285f4",
+          "icon": "assets/gcp_icons/SecurityIdentity-512-color.png"
+        },
+        {
+          "num": "02",
+          "title": "Track Adoption Closely",
+          "desc": "Spot usage gaps by region or cohort and tailor enablement early.",
+          "color": "#ea4335",
+          "icon": "assets/gcp_icons/BusinessIntelligence-512-color.png"
+        },
+        {
+          "num": "03",
+          "title": "Redesign Process First",
+          "desc": "Simplify bloated approval chains before automating to multiply gains.",
+          "color": "#e37400",
+          "icon": "assets/icons/pillar_ops.png"
+        },
+        {
+          "num": "04",
+          "title": "Invest in Upskilling",
+          "desc": "Deliver role-based hands-on fluency for HR teams & people managers.",
+          "color": "#34a853",
+          "icon": "assets/icons/pillar_develop.png"
+        }
+      ],
+      "ctaBoxes": [
+        {
+          "num": "01",
+          "title": "Days 1–30 · Quick Win Pilot",
+          "desc": "Launch HR Policy Concierge & Day-1 Onboarding Buddy (~60% faster answers).",
+          "color": "#4285f4",
+          "icon": "assets/icons/badge_nocode.png"
+        },
+        {
+          "num": "02",
+          "title": "Days 31–60 · Frictionless Hiring",
+          "desc": "Activate Skill-First Blind Screening & <1 Hr Interview Scheduling.",
+          "color": "#34a853",
+          "icon": "assets/icons/pillar_perform.png"
+        },
+        {
+          "num": "03",
+          "title": "Days 61–90 · Career Saathi & Clarity",
+          "desc": "Scale 3-Min Career Saathi reels, Burnout Pulse & CHRO Workforce Radar.",
+          "color": "#5e35b1",
+          "icon": "assets/icons/pillar_workforce.png"
+        }
+      ],
+      "notes": "Bring together the 4 Enterprise Adoption Pillars with a decisive 90-day Monday Morning sequence: start narrow with verified policies in 30 days, unlock hiring velocity at 60 days, and compound internal mobility by Day 90."
+    }
+  ]
+}
