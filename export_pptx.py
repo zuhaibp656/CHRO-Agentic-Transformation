@@ -29,6 +29,7 @@ OUT_PPTX = ROOT / "CHRO_Agentic_Transformation_Keynote.pptx"
 OUT_PPTX_V2 = ROOT / "CHRO_Agentic_Transformation_Keynote_v2.pptx"
 
 ASSETS = ROOT / "assets"
+BRAND = ASSETS / "branding"
 CHARTS = ASSETS / "charts"
 ICONS = ASSETS / "icons"
 GCP = ASSETS / "gcp_icons"
@@ -106,6 +107,48 @@ def add_bg(slide, color: RGBColor = C_WHITE) -> None:
     bg.fill.solid()
     bg.fill.fore_color.rgb = color
     bg.line.fill.background()
+
+
+def add_og_faded_bg(slide) -> None:
+    bg_path = BRAND / "og_slide_bg_fade.png"
+    if bg_path.exists():
+        slide.shapes.add_picture(str(bg_path), Inches(0), Inches(0), width=SLIDE_W, height=SLIDE_H)
+    else:
+        add_bg(slide, C_WHITE)
+
+
+def add_brand_footer(slide, slide_num: str, total_slides: int) -> None:
+    gc_path = BRAND / "google_cloud_logo.png"
+    gem_path = BRAND / "gemini_logo.png"
+    cursor_x = 0.65
+    if gc_path.exists():
+        with Image.open(gc_path) as im:
+            gw, gh = im.size
+        logo_h = 0.21
+        logo_w = logo_h * (gw / max(1, gh))
+        slide.shapes.add_picture(str(gc_path), Inches(cursor_x), Inches(7.015), width=Inches(logo_w), height=Inches(logo_h))
+        cursor_x += logo_w + 0.14
+        add_rect(slide, cursor_x, 7.03, 0.014, 0.18, fill=hex_rgb("#DADCE0"), border=None, rounded=False)
+        cursor_x += 0.14
+    if gem_path.exists():
+        with Image.open(gem_path) as im:
+            mw, mh = im.size
+        gem_h = 0.22
+        gem_w = gem_h * (mw / max(1, mh))
+        slide.shapes.add_picture(str(gem_path), Inches(cursor_x), Inches(7.005), width=Inches(gem_w), height=Inches(gem_h))
+    add_textbox(
+        slide,
+        11.3,
+        7.01,
+        1.4,
+        0.24,
+        f"{slide_num} / {total_slides:02d}",
+        font_size=10,
+        bold=True,
+        color=C_MUTED,
+        align=PP_ALIGN.RIGHT,
+        valign=MSO_ANCHOR.MIDDLE,
+    )
 
 
 def add_four_color_strip(slide, top: float = 7.38, height: float = 0.12) -> None:
@@ -266,7 +309,7 @@ def add_slide_chrome(
     total_slides: int = 22,
     icon_path: pathlib.Path | None = None,
 ) -> None:
-    add_bg(slide, C_WHITE)
+    add_og_faded_bg(slide)
     add_rect(slide, 0.0, 0.0, 13.333, 0.07, fill=accent, border=None, rounded=False)
     add_rect(slide, 0.65, 0.30, 5.2, 0.30, fill=C_ICE_BLUE, border=C_BORDER_BLUE, border_pt=0.75)
     add_textbox(
@@ -280,17 +323,7 @@ def add_slide_chrome(
     add_textbox(slide, 0.65, 0.64, title_w, 0.54, title, font_size=title_fs, bold=True, color=C_INK, font_name=FONT_DISPLAY)
     if subtitle:
         add_textbox(slide, 0.65, sub_y, 11.8, 0.36, subtitle, font_size=12.5, color=C_MUTED)
-    add_textbox(
-        slide,
-        0.65,
-        7.05,
-        8.8,
-        0.26,
-        "Gemini Enterprise · Office of the Chief Human Resources Officer (CHRO) Transformation",
-        font_size=9.5,
-        color=C_MUTED,
-    )
-    add_textbox(slide, 11.3, 7.05, 1.4, 0.26, f"{slide_num} / {total_slides:02d}", font_size=10, bold=True, color=C_MUTED, align=PP_ALIGN.RIGHT)
+    add_brand_footer(slide, slide_num, total_slides)
     add_four_color_strip(slide)
 
 
@@ -319,7 +352,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
         base_notes = sc.get("notes", "")
 
         if layout == "hero":
-            add_bg(slide, C_WHITE)
+            add_og_faded_bg(slide)
             add_rect(slide, 0.0, 0.0, 13.333, 0.12, fill=C_BLUE, border=None, rounded=False)
             add_rect(slide, 0.72, 0.88, 5.2, 0.36, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
             add_textbox(slide, 0.84, 0.91, 4.96, 0.3, sc["eyebrow"], font_size=10.5, bold=True, color=C_COBALT, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
@@ -336,9 +369,10 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 add_picture_fit(slide, hl_icons[idx], 0.92, cy + 0.12, 0.44, 0.44)
                 add_textbox(slide, 1.48, cy + 0.16, 5.65, 0.36, item, font_size=13.5, bold=True, color=C_INK, valign=MSO_ANCHOR.MIDDLE)
 
-            add_textbox(slide, 0.72, 6.62, 7.0, 0.36, meta["eventMeta"], font_size=11.5, color=C_MUTED)
+            add_textbox(slide, 0.72, 6.55, 7.0, 0.32, meta["eventMeta"], font_size=11.5, color=C_MUTED)
             # Hero Illustration Visual (Right 42%)
             add_picture_fit(slide, ASSETS / "hero_chro_keynote.jpg", 7.55, 0.82, 5.35, 5.65)
+            add_brand_footer(slide, sc["num"], total)
             add_four_color_strip(slide)
             set_notes(slide, base_notes)
 
@@ -415,7 +449,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
 
         elif layout == "section_break":
             acc = hex_rgb(sc.get("accent", "#4285F4"))
-            add_bg(slide, C_WHITE)
+            add_og_faded_bg(slide)
             add_rect(slide, 0.0, 0.0, 13.333, 0.14, fill=acc, border=None, rounded=False)
             add_rect(slide, 0.85, 1.45, 4.9, 0.40, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
             add_textbox(slide, 0.98, 1.48, 4.64, 0.34, sc["eyebrow"], font_size=11, bold=True, color=acc, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
@@ -437,8 +471,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                     add_textbox(slide, cx + 0.12, 4.94, cw - 0.24, 0.34, ch["num"], font_size=13, bold=True, color=c_col, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER)
                     add_textbox(slide, cx + 0.10, 5.30, cw - 0.20, 0.48, ch["label"], font_size=14, bold=True, color=C_INK, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
 
-            add_textbox(slide, 0.85, 7.05, 8.8, 0.26, "Gemini Enterprise · Office of the Chief Human Resources Officer (CHRO) Transformation", font_size=9.5, color=C_MUTED)
-            add_textbox(slide, 11.3, 7.05, 1.4, 0.26, f"{sc['num']} / {total:02d}", font_size=10, bold=True, color=C_MUTED, align=PP_ALIGN.RIGHT)
+            add_brand_footer(slide, sc["num"], total)
             add_four_color_strip(slide)
             set_notes(slide, base_notes)
 
@@ -959,7 +992,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
             set_notes(slide, base_notes)
 
         elif layout == "adoption_close":
-            add_bg(slide, C_WHITE)
+            add_og_faded_bg(slide)
             add_rect(slide, 0.0, 0.0, 13.333, 0.12, fill=C_BLUE, border=None, rounded=False)
             add_rect(slide, 0.65, 0.42, 5.4, 0.32, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
             add_textbox(slide, 0.78, 0.44, 5.14, 0.28, sc["eyebrow"], font_size=9.5, bold=True, color=C_COBALT, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
@@ -988,13 +1021,12 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
 
             roadmap_img = ROOT / sc.get("heroImage", "assets/roadmap_launch.jpg")
             add_picture_fit(slide, roadmap_img, 8.38, 1.05, 4.35, 5.60)
-            add_textbox(slide, 0.65, 7.04, 8.8, 0.26, f"Gemini Enterprise · Office of the Chief Human Resources Officer (CHRO)  ({version_tag_label(footer_label)})", font_size=9.5, color=C_MUTED)
-            add_textbox(slide, 11.3, 7.04, 1.4, 0.26, f"{sc['num']} / {total:02d}", font_size=10, bold=True, color=C_MUTED, align=PP_ALIGN.RIGHT)
+            add_brand_footer(slide, sc["num"], total)
             add_four_color_strip(slide)
             set_notes(slide, base_notes)
 
         elif layout == "closing":
-            add_bg(slide, C_WHITE)
+            add_og_faded_bg(slide)
             add_rect(slide, 0.0, 0.0, 13.333, 0.12, fill=C_BLUE, border=None, rounded=False)
             add_rect(slide, 0.72, 0.62, 5.2, 0.34, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
             add_textbox(slide, 0.84, 0.64, 4.96, 0.30, sc["eyebrow"], font_size=10, bold=True, color=C_COBALT, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
@@ -1024,6 +1056,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
 
             roadmap_img = ASSETS / "roadmap_launch.jpg"
             add_picture_fit(slide, roadmap_img if roadmap_img.exists() else ASSETS / "hero_chro_keynote.jpg", 8.10, 1.15, 4.65, 5.45)
+            add_brand_footer(slide, sc["num"], total)
             add_four_color_strip(slide)
             set_notes(slide, base_notes)
 

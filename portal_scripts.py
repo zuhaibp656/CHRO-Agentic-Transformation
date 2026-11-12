@@ -1098,25 +1098,25 @@ PORTAL_JS = r"""
           </div>
         `;
       } else if (sc.layout === 'pillar_map') {
-        headerIconHtml = `<img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:36px; height:36px; object-fit:contain;" />`;
+        headerIconHtml = `<img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:32px; height:32px; object-fit:contain;" />`;
         bodyHtml = `
-          <div style="display:flex; align-items:center; justify-content:center; gap:10px; padding:8px 16px; border-radius:10px; background:#e8f0fe; border:1.5px solid #4285f4; color:#185abc; font-family:var(--font-display); font-size:13px; font-weight:800; margin-bottom:14px;">
-            <img src="assets/icons/badge_sparkle.png" alt="" style="width:20px; height:20px;" />
+          <div style="display:flex; align-items:center; justify-content:center; gap:8px; padding:5px 12px; border-radius:9px; background:#e8f0fe; border:1.5px solid #4285f4; color:#185abc; font-family:var(--font-display); font-size:11.5px; font-weight:800; margin-bottom:8px;">
+            <img src="assets/icons/badge_sparkle.png" alt="" style="width:16px; height:16px;" />
             <span>OFFICE OF THE CHRO · 6 PILLARS · 14 PROCESS AGENTS</span>
-            <img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:20px; height:20px;" />
+            <img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:16px; height:16px;" />
           </div>
-          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; flex:1; min-height:0;">
+          <div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:9px; flex:1; min-height:0;">
             ${Object.values(PILLARS).map(p => `
-              <div style="padding:14px 16px; border-radius:12px; background:#f8f9fa; border:1px solid #e8eaed; border-top:4px solid ${p.color}; display:flex; flex-direction:column; justify-content:space-between; gap:10px;">
-                <div style="display:flex; align-items:center; gap:10px;">
-                  <img src="${SLIDE_PILLAR_ICONS[p.id] || 'assets/icons/badge_sparkle.png'}" alt="" style="width:34px; height:34px; object-fit:contain; flex-shrink:0;" />
-                  <div>
-                    <div style="font-size:10px; font-weight:800; color:${p.color};">${esc(p.apqcBadge)}</div>
-                    <div style="font-family:var(--font-display); font-size:14px; font-weight:800; color:#202124; line-height:1.15;">${esc(p.shortName || p.name)}</div>
+              <div style="padding:9px 11px; border-radius:10px; background:#f8f9fa; border:1px solid #e8eaed; border-top:3.5px solid ${p.color}; display:flex; flex-direction:column; justify-content:space-between; gap:5px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <img src="${SLIDE_PILLAR_ICONS[p.id] || 'assets/icons/badge_sparkle.png'}" alt="" style="width:26px; height:26px; object-fit:contain; flex-shrink:0;" />
+                  <div style="min-width:0;">
+                    <div style="font-size:8.5px; font-weight:800; color:${p.color};">${esc(p.apqcBadge)}</div>
+                    <div style="font-family:var(--font-display); font-size:12px; font-weight:800; color:#202124; line-height:1.12;">${esc(p.shortName || p.name)}</div>
                   </div>
                 </div>
-                <div style="font-family:var(--font-display); font-size:15px; font-weight:800; color:${p.color}; line-height:1.2;">${esc(p.slideMetric || p.impactMetric)}</div>
-                <div style="padding:6px 10px; border-radius:8px; background:#ffffff; border:1px solid #d2e3fc; font-size:10.5px; font-weight:700; color:#3c4043; text-align:center;">
+                <div style="font-family:var(--font-display); font-size:12.5px; font-weight:800; color:${p.color}; line-height:1.15;">${esc(p.slideMetric || p.impactMetric)}</div>
+                <div style="padding:4px 7px; border-radius:7px; background:#ffffff; border:1px solid #d2e3fc; font-size:9.5px; font-weight:700; color:#3c4043; text-align:center;">
                   ${esc(p.slideMixPill || (p.agentIds.length + ' Process Agents'))}
                 </div>
               </div>
@@ -1374,51 +1374,51 @@ PORTAL_JS = r"""
           ` : ''}
         `;
       } else if (sc.layout === 'moments_matter') {
-        headerIconHtml = `<img src="assets/icons/badge_sparkle.png" alt="" style="width:36px; height:36px; object-fit:contain;" />`;
+        headerIconHtml = `<img src="assets/icons/badge_sparkle.png" alt="" style="width:32px; height:32px; object-fit:contain;" />`;
         bodyHtml = `
-          <div style="display:flex; flex-direction:column; gap:12px; flex:1; min-height:0;">
-            <div class="slide-img-card" style="flex:0.94; min-height:0; padding:6px 12px; border-color:#d2e3fc;">
+          <div style="display:flex; flex-direction:column; gap:8px; flex:1; min-height:0;">
+            <div class="slide-img-card" style="flex:0.86; min-height:0; padding:5px 10px; border-color:#d2e3fc;">
               <img src="${esc(sc.heroImage || 'assets/moments_matter.jpg')}" alt="Five Hire-to-Retire Moments Visual Pathway" style="width:100%; height:100%; object-fit:contain;" />
             </div>
-            <div style="display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:10px; flex:1.15; min-height:0;">
+            <div style="display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:8px; flex:1.1; min-height:0;">
               ${(sc.moments || []).map(m => `
-                <div style="padding:11px 10px; border-radius:12px; background:#f8f9fa; border:1px solid #e8eaed; border-top:4px solid ${m.color}; display:flex; flex-direction:column; justify-content:space-between; text-align:center;">
+                <div style="padding:8px 8px; border-radius:10px; background:#f8f9fa; border:1px solid #e8eaed; border-top:3.5px solid ${m.color}; display:flex; flex-direction:column; justify-content:space-between; text-align:center;">
                   <div style="display:flex; align-items:center; justify-content:space-between;">
-                    <span style="font-family:var(--font-mono); font-size:10px; font-weight:800; color:${m.color};">${esc(m.step)}</span>
-                    <img src="${esc(m.icon)}" alt="" style="width:24px; height:24px; object-fit:contain;" />
+                    <span style="font-family:var(--font-mono); font-size:9px; font-weight:800; color:${m.color};">${esc(m.step)}</span>
+                    <img src="${esc(m.icon)}" alt="" style="width:20px; height:20px; object-fit:contain;" />
                   </div>
                   <div>
-                    <div style="font-family:var(--font-display); font-size:13.5px; font-weight:800; color:#202124;">${esc(m.title)}</div>
-                    <div style="font-family:var(--font-display); font-size:18px; font-weight:800; color:${m.color}; margin:4px 0 1px;">${esc(m.metric)}</div>
-                    <div style="font-size:9.5px; font-weight:700; color:#5f6368; text-transform:uppercase; letter-spacing:0.04em;">${esc(m.metricLbl)}</div>
+                    <div style="font-family:var(--font-display); font-size:12px; font-weight:800; color:#202124;">${esc(m.title)}</div>
+                    <div style="font-family:var(--font-display); font-size:15.5px; font-weight:800; color:${m.color}; margin:3px 0 1px;">${esc(m.metric)}</div>
+                    <div style="font-size:8.5px; font-weight:700; color:#5f6368; text-transform:uppercase; letter-spacing:0.04em;">${esc(m.metricLbl)}</div>
                   </div>
-                  <div style="font-size:10.5px; color:#3c4043; line-height:1.3; padding-top:6px; border-top:1px dashed #dadce0;">${esc(m.desc)}</div>
+                  <div style="font-size:9.5px; color:#3c4043; line-height:1.22; padding-top:4px; border-top:1px dashed #dadce0;">${esc(m.desc)}</div>
                 </div>
               `).join('')}
             </div>
           </div>
         `;
       } else if (sc.layout === 'mindmap_agents') {
-        headerIconHtml = `<img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:36px; height:36px; object-fit:contain;" />`;
+        headerIconHtml = `<img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:32px; height:32px; object-fit:contain;" />`;
         const branchPillars = (sc.pillarIds || []).map(id => PILLARS[id]).filter(Boolean);
         bodyHtml = `
           <div class="mm-slide-grid">
             <div class="mm-hub-card">
               <div>
-                <img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:44px; height:44px; object-fit:contain; margin:0 auto 6px; display:block;" />
-                <div style="font-size:9.5px; font-weight:800; color:#185abc; letter-spacing:0.06em; text-transform:uppercase;">MIND MAP · ${esc(sc.part || '')}</div>
-                <div style="font-family:var(--font-display); font-size:15px; font-weight:800; color:#202124; margin:4px 0 3px; line-height:1.15;">${esc(sc.hubTitle || 'Agent Ecosystem')}</div>
-                <div style="font-size:11px; font-weight:700; color:#4285f4;">${esc(sc.hubSub || '')}</div>
+                <img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:34px; height:34px; object-fit:contain; margin:0 auto 4px; display:block;" />
+                <div style="font-size:8.5px; font-weight:800; color:#185abc; letter-spacing:0.05em; text-transform:uppercase;">MIND MAP · ${esc(sc.part || '')}</div>
+                <div style="font-family:var(--font-display); font-size:13px; font-weight:800; color:#202124; margin:3px 0 2px; line-height:1.12;">${esc(sc.hubTitle || 'Agent Ecosystem')}</div>
+                <div style="font-size:9.8px; font-weight:700; color:#4285f4;">${esc(sc.hubSub || '')}</div>
               </div>
-              <div style="width:100%; display:flex; flex-direction:column; gap:5px; text-align:left; padding:8px; border-radius:10px; background:#ffffff; border:1px solid #d2e3fc;">
-                <div style="font-size:9px; font-weight:800; color:#5f6368; text-transform:uppercase;">${slideDeckVersion === 'v2' ? 'Solution Type' : 'Build Tier Key'}</div>
-                <div style="display:flex; align-items:center; gap:5px; font-size:9.5px; font-weight:700; color:#137333;"><span style="width:8px; height:8px; border-radius:50%; background:#34a853; display:inline-block;"></span> ${slideDeckVersion === 'v2' ? 'HR Team Studio' : 'No/Low-Code Studio'}</div>
-                <div style="display:flex; align-items:center; gap:5px; font-size:9.5px; font-weight:700; color:#185abc;"><span style="width:8px; height:8px; border-radius:50%; background:#5e35b1; display:inline-block;"></span> ${slideDeckVersion === 'v2' ? 'Cross-System Sync' : 'Google ADK + MCP'}</div>
+              <div style="width:100%; display:flex; flex-direction:column; gap:4px; text-align:left; padding:6px; border-radius:8px; background:#ffffff; border:1px solid #d2e3fc;">
+                <div style="font-size:8px; font-weight:800; color:#5f6368; text-transform:uppercase;">${slideDeckVersion === 'v2' ? 'Solution Type' : 'Build Tier Key'}</div>
+                <div style="display:flex; align-items:center; gap:4px; font-size:8.5px; font-weight:700; color:#137333;"><span style="width:7px; height:7px; border-radius:50%; background:#34a853; display:inline-block; flex-shrink:0;"></span> ${slideDeckVersion === 'v2' ? 'HR Team Studio' : 'No/Low-Code'}</div>
+                <div style="display:flex; align-items:center; gap:4px; font-size:8.5px; font-weight:700; color:#185abc;"><span style="width:7px; height:7px; border-radius:50%; background:#5e35b1; display:inline-block; flex-shrink:0;"></span> ${slideDeckVersion === 'v2' ? 'Cross-System Sync' : 'ADK + MCP'}</div>
               </div>
             </div>
             <div style="display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="100%" viewBox="0 0 24 240" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0,120 C12,120 10,38 24,38 M0,120 L24,120 M0,120 C12,120 10,202 24,202" stroke="#aecbfa" stroke-width="2" fill="none" />
+              <svg width="14" height="100%" viewBox="0 0 14 240" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,120 C7,120 6,38 14,38 M0,120 L14,120 M0,120 C7,120 6,202 14,202" stroke="#aecbfa" stroke-width="2" fill="none" />
               </svg>
             </div>
             <div class="mm-branches-col">
@@ -1427,16 +1427,16 @@ PORTAL_JS = r"""
                 const pIcon = SLIDE_PILLAR_ICONS[p.id] || 'assets/icons/badge_sparkle.png';
                 return `
                   <div class="mm-branch-row">
-                    <div class="mm-pillar-node" style="border-left:5px solid ${p.color}; border-color:${p.color}33; border-left-color:${p.color};">
-                      <img src="${pIcon}" alt="" style="width:28px; height:28px; object-fit:contain; flex-shrink:0;" />
-                      <div>
-                        <div style="font-size:9px; font-weight:800; color:${p.color}; letter-spacing:0.04em;">${esc(p.apqcBadge || ('PILLAR 0' + p.vNum))}</div>
-                        <div style="font-family:var(--font-display); font-size:12.5px; font-weight:800; color:#202124; line-height:1.15;">${esc(p.shortName || p.name)}</div>
+                    <div class="mm-pillar-node" style="border-left:4px solid ${p.color}; border-color:${p.color}33; border-left-color:${p.color};">
+                      <img src="${pIcon}" alt="" style="width:22px; height:22px; object-fit:contain; flex-shrink:0;" />
+                      <div style="min-width:0;">
+                        <div style="font-size:8px; font-weight:800; color:${p.color}; letter-spacing:0.03em; line-height:1.1;">${esc(p.apqcBadge || ('PILLAR 0' + p.vNum))}</div>
+                        <div style="font-family:var(--font-display); font-size:11px; font-weight:800; color:#202124; line-height:1.12;">${esc(p.shortName || p.name)}</div>
                       </div>
                     </div>
                     <div style="display:flex; align-items:center; justify-content:center;">
-                      <svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true">
-                        <path d="M0,12 L18,12 M13,7 L19,12 L13,17" stroke="${p.color}" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                      <svg width="12" height="18" viewBox="0 0 12 18" aria-hidden="true">
+                        <path d="M0,9 L10,9 M6.5,5 L10.5,9 L6.5,13" stroke="${p.color}" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </div>
                     <div class="mm-agents-row" style="grid-template-columns:repeat(${pAgents.length}, minmax(0, 1fr));">
@@ -1448,10 +1448,10 @@ PORTAL_JS = r"""
                           ? (isAdk ? 'Connected' : 'HR Studio')
                           : (isAdk ? 'ADK' : (ag.buildTier === 'Low-Code' ? 'Low-Code' : 'No-Code'));
                         return `
-                          <div class="mm-agent-node" style="border-top:3.5px solid ${tierCol};" onclick="openAgentPage('${ag.id}', true)" title="Click to inspect ${esc(ag.simpleName || ag.name)} Studio">
-                            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:6px;">
-                              <div style="font-family:var(--font-display); font-size:12px; font-weight:800; color:#202124; line-height:1.15;">${esc(ag.simpleName || ag.name)}</div>
-                              <span style="font-size:8.5px; font-weight:800; padding:2px 6px; border-radius:999px; background:${tierBg}; color:${tierCol}; white-space:nowrap; flex-shrink:0;">${tierTxt}</span>
+                          <div class="mm-agent-node" style="border-top:3px solid ${tierCol};" onclick="openAgentPage('${ag.id}', true)" title="Click to inspect ${esc(ag.simpleName || ag.name)} Studio">
+                            <div style="display:flex; flex-direction:column; gap:2px; min-width:0;">
+                              <span style="align-self:flex-start; font-size:7.5px; font-weight:800; padding:1px 5px; border-radius:999px; background:${tierBg}; color:${tierCol}; white-space:nowrap;">${tierTxt}</span>
+                              <div style="font-family:var(--font-display); font-size:10.5px; font-weight:800; color:#202124; line-height:1.12;">${esc(ag.simpleName || ag.name)}</div>
                             </div>
                             <div class="mm-persona-chips">
                               ${(ag.personasServed || []).map(per => `<span class="mm-persona-chip">&#128100; ${esc(per)}</span>`).join('')}
@@ -1487,22 +1487,22 @@ PORTAL_JS = r"""
           </div>
         `;
       } else if (sc.layout === 'workforce_readiness') {
-        headerIconHtml = `<img src="assets/icons/pillar_develop.png" alt="" style="width:36px; height:36px; object-fit:contain;" />`;
+        headerIconHtml = `<img src="assets/icons/pillar_develop.png" alt="" style="width:32px; height:32px; object-fit:contain;" />`;
         bodyHtml = `
-          <div style="display:grid; grid-template-columns:1.2fr 0.92fr; gap:16px; flex:1; min-height:0; align-items:stretch;">
-            <div class="slide-img-card" style="padding:10px; border-color:#d2e3fc;">
+          <div style="display:grid; grid-template-columns:1.18fr 0.94fr; gap:12px; flex:1; min-height:0; align-items:stretch;">
+            <div class="slide-img-card" style="padding:8px; border-color:#d2e3fc;">
               <img src="${esc(sc.chartImage || 'assets/charts/workforce_readiness_chart.png')}" alt="Workforce AI Readiness Strategic Time Shift" />
             </div>
-            <div style="display:flex; flex-direction:column; gap:8px; justify-content:space-between;">
+            <div style="display:flex; flex-direction:column; gap:5px; justify-content:space-between; min-height:0;">
               ${(sc.personas || []).map(p => `
-                <div style="flex:1; padding:8px 12px; border-radius:11px; background:#f8f9fa; border:1px solid #e8eaed; border-left:5px solid ${p.color}; display:flex; align-items:center; gap:10px;">
-                  <img src="${esc(p.icon)}" alt="" style="width:28px; height:28px; object-fit:contain; flex-shrink:0;" />
+                <div style="flex:1; padding:6px 10px; border-radius:9px; background:#f8f9fa; border:1px solid #e8eaed; border-left:4px solid ${p.color}; display:flex; align-items:center; gap:8px;">
+                  <img src="${esc(p.icon)}" alt="" style="width:24px; height:24px; object-fit:contain; flex-shrink:0;" />
                   <div style="flex:1; min-width:0;">
-                    <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:2px;">
-                      <span style="font-family:var(--font-display); font-size:11.5px; font-weight:800; color:#202124;">${esc(p.role)}</span>
-                      <span style="font-size:9px; font-weight:800; padding:2px 7px; border-radius:999px; background:#e8f0fe; color:${p.color}; white-space:nowrap;">${esc(p.lift)}</span>
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:1px;">
+                      <span style="font-family:var(--font-display); font-size:11px; font-weight:800; color:#202124;">${esc(p.role)}</span>
+                      <span style="font-size:8.5px; font-weight:800; padding:1.5px 6px; border-radius:999px; background:#e8f0fe; color:${p.color}; white-space:nowrap;">${esc(p.lift)}</span>
                     </div>
-                    <div style="font-size:10.5px; color:#3c4043; line-height:1.3;">${esc(p.action)}</div>
+                    <div style="font-size:9.8px; color:#3c4043; line-height:1.22;">${esc(p.action)}</div>
                   </div>
                 </div>
               `).join('')}
@@ -1533,10 +1533,10 @@ PORTAL_JS = r"""
           </div>
         `;
       } else if (sc.layout === 'pillar_functions_map') {
-        headerIconHtml = `<img src="assets/icons/pillar_workforce.png" alt="" style="width:36px; height:36px; object-fit:contain;" />`;
+        headerIconHtml = `<img src="assets/icons/pillar_workforce.png" alt="" style="width:32px; height:32px; object-fit:contain;" />`;
         bodyHtml = `
-          <div style="display:flex; align-items:center; justify-content:center; gap:10px; padding:7px 14px; border-radius:10px; background:#e8f0fe; border:1.5px solid #4285f4; color:#185abc; font-family:var(--font-display); font-size:12px; font-weight:800; margin-bottom:10px;">
-            <img src="assets/icons/badge_sparkle.png" alt="" style="width:18px; height:18px;" />
+          <div style="display:flex; align-items:center; justify-content:center; gap:8px; padding:4px 12px; border-radius:9px; background:#e8f0fe; border:1.5px solid #4285f4; color:#185abc; font-family:var(--font-display); font-size:10.8px; font-weight:800; margin-bottom:6px;">
+            <img src="assets/icons/badge_sparkle.png" alt="" style="width:15px; height:15px;" />
             <span>${esc(sc.banner || 'OFFICE OF THE CHRO · 6 PILLARS · 25 BUSINESS FUNCTIONS')}</span>
           </div>
           <div class="pf-grid-3x2">
@@ -1545,15 +1545,15 @@ PORTAL_JS = r"""
               if (!p) return '';
               const pIcon = SLIDE_PILLAR_ICONS[p.id] || 'assets/icons/badge_sparkle.png';
               return `
-                <div class="pf-card" style="border-top:4px solid ${p.color};" onclick="selectPillar('${p.id}'); goToOrgChart();" title="Explore ${esc(p.shortName || p.name)} in Portal">
-                  <div style="display:flex; align-items:center; gap:9px;">
-                    <img src="${pIcon}" alt="" style="width:28px; height:28px; object-fit:contain; flex-shrink:0;" />
+                <div class="pf-card" style="border-top:3.5px solid ${p.color};" onclick="selectPillar('${p.id}'); goToOrgChart();" title="Explore ${esc(p.shortName || p.name)} in Portal">
+                  <div style="display:flex; align-items:center; gap:7px;">
+                    <img src="${pIcon}" alt="" style="width:22px; height:22px; object-fit:contain; flex-shrink:0;" />
                     <div style="min-width:0;">
-                      <div style="font-size:9px; font-weight:800; color:${p.color}; letter-spacing:0.04em;">${esc(p.apqcBadge)}</div>
-                      <div style="font-family:var(--font-display); font-size:13px; font-weight:800; color:#202124; line-height:1.15;">${esc(p.shortName || p.name)}</div>
+                      <div style="font-size:8px; font-weight:800; color:${p.color}; letter-spacing:0.03em; line-height:1.1;">${esc(p.apqcBadge)}</div>
+                      <div style="font-family:var(--font-display); font-size:11.5px; font-weight:800; color:#202124; line-height:1.12;">${esc(p.shortName || p.name)}</div>
                     </div>
                   </div>
-                  <div style="padding:4px 8px; border-radius:7px; background:#ffffff; border:1px solid ${p.color}44; font-family:var(--font-display); font-size:11.5px; font-weight:800; color:${p.color}; text-align:center;">
+                  <div style="padding:3px 6px; border-radius:6px; background:#ffffff; border:1px solid ${p.color}44; font-family:var(--font-display); font-size:10px; font-weight:800; color:${p.color}; text-align:center;">
                     ${esc(item.outcome)}
                   </div>
                   <div class="pf-fn-grid">
@@ -1565,38 +1565,38 @@ PORTAL_JS = r"""
           </div>
         `;
       } else if (sc.layout === 'pillar_value_pair') {
-        headerIconHtml = `<img src="assets/icons/pillar_perform.png" alt="" style="width:36px; height:36px; object-fit:contain;" />`;
+        headerIconHtml = `<img src="assets/icons/pillar_perform.png" alt="" style="width:32px; height:32px; object-fit:contain;" />`;
         bodyHtml = `
           ${sc.topBanner ? `
-            <div style="display:flex; align-items:center; gap:8px; padding:7px 12px; border-radius:10px; background:#e8f0fe; border:1px solid #d2e3fc; margin-bottom:10px;">
-              <img src="assets/icons/badge_sparkle.png" alt="" style="width:18px; height:18px; flex-shrink:0;" />
-              <div style="font-size:11px; font-weight:700; color:#185abc; line-height:1.25;">${esc(sc.topBanner)}</div>
+            <div style="display:flex; align-items:center; gap:7px; padding:4px 10px; border-radius:8px; background:#e8f0fe; border:1px solid #d2e3fc; margin-bottom:6px;">
+              <img src="assets/icons/badge_sparkle.png" alt="" style="width:15px; height:15px; flex-shrink:0;" />
+              <div style="font-size:10px; font-weight:700; color:#185abc; line-height:1.2;">${esc(sc.topBanner)}</div>
             </div>
           ` : ''}
           <div class="pv-pair-grid">
             ${(sc.cards || []).map(c => `
-              <div class="pv-col-card" style="border-top:5px solid ${c.color};">
-                <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
-                  <div style="display:flex; align-items:center; gap:9px; min-width:0;">
-                    <img src="${esc(c.icon)}" alt="" style="width:32px; height:32px; object-fit:contain; flex-shrink:0;" />
+              <div class="pv-col-card" style="border-top:4px solid ${c.color};">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+                  <div style="display:flex; align-items:center; gap:7px; min-width:0;">
+                    <img src="${esc(c.icon)}" alt="" style="width:25px; height:25px; object-fit:contain; flex-shrink:0;" />
                     <div style="min-width:0;">
-                      <div style="font-size:9px; font-weight:800; color:${c.color}; letter-spacing:0.04em;">${esc(c.badge)}</div>
-                      <div style="font-family:var(--font-display); font-size:13.5px; font-weight:800; color:#202124; line-height:1.15;">${esc(c.title)}</div>
+                      <div style="font-size:8px; font-weight:800; color:${c.color}; letter-spacing:0.03em;">${esc(c.badge)}</div>
+                      <div style="font-family:var(--font-display); font-size:12px; font-weight:800; color:#202124; line-height:1.12;">${esc(c.title)}</div>
                     </div>
                   </div>
-                  <div style="padding:6px 10px; border-radius:10px; background:#f8f9fa; border:1px solid ${c.color}55; text-align:center; flex-shrink:0;">
-                    <div style="font-family:var(--font-display); font-size:16px; font-weight:800; color:${c.color}; line-height:1.05;">${esc(c.metric)}</div>
-                    <div style="font-size:7.5px; font-weight:800; color:#5f6368; letter-spacing:0.04em;">${esc(c.metricLbl)}</div>
+                  <div style="padding:4px 8px; border-radius:8px; background:#f8f9fa; border:1px solid ${c.color}55; text-align:center; flex-shrink:0;">
+                    <div style="font-family:var(--font-display); font-size:14px; font-weight:800; color:${c.color}; line-height:1.05;">${esc(c.metric)}</div>
+                    <div style="font-size:7px; font-weight:800; color:#5f6368; letter-spacing:0.04em;">${esc(c.metricLbl)}</div>
                   </div>
                 </div>
-                <div style="display:flex; flex-direction:column; gap:8px; flex:1;">
-                  <div class="pv-strip" style="background:#fce8e6; border-left:4px solid #ea4335;">
+                <div style="display:flex; flex-direction:column; gap:5px; flex:1; min-height:0;">
+                  <div class="pv-strip" style="background:#fce8e6; border-left:3.5px solid #ea4335;">
                     <span><strong style="color:#c5221f;">Today's Friction:</strong> ${esc(c.problem)}</span>
                   </div>
-                  <div class="pv-strip" style="background:#e8f0fe; border-left:4px solid ${c.color};">
+                  <div class="pv-strip" style="background:#e8f0fe; border-left:3.5px solid ${c.color};">
                     <span><strong style="color:#185abc;">Solution:</strong> ${esc(c.solution)}</span>
                   </div>
-                  <div class="pv-strip" style="background:#e6f4ea; border-left:4px solid #137333;">
+                  <div class="pv-strip" style="background:#e6f4ea; border-left:3.5px solid #137333;">
                     <span><strong style="color:#137333;">Business Outcome:</strong> ${esc(c.value)}</span>
                   </div>
                 </div>
@@ -1606,38 +1606,38 @@ PORTAL_JS = r"""
         `;
       } else if (sc.layout === 'adoption_close') {
         bodyHtml = `
-          <div style="display:grid; grid-template-columns:1.38fr 0.78fr; gap:18px; align-items:stretch; flex:1; min-height:0;">
-            <div style="display:flex; flex-direction:column; justify-content:space-between; gap:8px; min-height:0;">
+          <div style="display:grid; grid-template-columns:1.38fr 0.78fr; gap:14px; align-items:stretch; flex:1; min-height:0;">
+            <div style="display:flex; flex-direction:column; justify-content:space-between; gap:5px; min-height:0;">
               <div>
-                <span style="display:inline-block; padding:3px 10px; border-radius:999px; background:#e8f0fe; border:1px solid #d2e3fc; color:#185abc; font-size:9.5px; font-weight:800; letter-spacing:0.05em;">${esc(sc.eyebrow)}</span>
-                <h2 style="font-family:var(--font-display); font-size:clamp(19px,2vw,24px); font-weight:800; color:#202124; margin:5px 0 3px; line-height:1.12;">${esc(sc.title)}</h2>
-                <p style="font-size:11.5px; color:#5f6368; margin:0;">${esc(sc.subtitle)}</p>
+                <span style="display:inline-block; padding:2.5px 9px; border-radius:999px; background:#e8f0fe; border:1px solid #d2e3fc; color:#185abc; font-size:9px; font-weight:800; letter-spacing:0.05em;">${esc(sc.eyebrow)}</span>
+                <h2 style="font-family:var(--font-display); font-size:clamp(17px,1.8vw,22px); font-weight:800; color:#202124; margin:3px 0 2px; line-height:1.12;">${esc(sc.title)}</h2>
+                <p style="font-size:10.8px; color:#5f6368; margin:0;">${esc(sc.subtitle)}</p>
               </div>
-              <div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:8px;">
+              <div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:6px;">
                 ${(sc.adoptionPillars || []).map(ap => `
-                  <div style="padding:8px 10px; border-radius:10px; background:#f8f9fa; border:1px solid #e8eaed; border-top:3.5px solid ${ap.color}; display:flex; align-items:flex-start; gap:8px;">
-                    <img src="${esc(ap.icon)}" alt="" style="width:24px; height:24px; object-fit:contain; flex-shrink:0;" />
+                  <div style="padding:6px 8px; border-radius:9px; background:#f8f9fa; border:1px solid #e8eaed; border-top:3px solid ${ap.color}; display:flex; align-items:flex-start; gap:7px;">
+                    <img src="${esc(ap.icon)}" alt="" style="width:20px; height:20px; object-fit:contain; flex-shrink:0;" />
                     <div>
-                      <div style="font-family:var(--font-display); font-size:11px; font-weight:800; color:${ap.color};">${esc(ap.num)} · ${esc(ap.title)}</div>
-                      <div style="font-size:10px; color:#3c4043; line-height:1.25;">${esc(ap.desc)}</div>
+                      <div style="font-family:var(--font-display); font-size:10.5px; font-weight:800; color:${ap.color}; line-height:1.15;">${esc(ap.num)} · ${esc(ap.title)}</div>
+                      <div style="font-size:9.3px; color:#3c4043; line-height:1.2;">${esc(ap.desc)}</div>
                     </div>
                   </div>
                 `).join('')}
               </div>
-              <div style="display:flex; flex-direction:column; gap:6px;">
+              <div style="display:flex; flex-direction:column; gap:5px;">
                 ${(sc.ctaBoxes || []).map(st => `
-                  <div style="display:flex; align-items:center; gap:10px; padding:7px 12px; border-radius:10px; background:#ffffff; border:1.5px solid ${st.color};">
-                    <span style="width:24px; height:24px; border-radius:50%; background:${st.color}; color:#fff; font-weight:800; font-size:10.5px; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">${esc(st.num)}</span>
+                  <div style="display:flex; align-items:center; gap:9px; padding:5px 10px; border-radius:9px; background:#ffffff; border:1.5px solid ${st.color};">
+                    <span style="width:22px; height:22px; border-radius:50%; background:${st.color}; color:#fff; font-weight:800; font-size:10px; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">${esc(st.num)}</span>
                     <div style="flex:1; min-width:0;">
-                      <div style="font-size:11.5px; font-weight:800; color:${st.color};">${esc(st.title)}</div>
-                      <div style="font-size:10.5px; color:#3c4043; line-height:1.25;">${esc(st.desc)}</div>
+                      <div style="font-size:10.8px; font-weight:800; color:${st.color}; line-height:1.15;">${esc(st.title)}</div>
+                      <div style="font-size:9.8px; color:#3c4043; line-height:1.2;">${esc(st.desc)}</div>
                     </div>
-                    <img src="${esc(st.icon)}" alt="" style="width:24px; height:24px; object-fit:contain; flex-shrink:0;" />
+                    <img src="${esc(st.icon)}" alt="" style="width:20px; height:20px; object-fit:contain; flex-shrink:0;" />
                   </div>
                 `).join('')}
               </div>
             </div>
-            <div class="slide-img-card" style="height:100%; border-color:#d2e3fc;">
+            <div class="slide-img-card" style="height:100%; max-height:440px; border-color:#d2e3fc;">
               <img src="${esc(sc.heroImage || 'assets/roadmap_launch.jpg')}" alt="90-Day HR Transformation Roadmap" style="width:100%; height:100%; object-fit:contain; border-radius:8px;" />
             </div>
           </div>
@@ -1645,11 +1645,11 @@ PORTAL_JS = r"""
       }
 
       const headerBlock = (sc.layout === 'hero' || sc.layout === 'closing' || sc.layout === 'adoption_close' || sc.layout === 'section_break') ? '' : `
-        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:10px;">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px; flex-shrink:0;">
           <div>
-            <div style="display:inline-block; padding:3px 10px; border-radius:999px; background:#e8f0fe; border:1px solid #d2e3fc; color:#185abc; font-size:9.5px; font-weight:800; letter-spacing:0.05em;">${esc(sc.eyebrow)}</div>
-            <h2 style="font-family:var(--font-display); font-size:clamp(17px,1.75vw,21px); font-weight:800; color:#202124; margin:4px 0 2px; line-height:1.15;">${esc(sc.title)}</h2>
-            ${(sc.layout === 'agent_spotlight' ? `${AGENTS[sc.agentId].pillarName} · ${AGENTS[sc.agentId].slideProcessShort || AGENTS[sc.agentId].processName} · ${AGENTS[sc.agentId].buildTier}` : sc.subtitle) ? `<div style="font-size:11.5px; color:#5f6368;">${esc(sc.layout === 'agent_spotlight' ? `${AGENTS[sc.agentId].pillarName} · ${AGENTS[sc.agentId].slideProcessShort || AGENTS[sc.agentId].processName} · ${AGENTS[sc.agentId].buildTier}` : sc.subtitle)}</div>` : ''}
+            <div style="display:inline-block; padding:2.5px 9px; border-radius:999px; background:#e8f0fe; border:1px solid #d2e3fc; color:#185abc; font-size:9px; font-weight:800; letter-spacing:0.05em;">${esc(sc.eyebrow)}</div>
+            <h2 style="font-family:var(--font-display); font-size:clamp(16px,1.6vw,20px); font-weight:800; color:#202124; margin:3px 0 1px; line-height:1.12;">${esc(sc.title)}</h2>
+            ${(sc.layout === 'agent_spotlight' ? `${AGENTS[sc.agentId].pillarName} · ${AGENTS[sc.agentId].slideProcessShort || AGENTS[sc.agentId].processName} · ${AGENTS[sc.agentId].buildTier}` : sc.subtitle) ? `<div style="font-size:10.8px; color:#5f6368;">${esc(sc.layout === 'agent_spotlight' ? `${AGENTS[sc.agentId].pillarName} · ${AGENTS[sc.agentId].slideProcessShort || AGENTS[sc.agentId].processName} · ${AGENTS[sc.agentId].buildTier}` : sc.subtitle)}</div>` : ''}
           </div>
           ${headerIconHtml ? `<div style="flex-shrink:0; padding-top:2px;">${headerIconHtml}</div>` : ''}
         </div>
@@ -1659,8 +1659,12 @@ PORTAL_JS = r"""
         <div class="keynote-slide-frame">
           ${headerBlock}
           ${bodyHtml}
-          <div style="display:flex; justify-content:space-between; align-items:center; font-size:10px; color:#5f6368; padding-top:6px;">
-            <span>Gemini Enterprise · Office of the Chief Human Resources Officer (CHRO) Transformation</span>
+          <div class="slide-brand-footer">
+            <div class="slide-brand-lockup" aria-label="Google Cloud and Gemini">
+              <img src="assets/branding/google_cloud_logo.png" alt="Google Cloud" class="slide-brand-gc" />
+              <span class="slide-brand-divider" aria-hidden="true"></span>
+              <img src="assets/branding/gemini_logo.png" alt="Gemini" class="slide-brand-gemini" />
+            </div>
             <span style="font-family:var(--font-mono); font-weight:700;">${esc(sc.num)} / ${String(total).padStart(2, '0')}</span>
           </div>
           ${fourBar}

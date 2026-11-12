@@ -923,8 +923,8 @@ PORTAL_CSS = r"""
 
     .keynote-stage-shell {
       display: grid;
-      grid-template-columns: 240px minmax(0, 1fr);
-      gap: 20px;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 16px;
       align-items: start;
     }
     @media (max-width: 960px) { .keynote-stage-shell { grid-template-columns: 1fr; } }
@@ -962,17 +962,54 @@ PORTAL_CSS = r"""
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      min-height: 550px;
-      background: #ffffff;
+      min-height: 556px;
+      background: #ffffff url('assets/branding/og_slide_bg_fade.png') center / cover no-repeat;
       color: #202124;
       border-radius: 16px;
       border: 1px solid #d2e3fc;
       box-shadow: var(--shadow-lg);
-      padding: 20px 26px 24px;
+      padding: 14px 22px 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
+    }
+    .slide-brand-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #5f6368;
+      padding-top: 6px;
+      margin-top: auto;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+    .slide-brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 18px;
+    }
+    .slide-brand-gc {
+      height: 15px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .slide-brand-divider {
+      width: 1px;
+      height: 13px;
+      background: #dadce0;
+      display: inline-block;
+    }
+    .slide-brand-gemini {
+      height: 16px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      transform: translateY(-0.5px);
     }
 
     .slide-chevron-strip {
@@ -1134,6 +1171,8 @@ PORTAL_CSS = r"""
         border: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
         page-break-after: always !important;
         break-after: page !important;
       }
@@ -2140,8 +2179,8 @@ PORTAL_CSS = r"""
     /* Mind Map Slide Layout (v2 Slides 07 & 08) */
     .mm-slide-grid {
       display: grid;
-      grid-template-columns: 162px 24px minmax(0, 1fr);
-      gap: 6px;
+      grid-template-columns: minmax(110px, 16%) 14px minmax(0, 1fr);
+      gap: 4px;
       flex: 1;
       min-height: 0;
       align-items: stretch;
@@ -2150,51 +2189,60 @@ PORTAL_CSS = r"""
       border-radius: 14px;
       background: linear-gradient(160deg, #e8f0fe 0%, #f8f9fa 100%);
       border: 1.5px solid #4285f4;
-      padding: 12px 10px;
+      padding: 8px 7px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
       text-align: center;
+      min-width: 0;
+      overflow: hidden;
     }
     .mm-branches-col {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 8px;
+      gap: 5px;
       min-height: 0;
+      min-width: 0;
     }
     .mm-branch-row {
       flex: 1;
       display: grid;
-      grid-template-columns: 185px 22px minmax(0, 1fr);
+      grid-template-columns: minmax(118px, 25%) 12px minmax(0, 1fr);
       align-items: stretch;
-      gap: 6px;
+      gap: 4px;
       min-height: 0;
+      min-width: 0;
     }
     .mm-pillar-node {
-      border-radius: 12px;
-      padding: 8px 10px;
+      border-radius: 10px;
+      padding: 6px 7px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       background: #f8f9fa;
       border: 1.5px solid #d2e3fc;
+      min-width: 0;
+      overflow: hidden;
     }
     .mm-agents-row {
       display: grid;
-      gap: 8px;
+      gap: 5px;
       min-height: 0;
+      min-width: 0;
     }
     .mm-agent-node {
-      border-radius: 11px;
-      padding: 8px 10px;
+      border-radius: 10px;
+      padding: 5px 7px;
       background: #ffffff;
       border: 1px solid #d2e3fc;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 8px;
+      gap: 4px;
+      min-width: 0;
+      overflow: hidden;
       cursor: pointer;
       transition: transform 0.16s ease, box-shadow 0.16s ease;
     }
@@ -2205,17 +2253,17 @@ PORTAL_CSS = r"""
     .mm-persona-chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 3px;
     }
     .mm-persona-chip {
-      font-size: 9px;
+      font-size: 8px;
       font-weight: 700;
-      padding: 2px 6px;
+      padding: 1.5px 5px;
       border-radius: 999px;
       background: #f1f3f4;
       color: #3c4043;
       border: 1px solid #e0e3e7;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
     /* v2 Business Value & Pillars Layouts (Slides 05, 06, 07-09, 16) */
@@ -2254,61 +2302,63 @@ PORTAL_CSS = r"""
     .pf-grid-3x2 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 11px;
+      gap: 7px;
       flex: 1;
       min-height: 0;
     }
     .pf-card {
-      padding: 11px 12px;
-      border-radius: 12px;
+      padding: 7px 9px;
+      border-radius: 10px;
       background: #f8f9fa;
       border: 1px solid #d2e3fc;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 7px;
+      gap: 4px;
       cursor: pointer;
+      min-width: 0;
     }
     .pf-fn-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 5px;
+      gap: 4px;
     }
     .pf-fn-pill {
-      padding: 4px 6px;
-      border-radius: 7px;
+      padding: 3px 4px;
+      border-radius: 6px;
       background: #ffffff;
       border: 1px solid #e0e3e7;
-      font-size: 9.5px;
+      font-size: 8.6px;
       font-weight: 700;
       color: #3c4043;
       text-align: center;
-      line-height: 1.2;
+      line-height: 1.12;
     }
     .pv-pair-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 10px;
       flex: 1;
       min-height: 0;
     }
     .pv-col-card {
-      padding: 14px 15px;
-      border-radius: 14px;
+      padding: 9px 11px;
+      border-radius: 12px;
       background: #ffffff;
       border: 1.5px solid #d2e3fc;
       display: flex;
       flex-direction: column;
-      gap: 11px;
+      gap: 6px;
+      min-width: 0;
     }
     .pv-strip {
       flex: 1;
       display: flex;
       align-items: center;
-      padding: 10px 13px;
-      border-radius: 10px;
-      font-size: 11.5px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 9.8px;
       color: #202124;
-      line-height: 1.4;
+      line-height: 1.24;
     }
 """
