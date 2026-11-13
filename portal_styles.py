@@ -2541,4 +2541,41 @@ PORTAL_CSS = r"""
       height: 100vh;
       padding: 22px 36px 24px;
     }
+
+    /* Cross-Domain 4-Card Showcase (v3 Slide 06) */
+    .cd-grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      flex: 1;
+      min-height: 0;
+    }
+    .cd-card {
+      padding: 13px 15px;
+      border-radius: 13px;
+      background: #ffffff;
+      border: 1.5px solid #d2e3fc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .cd-sys-pill {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #f8f9fa;
+      border: 1px solid #e0e3e7;
+      font-size: 10.2px;
+      font-weight: 700;
+      color: #185abc;
+      line-height: 1.25;
+    }
+    @media (max-width: 1180px) {
+      .cd-grid-2x2 { gap: 9px; }
+      .cd-card { padding: 9px 11px; gap: 5px; }
+      .cd-sys-pill { font-size: 9.2px; padding: 2px 6px; }
+    }
 """

@@ -8,10 +8,11 @@ PORTAL_JS = r"""
     const VALUE_CHAINS = CATALOG.valueChains || {};
     const KEYNOTE_SLIDES_V1 = CATALOG.keynoteSlides || [];
     const KEYNOTE_SLIDES_V2 = CATALOG.keynoteSlidesV2 || [];
+    const KEYNOTE_SLIDES_V3 = CATALOG.keynoteSlidesV3 || [];
     const KEYNOTE_SLIDES = KEYNOTE_SLIDES_V1;
 
     let selectedPillarId = null;
-    let slideDeckVersion = KEYNOTE_SLIDES_V2.length ? 'v2' : 'v1'; // 'v2' (Stage Keynote) | 'v1' (Architecture Deck)
+    let slideDeckVersion = KEYNOTE_SLIDES_V3.length ? 'v3' : (KEYNOTE_SLIDES_V2.length ? 'v2' : 'v1'); // 'v3' (CXO & Gemini) | 'v2' (Stage Keynote) | 'v1' (Architecture Deck)
     let currentSlideIdx = 0;
     let slideViewMode = 'presenter'; // 'presenter' | 'grid'
     let showSpeakerNotes = true;
@@ -21,7 +22,9 @@ PORTAL_JS = r"""
     const selectedVcStageByVc = {};
 
     function getActiveKeynoteSlides() {
-      return (slideDeckVersion === 'v2' && KEYNOTE_SLIDES_V2.length) ? KEYNOTE_SLIDES_V2 : KEYNOTE_SLIDES_V1;
+      if (slideDeckVersion === 'v3' && KEYNOTE_SLIDES_V3.length) return KEYNOTE_SLIDES_V3;
+      if (slideDeckVersion === 'v2' && KEYNOTE_SLIDES_V2.length) return KEYNOTE_SLIDES_V2;
+      return KEYNOTE_SLIDES_V1;
     }
 
     function esc(str) {
@@ -1486,9 +1489,9 @@ PORTAL_JS = r"""
                 <div style="font-size:10.8px; font-weight:700; color:#4285f4;">${esc(sc.hubSub || '')}</div>
               </div>
               <div style="width:100%; display:flex; flex-direction:column; gap:5px; text-align:left; padding:7px 8px; border-radius:8px; background:#ffffff; border:1px solid #d2e3fc;">
-                <div style="font-size:8.6px; font-weight:800; color:#5f6368; text-transform:uppercase;">${slideDeckVersion === 'v2' ? 'Solution Type' : 'Build Tier Key'}</div>
-                <div style="display:flex; align-items:center; gap:5px; font-size:9.4px; font-weight:700; color:#137333;"><span style="width:7px; height:7px; border-radius:50%; background:#34a853; display:inline-block; flex-shrink:0;"></span> ${slideDeckVersion === 'v2' ? 'HR Team Studio' : 'No/Low-Code'}</div>
-                <div style="display:flex; align-items:center; gap:5px; font-size:9.4px; font-weight:700; color:#185abc;"><span style="width:7px; height:7px; border-radius:50%; background:#5e35b1; display:inline-block; flex-shrink:0;"></span> ${slideDeckVersion === 'v2' ? 'Cross-System Sync' : 'ADK + MCP'}</div>
+                <div style="font-size:8.6px; font-weight:800; color:#5f6368; text-transform:uppercase;">${(slideDeckVersion === 'v2' || slideDeckVersion === 'v3') ? 'Solution Type' : 'Build Tier Key'}</div>
+                <div style="display:flex; align-items:center; gap:5px; font-size:9.4px; font-weight:700; color:#137333;"><span style="width:7px; height:7px; border-radius:50%; background:#34a853; display:inline-block; flex-shrink:0;"></span> ${(slideDeckVersion === 'v2' || slideDeckVersion === 'v3') ? 'HR Team Studio' : 'No/Low-Code'}</div>
+                <div style="display:flex; align-items:center; gap:5px; font-size:9.4px; font-weight:700; color:#185abc;"><span style="width:7px; height:7px; border-radius:50%; background:#5e35b1; display:inline-block; flex-shrink:0;"></span> ${(slideDeckVersion === 'v2' || slideDeckVersion === 'v3') ? 'Cross-System Sync' : 'ADK + MCP'}</div>
               </div>
             </div>
             <div style="display:flex; align-items:center; justify-content:center;">
@@ -1519,7 +1522,7 @@ PORTAL_JS = r"""
                         const isAdk = ag.buildTier === 'High-Code';
                         const tierCol = isAdk ? '#5e35b1' : '#137333';
                         const tierBg = isAdk ? '#f3e8fd' : '#e6f4ea';
-                        const tierTxt = slideDeckVersion === 'v2'
+                        const tierTxt = (slideDeckVersion === 'v2' || slideDeckVersion === 'v3')
                           ? (isAdk ? 'Connected' : 'HR Studio')
                           : (isAdk ? 'ADK' : (ag.buildTier === 'Low-Code' ? 'Low-Code' : 'No-Code'));
                         return `
@@ -1691,6 +1694,31 @@ PORTAL_JS = r"""
             `).join('')}
           </div>
         `;
+      } else if (sc.layout === 'cross_domain_4') {
+        headerIconHtml = `<img src="assets/gcp_icons/Agents-512-color.png" alt="" style="width:32px; height:32px; object-fit:contain;" />`;
+        bodyHtml = `
+          <div class="cd-grid-2x2">
+            ${(sc.domains || []).map(d => `
+              <div class="cd-card" style="border-top:4px solid ${d.color};">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+                  <div style="display:flex; align-items:center; gap:8px; min-width:0; flex:1;">
+                    <img src="${esc(d.icon)}" alt="" style="width:26px; height:26px; object-fit:contain; flex-shrink:0;" />
+                    <div style="min-width:0;">
+                      <div style="font-size:8.8px; font-weight:800; color:${d.color}; letter-spacing:0.04em; line-height:1.12;">${esc(d.badge)}</div>
+                      <div style="font-family:var(--font-display); font-size:clamp(12px,1.15vw,13.8px); font-weight:800; color:#202124; line-height:1.14;">${esc(d.title)}</div>
+                    </div>
+                  </div>
+                  <div style="padding:4px 8px; border-radius:8px; background:#f8f9fa; border:1.2px solid ${d.color}66; text-align:center; flex-shrink:0;">
+                    <div style="font-family:var(--font-display); font-size:clamp(13px,1.3vw,16px); font-weight:800; color:${d.color}; line-height:1.08; white-space:nowrap;">${esc(d.metric)}</div>
+                    <div style="font-size:7.2px; font-weight:800; color:#5f6368; letter-spacing:0.03em; line-height:1.15;">${esc(d.metricLbl)}</div>
+                  </div>
+                </div>
+                <div><span class="cd-sys-pill">Systems: ${esc(d.systems)}</span></div>
+                <div style="font-size:clamp(11px,1.02vw,12.2px); color:#3c4043; line-height:1.36;">${esc(d.desc)}</div>
+              </div>
+            `).join('')}
+          </div>
+        `;
       } else if (sc.layout === 'adoption_close') {
         bodyHtml = `
           <div style="display:grid; grid-template-columns:1.38fr 0.78fr; gap:14px; align-items:stretch; flex:1; min-height:0;">
@@ -1760,7 +1788,7 @@ PORTAL_JS = r"""
     }
 
     function setSlideDeckVersion(ver, idx = 0) {
-      const targetVer = (ver === 'v1' || ver === 'v2') ? ver : 'v2';
+      const targetVer = (ver === 'v1' || ver === 'v2' || ver === 'v3') ? ver : 'v3';
       slideDeckVersion = targetVer;
       const slides = getActiveKeynoteSlides();
       currentSlideIdx = Math.max(0, Math.min(idx, Math.max(0, slides.length - 1)));
@@ -1769,7 +1797,7 @@ PORTAL_JS = r"""
     }
 
     function openSlidesPage(idx = null, pushHash = true, ver = null) {
-      if (ver === 'v1' || ver === 'v2') slideDeckVersion = ver;
+      if (ver === 'v1' || ver === 'v2' || ver === 'v3') slideDeckVersion = ver;
       const slides = getActiveKeynoteSlides();
       if (idx !== null && idx >= 0 && idx < slides.length) currentSlideIdx = idx;
       if (currentSlideIdx >= slides.length) currentSlideIdx = 0;
@@ -1813,29 +1841,37 @@ PORTAL_JS = r"""
       const slides = getActiveKeynoteSlides();
       if (currentSlideIdx >= slides.length) currentSlideIdx = 0;
       const sc = slides[currentSlideIdx] || slides[0];
+      const isV3 = slideDeckVersion === 'v3' && KEYNOTE_SLIDES_V3.length > 0;
       const isV2 = slideDeckVersion === 'v2' && KEYNOTE_SLIDES_V2.length > 0;
-      const pptxHref = isV2 ? 'CHRO_Agentic_Transformation_Keynote_v2.pptx?v=2' : 'CHRO_Agentic_Transformation_Keynote.pptx?v=5';
-      const pptxName = isV2 ? 'CHRO_Agentic_Transformation_Keynote_v2.pptx' : 'CHRO_Agentic_Transformation_Keynote.pptx';
+      const isV1 = !isV3 && !isV2;
+      const pptxHref = isV3
+        ? 'CHRO_Agentic_Transformation_Keynote_v3.pptx?v=1'
+        : (isV2 ? 'CHRO_Agentic_Transformation_Keynote_v2.pptx?v=2' : 'CHRO_Agentic_Transformation_Keynote.pptx?v=5');
+      const pptxName = isV3
+        ? 'CHRO_Agentic_Transformation_Keynote_v3.pptx'
+        : (isV2 ? 'CHRO_Agentic_Transformation_Keynote_v2.pptx' : 'CHRO_Agentic_Transformation_Keynote.pptx');
+      const deckHeading = isV3
+        ? `Amit's Keynote v3 — Gemini Updates & CXO Cross-Domain (${slides.length} Slides)`
+        : (isV2 ? `PeopleStrong Xponential 2026 — Stage Keynote v2 (${slides.length} Slides)` : `PeopleStrong Xponential 2026 — Architecture Deck v1 (${slides.length} Slides)`);
 
       const toolbar = `
         <div class="slides-toolbar">
           <div>
             <div style="font-size:11px; font-weight:800; color:var(--g-cobalt); text-transform:uppercase;">Keynote Presentation &amp; PowerPoint Mode (16:9 Widescreen)</div>
-            <div style="font-family:var(--font-display); font-size:20px; font-weight:800;">
-              ${isV2 ? `PeopleStrong Xponential 2026 — Stage Keynote v2 (${slides.length} Slides)` : `PeopleStrong Xponential 2026 — Architecture Deck v1 (${slides.length} Slides)`}
-            </div>
+            <div style="font-family:var(--font-display); font-size:20px; font-weight:800;">${deckHeading}</div>
           </div>
           <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
             <div class="deck-version-switcher" role="tablist" aria-label="Slide deck version">
+              <button type="button" class="deck-ver-pill ${isV3 ? 'active' : ''}" onclick="setSlideDeckVersion('v3', 0)">&#127775; v3 &middot; CXO &amp; Gemini (${KEYNOTE_SLIDES_V3.length})</button>
               <button type="button" class="deck-ver-pill ${isV2 ? 'active' : ''}" onclick="setSlideDeckVersion('v2', 0)">&#10024; v2 &middot; Stage Keynote (${KEYNOTE_SLIDES_V2.length})</button>
-              <button type="button" class="deck-ver-pill ${!isV2 ? 'active' : ''}" onclick="setSlideDeckVersion('v1', 0)">&#128208; v1 &middot; Full Deck (${KEYNOTE_SLIDES_V1.length})</button>
+              <button type="button" class="deck-ver-pill ${isV1 ? 'active' : ''}" onclick="setSlideDeckVersion('v1', 0)">&#128208; v1 &middot; Full Deck (${KEYNOTE_SLIDES_V1.length})</button>
             </div>
             <button type="button" class="switch-pill ${slideViewMode === 'presenter' ? 'active' : ''}" onclick="setSlideViewMode('presenter')">🖥️ Presenter</button>
             <button type="button" class="switch-pill ${slideViewMode === 'grid' ? 'active' : ''}" onclick="setSlideViewMode('grid')">🗂️ All ${slides.length} Slides</button>
             <button type="button" class="switch-pill" onclick="toggleSlideFullscreen()" title="Fullscreen Stage Mode (Press F)">⛶ Fullscreen</button>
             <button type="button" class="switch-pill" onclick="printAllSlidesPdf()">🖨️ Export PDF</button>
-            ${!isV2 ? `<a href="https://docs.google.com/presentation/d/1PkW9mPtL3Tta4s5xVUgxiXTlWO2FdInVRp7Hnyng6qU/edit" target="_blank" rel="noopener" class="switch-pill" style="border-color:#4285f4; color:#185abc;">🎞️ Google Slides &nearr;</a>` : ''}
-            <a href="${pptxHref}" download="${pptxName}" class="pptx-download-btn">📊 Download ${isV2 ? 'v2 ' : 'v1 '}.pptx</a>
+            ${isV1 ? `<a href="https://docs.google.com/presentation/d/1PkW9mPtL3Tta4s5xVUgxiXTlWO2FdInVRp7Hnyng6qU/edit" target="_blank" rel="noopener" class="switch-pill" style="border-color:#4285f4; color:#185abc;">🎞️ Google Slides &nearr;</a>` : ''}
+            <a href="${pptxHref}" download="${pptxName}" class="pptx-download-btn">📊 Download ${isV3 ? 'v3 ' : (isV2 ? 'v2 ' : 'v1 ')}.pptx</a>
           </div>
         </div>
       `;
@@ -2288,8 +2324,13 @@ PORTAL_JS = r"""
     function handleUrlHash() {
       const rawHash = (window.location.hash || '').trim();
       const h = rawHash.startsWith('#vc/') ? '#process/' + rawHash.slice(4) : rawHash;
-      if (h === '#slides' || h === '#slides/v2') return openSlidesPage(currentSlideIdx, false, 'v2');
+      if (h === '#slides' || h === '#slides/v3') return openSlidesPage(currentSlideIdx, false, 'v3');
+      if (h === '#slides/v2') return openSlidesPage(currentSlideIdx, false, 'v2');
       if (h === '#slides/v1') return openSlidesPage(currentSlideIdx, false, 'v1');
+      if (h.startsWith('#slide/v3/')) {
+        const n = parseInt(h.slice('#slide/v3/'.length), 10);
+        return openSlidesPage(!Number.isNaN(n) && n >= 1 ? n - 1 : 0, false, 'v3');
+      }
       if (h.startsWith('#slide/v1/')) {
         const n = parseInt(h.slice('#slide/v1/'.length), 10);
         return openSlidesPage(!Number.isNaN(n) && n >= 1 ? n - 1 : 0, false, 'v1');

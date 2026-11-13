@@ -56,7 +56,7 @@ __PORTAL_CSS__
       <nav class="nav-links" aria-label="Primary sections">
         <button type="button" class="nav-pill-btn" data-nav="pageHome" onclick="goToOrgChart()">6 Pillars</button>
         <button type="button" class="nav-pill-btn" data-nav="pageValueChain" onclick="scrollToProcessJourneys()">4 E2E Flows</button>
-        <button type="button" class="nav-pill-btn" data-nav="pageSlides" onclick="openSlidesPage(null, true)">Slides (v2 &middot; v1)</button>
+        <button type="button" class="nav-pill-btn" data-nav="pageSlides" onclick="openSlidesPage(null, true)">Slides (v3 &middot; v2 &middot; v1)</button>
         <button type="button" class="nav-pill-btn" data-nav="pageMatrix" onclick="openMatrixPage(true)">Matrix (14)</button>
         <button type="button" class="nav-pill-btn" data-nav="pageArchitecture" onclick="openArchitecturePage(true)">Stack &amp; Proof</button>
         <button type="button" class="nav-pill-btn" data-nav="pageMindMap" onclick="openMindMapPage(true)">Mind Map</button>
@@ -65,7 +65,7 @@ __PORTAL_CSS__
       <div class="nav-actions">
         <button type="button" class="theme-toggle-btn" onclick="toggleQuickJumpMenu(event)">Jump &#9662;</button>
         <button type="button" id="themeToggleBtn" class="theme-toggle-btn" onclick="togglePortalTheme()"><span>🌙</span><span>Dark Theme</span></button>
-        <a href="CHRO_Agentic_Transformation_Keynote_v2.pptx?v=1" download="CHRO_Agentic_Transformation_Keynote_v2.pptx" class="pptx-download-btn">📊 v2 .pptx</a>
+        <a href="CHRO_Agentic_Transformation_Keynote_v3.pptx?v=1" download="CHRO_Agentic_Transformation_Keynote_v3.pptx" class="pptx-download-btn">📊 v3 .pptx</a>
         <div id="navQuickMenu" class="nav-quick-menu"></div>
       </div>
     </div>
@@ -95,15 +95,15 @@ __PORTAL_CSS__
             <span>Explore Office of the CHRO (6 Pillars)</span>
             <span>&darr;</span>
           </button>
-          <button type="button" class="hero-cta-btn hero-cta-secondary" onclick="openSlidesPage(0, true, 'v2')">
-            <span>Launch Stage Keynote v2 &amp; v1</span>
+          <button type="button" class="hero-cta-btn hero-cta-secondary" onclick="openSlidesPage(0, true, 'v3')">
+            <span>Launch Keynote v3 &middot; v2 &middot; v1</span>
             <span>&rarr;</span>
           </button>
           <a href="https://docs.google.com/presentation/d/1PkW9mPtL3Tta4s5xVUgxiXTlWO2FdInVRp7Hnyng6qU/edit" target="_blank" rel="noopener" class="hero-cta-btn hero-cta-secondary">
             <span>Open in Google Slides &nearr;</span>
           </a>
-          <a href="CHRO_Agentic_Transformation_Keynote_v2.pptx?v=1" download="CHRO_Agentic_Transformation_Keynote_v2.pptx" class="hero-cta-btn hero-cta-secondary">
-            <span>Download v2 .pptx</span>
+          <a href="CHRO_Agentic_Transformation_Keynote_v3.pptx?v=1" download="CHRO_Agentic_Transformation_Keynote_v3.pptx" class="hero-cta-btn hero-cta-secondary">
+            <span>Download v3 .pptx</span>
           </a>
         </div>
 

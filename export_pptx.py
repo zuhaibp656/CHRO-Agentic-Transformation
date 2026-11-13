@@ -27,6 +27,7 @@ ROOT = pathlib.Path(__file__).resolve().parent
 CATALOG_PATH = ROOT / "data" / "hr_catalog.json"
 OUT_PPTX = ROOT / "CHRO_Agentic_Transformation_Keynote.pptx"
 OUT_PPTX_V2 = ROOT / "CHRO_Agentic_Transformation_Keynote_v2.pptx"
+OUT_PPTX_V3 = ROOT / "CHRO_Agentic_Transformation_Keynote_v3.pptx"
 
 ASSETS = ROOT / "assets"
 BRAND = ASSETS / "branding"
@@ -806,7 +807,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
             add_textbox(slide, 0.78, 3.96, 1.98, 0.34, sc.get("hubSub", ""), font_size=11, bold=True, color=C_BLUE, align=PP_ALIGN.CENTER)
 
             # Tier Legend Box at bottom of Hub
-            is_v2_deck = "v2" in (footer_label or "").lower()
+            is_v2_deck = any(k in (footer_label or "").lower() for k in ("v2", "v3"))
             add_rect(slide, 0.80, 5.42, 1.94, 1.20, fill=C_WHITE, border=C_BORDER_BLUE)
             add_textbox(slide, 0.90, 5.48, 1.74, 0.22, "SOLUTION TYPE" if is_v2_deck else "BUILD TIER KEY", font_size=8.5, bold=True, color=C_MUTED)
             add_circle(slide, 0.92, 5.80, 0.14, C_GREEN)
@@ -1040,6 +1041,31 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
             add_four_color_strip(slide)
             set_notes(slide, base_notes)
 
+        elif layout == "cross_domain_4":
+            add_slide_chrome(slide, sc["eyebrow"], sc["title"], sc["subtitle"], sc["num"], C_BLUE, total, GCP / "Agents-512-color.png")
+            for idx, d in enumerate(sc.get("domains", [])):
+                col = idx % 2
+                row = idx // 2
+                dx = 0.65 + col * 6.17
+                dy = 1.78 + row * 2.58
+                dw = 5.86
+                dh = 2.40
+                dcol = hex_rgb(d["color"])
+                add_rect(slide, dx, dy, dw, dh, fill=C_WHITE, border=C_BORDER_BLUE, border_pt=1.25)
+                add_rect(slide, dx, dy, dw, 0.08, fill=dcol, border=None, rounded=False)
+                add_picture_fit(slide, ROOT / d["icon"], dx + 0.18, dy + 0.22, 0.50, 0.50)
+                add_textbox(slide, dx + 0.78, dy + 0.18, 3.32, 0.22, d["badge"], font_size=9.2, bold=True, color=dcol, font_name=FONT_DISPLAY)
+                add_textbox(slide, dx + 0.78, dy + 0.40, 3.32, 0.44, d["title"], font_size=14, bold=True, color=C_INK, font_name=FONT_DISPLAY)
+
+                add_rect(slide, dx + 4.18, dy + 0.20, 1.50, 0.66, fill=C_SURFACE, border=dcol, border_pt=1.0)
+                add_textbox(slide, dx + 4.22, dy + 0.23, 1.42, 0.34, d["metric"], font_size=15, bold=True, color=dcol, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER)
+                add_textbox(slide, dx + 4.22, dy + 0.58, 1.42, 0.22, d["metricLbl"], font_size=7.4, bold=True, color=C_MUTED, align=PP_ALIGN.CENTER)
+
+                add_rect(slide, dx + 0.18, dy + 0.96, dw - 0.36, 0.34, fill=C_SURFACE, border=C_BORDER, border_pt=0.75)
+                add_textbox(slide, dx + 0.26, dy + 0.99, dw - 0.52, 0.28, f"Systems: {d['systems']}", font_size=10, bold=True, color=C_COBALT, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, dx + 0.18, dy + 1.38, dw - 0.36, 0.88, d["desc"], font_size=12, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
+            set_notes(slide, base_notes)
+
         elif layout == "closing":
             add_og_faded_bg(slide)
             add_rect(slide, 0.0, 0.0, 13.333, 0.12, fill=C_BLUE, border=None, rounded=False)
@@ -1083,16 +1109,18 @@ def version_tag_label(label: str) -> str:
     return label or "Keynote"
 
 
-def build_deck(version: str = "both") -> None:
+def build_deck(version: str = "all") -> None:
     cat = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
-    if version in ("v1", "both"):
+    if version in ("v1", "both", "all"):
         build_single_deck(cat, cat["keynoteSlides"], OUT_PPTX, "v1 Architecture Deck")
-    if version in ("v2", "both") and cat.get("keynoteSlidesV2"):
+    if version in ("v2", "both", "all") and cat.get("keynoteSlidesV2"):
         build_single_deck(cat, cat["keynoteSlidesV2"], OUT_PPTX_V2, "v2 Stage Keynote")
+    if version in ("v3", "all") and cat.get("keynoteSlidesV3"):
+        build_single_deck(cat, cat["keynoteSlidesV3"], OUT_PPTX_V3, "v3 CXO & Gemini Keynote")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Build CHRO Keynote PPTX v1 and/or v2 decks.")
-    parser.add_argument("--version", choices=("v1", "v2", "both"), default="both")
+    parser = argparse.ArgumentParser(description="Build CHRO & CXO Keynote PPTX v1, v2, and/or v3 decks.")
+    parser.add_argument("--version", choices=("v1", "v2", "v3", "both", "all"), default="all")
     args = parser.parse_args()
     build_deck(args.version)

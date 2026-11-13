@@ -3070,5 +3070,600 @@
       ],
       "notes": "Bring together the 4 Enterprise Adoption Pillars with a decisive 90-day Monday Morning sequence: start narrow with verified policies in 30 days, unlock hiring velocity at 60 days, and compound internal mobility by Day 90."
     }
+  ],
+  "keynoteSlidesV3": [
+    {
+      "num": "01",
+      "layout": "hero",
+      "eyebrow": "AMIT'S KEYNOTE (20–25 MIN) · GEMINI ENTERPRISE + CROSS-DOMAIN CXO",
+      "title": "Future of Humans & Agents: CHRO & CXO Edition",
+      "subtitle": "Recent Gemini Enterprise breakthroughs meet real-world agentic workflows across HR, Finance, Public Sector & Operations — zero passive portals, named human authority.",
+      "highlights": [
+        "Gemini Updates: MCP Tools, Agent2Agent (A2A) Mesh & Memory Bank",
+        "Cross-Domain Value: HR · Finance (CFO) · Public Sector · Operations",
+        "Workshop Bridge: No-Code Studio + Connectors + Custom MCP (PeopleStrong)"
+      ],
+      "notes": "Opening (20-25 min Keynote): Bridge Session 1's AI Workshop (No-Code + Enterprise Connectors + Custom MCP PeopleStrong) and Session 2's Human x AI vision into a cross-domain executive blueprint."
+    },
+    {
+      "num": "02",
+      "layout": "touchpoints_grid",
+      "eyebrow": "01 · GEMINI ENTERPRISE RECENT UPDATES & PROGRESS",
+      "title": "What's New in Gemini Enterprise: Open Standards & Zero-Code Speed",
+      "subtitle": "Moving from isolated chat assistants to governed multi-agent collaboration across every enterprise system",
+      "levers": [
+        {
+          "title": "Open Standards (MCP & A2A)",
+          "desc": "Standardized tool access & cross-vendor agent handoffs",
+          "color": "#1a73e8"
+        },
+        {
+          "title": "No-Code Agent Designer",
+          "desc": "HR & Finance teams compose workflow helpers in hours",
+          "color": "#137333"
+        },
+        {
+          "title": "Smart Model Tiering",
+          "desc": "Gemini Flash (<1s scale) + Gemini Pro (deep reasoning)",
+          "color": "#5e35b1"
+        },
+        {
+          "title": "Memory Bank & Armor",
+          "desc": "Persistent context + inline Model Armor & DLP guard",
+          "color": "#ea8600"
+        }
+      ],
+      "touchpoints": [
+        {
+          "title": "50+ Managed MCP Servers",
+          "desc": "Pre-built governed access to BigQuery, Storage & Workspace data.",
+          "icon": "assets/gcp_icons/IntegrationServices-512-color.png",
+          "color": "#1a73e8"
+        },
+        {
+          "title": "Custom MCP (PeopleStrong)",
+          "desc": "Today's workshop pattern: secure two-way HRIS, ERP & custom API actions.",
+          "icon": "assets/gcp_icons/Developer_Tools-512-color.png",
+          "color": "#137333"
+        },
+        {
+          "title": "Agent2Agent (A2A) Mesh",
+          "desc": "Agents across HR, Finance & CRM discover each other and delegate tasks.",
+          "icon": "assets/gcp_icons/Agents-512-color.png",
+          "color": "#5e35b1"
+        },
+        {
+          "title": "130+ Enterprise Connectors",
+          "desc": "Unified grounding across Workday, SAP, ServiceNow & SharePoint.",
+          "icon": "assets/gcp_icons/Collaboration-512-color.png",
+          "color": "#0097a7"
+        },
+        {
+          "title": "Deep Research & Canvas",
+          "desc": "Multi-step synthesis for board packs, policy reviews & workforce plans.",
+          "icon": "assets/icons/badge_sparkle.png",
+          "color": "#4285f4"
+        },
+        {
+          "title": "Apigee MCP Governance",
+          "desc": "Curated, role-scoped tool bundles prevent noisy API overload.",
+          "icon": "assets/gcp_icons/SecurityIdentity-512-color.png",
+          "color": "#ea4335"
+        },
+        {
+          "title": "Persistent Memory Bank",
+          "desc": "Recalls org context, regional rules & prior approvals safely.",
+          "icon": "assets/gcp_icons/Databases-512-color.png",
+          "color": "#0097a7"
+        },
+        {
+          "title": "Group-Scoped Publishing",
+          "desc": "Deploy No-Code helpers across departments via Google Identity groups.",
+          "icon": "assets/icons/badge_nocode.png",
+          "color": "#137333"
+        }
+      ],
+      "notes": "Walk executives through Gemini Enterprise's recent progress: MCP for standardized data/tool connectivity, A2A for cross-vendor agent collaboration, Apigee for MCP governance, Memory Bank for persistent enterprise context, and No-Code Agent Designer."
+    },
+    {
+      "num": "03",
+      "eyebrow": "02 · THE ZERO-UI ENTERPRISE SHIFT",
+      "title": "Passive Portals End Here: Welcome to the Zero-UI Workplace",
+      "subtitle": "Why employees, finance analysts, and citizens reject another portal — AI must work inside daily tools",
+      "layout": "macro_shift",
+      "heroImage": "assets/zero_ui_workplace.jpg",
+      "cards": [
+        {
+          "icon": "assets/gcp_icons/Collaboration-512-color.png",
+          "accent": "#1a73e8",
+          "title": "Goal-Driven Over Form-Driven",
+          "desc": "Employees stop clicking across HRIS, payroll, and leave tabs — they state a goal once in plain language."
+        },
+        {
+          "icon": "assets/gcp_icons/IntegrationServices-512-color.png",
+          "accent": "#34a853",
+          "title": "Seamless Across Legacy Systems",
+          "desc": "Work flows quietly across recruiting, calendars, IT provisioning, and payroll without replacing existing HR tools."
+        },
+        {
+          "icon": "assets/gcp_icons/Agents-512-color.png",
+          "accent": "#5e35b1",
+          "title": "Meet People Where They Work",
+          "desc": "24/7 natural conversations inside web, mobile, WhatsApp, and regional Indian languages."
+        }
+      ],
+      "statBanner": "Behavioral Shift: 800% year-over-year rise in conversational queries — your workforce already brings consumer expectations to HR.",
+      "notes": "Draw from everyday life: just as consumers now delegate multi-step research and bookings to conversational assistants, employees will no longer tolerate five portals to change tax declarations or book interviews."
+    },
+    {
+      "num": "04",
+      "eyebrow": "03 · THE ENTERPRISE COORDINATION PARADOX",
+      "title": "The Enterprise Paradox: ~75% Coordination Tax vs. ~25% Strategy",
+      "subtitle": "Across HR, Finance, Public Sector & Ops, skilled professionals lose three-quarters of every week to manual handoffs",
+      "layout": "split_metrics",
+      "leftLabel": "Operational Tax (~75%)",
+      "leftItems": [
+        "25% — Coordinating across HR, IT & hiring systems",
+        "20% — Manual data entry & spreadsheet validation",
+        "15% — Chasing email approvals & follow-ups",
+        "15% — Compiling quarterly slides & spreadsheets"
+      ],
+      "rightLabel": "Strategic Impact (~25%)",
+      "rightItems": [
+        "10% — Coaching & advising business leaders",
+        "8% — Strategic workforce & skills planning",
+        "7% — Culture, inclusion & employee experience"
+      ],
+      "notes": "This benchmark resonates in every CHRO boardroom: HR does not suffer from a lack of strategic ambition — it suffers from an operating model that taxes 75% of human bandwidth on chasing forms and approvals."
+    },
+    {
+      "num": "05",
+      "eyebrow": "04 · FUTURE OF HUMANS & AGENTS (HUMAN × AI)",
+      "title": "Future of Humans & Agents: Silicon Runs Routine, Leaders Own Judgment",
+      "subtitle": "AI absorbs scheduling, triage, and status chasing so people leaders double down on empathy and judgment",
+      "layout": "human_premium",
+      "heroImage": "assets/human_premium.jpg",
+      "pillars": [
+        {
+          "icon": "assets/icons/badge_sparkle.png",
+          "color": "#4285f4",
+          "title": "Decouple Growth From Admin Headcount",
+          "desc": "Handle 5x seasonal hiring surges and 50,000+ employee requests without burning out HR teams."
+        },
+        {
+          "icon": "assets/icons/pillar_engage.png",
+          "color": "#34a853",
+          "title": "Elevate Empathy & Coaching",
+          "desc": "Return hours every day to leadership coaching, hard career conversations, and workplace belonging."
+        },
+        {
+          "icon": "assets/icons/badge_shield.png",
+          "color": "#5e35b1",
+          "title": "Humans Lead Every High-Stakes Call",
+          "desc": "AI prepares verified shortlists and salary options — people decide who is hired, promoted, or rewarded."
+        }
+      ],
+      "quote": "\"When software handles forms and follow-ups, HR reclaims the Human Premium — trust, empathy, and strategic judgment.\"",
+      "notes": "Turn AI anxiety into executive confidence: routine coordination drops to near zero while human judgment, ethical oversight, and high-trust coaching become your highest-value differentiator."
+    },
+    {
+      "num": "06",
+      "layout": "cross_domain_4",
+      "eyebrow": "05 · CROSS-DOMAIN CXO USE CASES (BEYOND HR)",
+      "title": "One Agentic Mesh Across 4 Domains: HR · Finance · Public Sector · Ops",
+      "subtitle": "Not limited to HR — the exact same Gemini Enterprise + MCP + HITL pattern scales across every CXO office",
+      "domains": [
+        {
+          "badge": "HR & CHRO · PEOPLESTRONG + CUSTOM MCP",
+          "title": "Day-1 Onboarding & Blind Screening",
+          "metric": "40–50% Faster",
+          "metricLbl": "SCREENING & ONBOARDING",
+          "systems": "PeopleStrong · Workday · ServiceNow · Calendar",
+          "desc": "PII-masked skill shortlists, <1 hr panel scheduling, and automated Day-1 laptop, badge & 90-day buddy plans.",
+          "icon": "assets/icons/pillar_attract.png",
+          "color": "#1a73e8"
+        },
+        {
+          "badge": "FINANCE & CFO · SAP / ORACLE + BIGQUERY",
+          "title": "Autonomous Close & Variance Intelligence",
+          "metric": "Days -> Hours",
+          "metricLbl": "MONTH-END CLOSE",
+          "systems": "SAP S/4HANA · BigQuery · Sheets · Workspace",
+          "desc": "Continuous sub-ledger reconciliation, invoice anomaly detection, and CFO-approved board variance narratives.",
+          "icon": "assets/gcp_icons/BusinessIntelligence-512-color.png",
+          "color": "#137333"
+        },
+        {
+          "badge": "PUBLIC SECTOR · CITIZEN & PERMIT SERVICES",
+          "title": "Multilingual Grievance & Permit Concierge",
+          "metric": "24/7 Regional",
+          "metricLbl": "CITIZEN ACCESS",
+          "systems": "Citizen Portal · Sovereign Storage · Case CRM",
+          "desc": "Voice/chat intake in regional languages, automatic case routing, and India DPDP-compliant citizen consent logs.",
+          "icon": "assets/gcp_icons/SecurityIdentity-512-color.png",
+          "color": "#5e35b1"
+        },
+        {
+          "badge": "OPERATIONS & COO · SUPPLY CHAIN TOWER",
+          "title": "Supply Disruption & Service Resolution",
+          "metric": "60–75% Deflect",
+          "metricLbl": "EXCEPTION TRIAGE",
+          "systems": "ERP · Warehouse Mgmt · CRM · Supplier Portals",
+          "desc": "Detects shipment delays early, simulates alternate routing options, and escalates approved supplier recovery plans.",
+          "icon": "assets/gcp_icons/Operations-512-color.png",
+          "color": "#ea8600"
+        }
+      ],
+      "notes": "Keynote Pivot Slide: Show CXOs in the room that while PeopleStrong Xponential highlights HR, the exact same Gemini Enterprise + Enterprise Connector + Custom MCP + A2A architecture solves CFO close, Public Sector citizen services, and COO supply chain disruptions."
+    },
+    {
+      "num": "07",
+      "eyebrow": "06 · CHRO PILLARS & 25 BUSINESS FUNCTIONS",
+      "title": "Six HR Pillars & Core Functions: Where Business Value Unlocks",
+      "subtitle": "Every operational HR function mapped cleanly from Requisition to Workforce Strategy — zero tech jargon",
+      "layout": "pillar_functions_map",
+      "banner": "OFFICE OF THE CHRO · 6 PILLARS · 25 BUSINESS FUNCTIONS ACROSS HIRE-TO-RETIRE",
+      "pillarsData": [
+        {
+          "pillarId": "requisition_screening",
+          "outcome": "40%–50% Less Screening",
+          "functions": [
+            "Skills Extraction",
+            "Job Description Authoring",
+            "Application Processing",
+            "Fair Resume Screening"
+          ]
+        },
+        {
+          "pillarId": "candidate_hiring",
+          "outcome": "4 Days -> <1 Hr Scheduling",
+          "functions": [
+            "Panel Scheduling",
+            "Interview Readiness",
+            "Feedback Aggregation",
+            "Offer Management"
+          ]
+        },
+        {
+          "pillarId": "onboarding",
+          "outcome": "100% Day-1 Ready",
+          "functions": [
+            "Process Automation",
+            "New Hire Buddy",
+            "1-30-60-90 Journey",
+            "Day-1 Access Setup"
+          ]
+        },
+        {
+          "pillarId": "continuous_learning",
+          "outcome": "50 Pages -> 3 Min Reels",
+          "functions": [
+            "Personalized Training",
+            "Micro-Reel Creation",
+            "Skill & Roleplay Drills",
+            "Career Pathing"
+          ]
+        },
+        {
+          "pillarId": "people_ops",
+          "outcome": "~70% Instant Deflection",
+          "functions": [
+            "Employee Service Tickets",
+            "HR Policy Approvals",
+            "Appraisal Synthesis",
+            "Burnout Case Triage"
+          ]
+        },
+        {
+          "pillarId": "hr_strategy_rewards",
+          "outcome": "<1–2% Unexplained Pay Gap",
+          "functions": [
+            "Compensation Analysis",
+            "Pay Benchmarking",
+            "Workforce Composition",
+            "Hiring Projections"
+          ]
+        }
+      ],
+      "notes": "Directly preserves the 6 HR Function Pillars and all 25 core business functions from Slide 17 — structured so CHROs immediately see which business KPI improves in every sub-function."
+    },
+    {
+      "num": "08",
+      "eyebrow": "07 · HR VALUE UNLOCK (ATTRACT & HIRE)",
+      "title": "Cut Agency Sourcing Tax & Shrink Interview Loops From 4 Days to <1 Hour",
+      "subtitle": "How Talent Acquisition captures Tier-2 and Tier-3 hubs without adding recruiting headcount",
+      "layout": "pillar_value_pair",
+      "topBanner": "TALENT ACQUISITION PAYOFF: Reduce external recruiter spend, boost organic regional applications & stop losing finalists to scheduling delays",
+      "cards": [
+        {
+          "badge": "PILLAR 01 · REQUISITION & SCREENING",
+          "title": "Micro-Market Talent Magnet & Skill-First Triage",
+          "metric": "40%–50%",
+          "metricLbl": "LESS SCREENING EFFORT",
+          "color": "#1a73e8",
+          "icon": "assets/icons/pillar_attract.png",
+          "problem": "Over-reliance on external staffing agencies inflates sourcing costs while jargon-heavy JDs and 300+ CVs stall shortlists.",
+          "solution": "Localized outreach across Tier-2/3 hubs, skill-based role templates in minutes, 24/7 Candidate Q&A, and blind skill triage.",
+          "value": "Lower agency dependency, broader diverse reach, and faster quality shortlists."
+        },
+        {
+          "badge": "PILLAR 02 · CANDIDATE HIRING & SELECTION",
+          "title": "Zero-Touch Panel Scheduling & Calibrated Selection",
+          "metric": "4d -> <1h",
+          "metricLbl": "INTERVIEW TURNAROUND",
+          "color": "#185abc",
+          "icon": "assets/icons/pillar_perform.png",
+          "problem": "Exchanging dozens of emails across time zones takes ~4 days per round; noisy interviewer notes delay offers.",
+          "solution": "Autonomous calendar negotiation across candidate & panel, role rubrics, objective scorecard synthesis, and band-checked offers.",
+          "value": "Minimal candidate drop-off, fair interview calibration, and faster close rates."
+        }
+      ],
+      "notes": "Connects Requisition & Screening plus Candidate Hiring directly to revenue protection: winning scarce talent days before competitors even confirm interview slots."
+    },
+    {
+      "num": "09",
+      "layout": "pillar_value_pair",
+      "eyebrow": "08 · CROSS-DOMAIN VALUE: CFO FINANCE & PUBLIC SECTOR",
+      "title": "Beyond HR: Autonomous Finance Close & 24/7 Citizen Service Delivery",
+      "subtitle": "Same governed Gemini Enterprise foundation — zero black-box decisions, full human audit trail",
+      "topBanner": "CROSS-DOMAIN REUSE: One governed MCP + A2A backbone powers Finance (CFO) and Public Sector agencies cleanly",
+      "cards": [
+        {
+          "badge": "FINANCE / CFO · RECORD-TO-REPORT",
+          "title": "Autonomous Month-End Close & Cash Forecasting",
+          "metric": "Days -> Hrs",
+          "metricLbl": "RECONCILIATION CYCLE",
+          "icon": "assets/gcp_icons/BusinessIntelligence-512-color.png",
+          "color": "#137333",
+          "problem": "Finance teams manually chase inter-company mismatches, vendor invoices & spreadsheet sign-offs every close cycle.",
+          "solution": "Enterprise connectors pull ERP & bank feeds into BigQuery; Gemini Pro explains variances with clause-level citations.",
+          "value": "Faster board reporting, zero unlogged journal edits, and proactive working-capital foresight."
+        },
+        {
+          "badge": "PUBLIC SECTOR · CITIZEN GRIEVANCE & PERMITS",
+          "title": "Multilingual Citizen Triage & Case Resolution",
+          "metric": "24/7 Voice",
+          "metricLbl": "REGIONAL DIALECTS",
+          "icon": "assets/gcp_icons/SecurityIdentity-512-color.png",
+          "color": "#5e35b1",
+          "problem": "Citizens face fragmented forms and language barriers while case officers drown in duplicate status inquiries.",
+          "solution": "Multilingual Gemini intake verifies eligibility via sovereign MCP connectors and drafts officer case briefs.",
+          "value": "Instant citizen clarity, sovereign data residency, and faster resolution SLAs with officer sign-off."
+        }
+      ],
+      "notes": "Compare Finance (CFO) and Public Sector side-by-side using the same Today's Friction -> AI Solution -> Business Outcome structure."
+    },
+    {
+      "num": "10",
+      "layout": "moments_matter",
+      "eyebrow": "09 · LIVE WORKSHOP BRIDGE (NO-CODE + CONNECTORS + CUSTOM MCP)",
+      "title": "From Workshop Demo to Enterprise Collaboration: 1 End-to-End Flow",
+      "subtitle": "How Session 1's No-Code Agent + Enterprise Connectors + Custom MCP (PeopleStrong) executes a real workflow",
+      "heroImage": "assets/moments_matter.jpg",
+      "moments": [
+        {
+          "step": "01",
+          "title": "Plain Request",
+          "metric": "Zero-UI",
+          "metricLbl": "CHAT OR VOICE",
+          "desc": "Manager or citizen triggers request inside Chat or Workspace.",
+          "icon": "assets/icons/badge_sparkle.png",
+          "color": "#1a73e8"
+        },
+        {
+          "step": "02",
+          "title": "Enterprise Data",
+          "metric": "130+",
+          "metricLbl": "CONNECTORS",
+          "desc": "Reads policies, ERP & BigQuery context with role permissions.",
+          "icon": "assets/icons/pillar_workforce.png",
+          "color": "#0097a7"
+        },
+        {
+          "step": "03",
+          "title": "Custom MCP",
+          "metric": "2-Way",
+          "metricLbl": "PEOPLESTRONG API",
+          "desc": "Executes live schema-checked reads & staged updates securely.",
+          "icon": "assets/gcp_icons/Developer_Tools-512-color.png",
+          "color": "#137333"
+        },
+        {
+          "step": "04",
+          "title": "A2A Handoff",
+          "metric": "Multi-Agent",
+          "metricLbl": "HR + IT + FIN",
+          "desc": "Coordinates IT tickets, calendar panels & budget checks.",
+          "icon": "assets/gcp_icons/Agents-512-color.png",
+          "color": "#5e35b1"
+        },
+        {
+          "step": "05",
+          "title": "Human Gate",
+          "metric": "100% HITL",
+          "metricLbl": "NAMED SIGN-OFF",
+          "desc": "Presents cited brief for one-click executive approval & audit.",
+          "icon": "assets/icons/badge_check.png",
+          "color": "#ea8600"
+        }
+      ],
+      "notes": "Connects directly to Session 1 (AI Workshop): shows how a No-Code agent collaborates across Enterprise Connectors and Custom MCP (PeopleStrong) to complete one end-to-end cross-domain workflow."
+    },
+    {
+      "num": "11",
+      "eyebrow": "10 · AGENT PORTFOLIO MIND MAP (PART 1 OF 2)",
+      "title": "Talent & Day-1 Mind Map: 3 Pillars · 7 Solutions · Personas Served",
+      "subtitle": "Every capability stays anchored to an HR Pillar and the exact People Personas it serves — zero isolated bots",
+      "layout": "mindmap_agents",
+      "part": "Part 1 of 2",
+      "hubTitle": "Talent & Day-1 Pillars",
+      "hubSub": "Pillars 01–03 · 7 Agents",
+      "pillarIds": [
+        "requisition_screening",
+        "candidate_hiring",
+        "onboarding"
+      ],
+      "notes": "Show briefly on stage: Pillars 01–03 map cleanly to 7 specialized solutions and their exact personas — Recruiting Leads, Hiring Managers, Interview Panels, Candidates, and New Hires."
+    },
+    {
+      "num": "12",
+      "eyebrow": "11 · AGENT PORTFOLIO MIND MAP (PART 2 OF 2)",
+      "title": "Growth, Ops & Strategy Mind Map: 3 Pillars · 7 Solutions · Personas Served",
+      "subtitle": "Empowering Frontline Teams, Learning Leads, HR Business Partners, Total Rewards & the CHRO",
+      "layout": "mindmap_agents",
+      "part": "Part 2 of 2",
+      "hubTitle": "Growth, Ops & Strategy",
+      "hubSub": "Pillars 04–06 · 7 Agents",
+      "pillarIds": [
+        "continuous_learning",
+        "people_ops",
+        "hr_strategy_rewards"
+      ],
+      "notes": "Complete the 14-agent portfolio in one glance: Career Saathi, Micro-Learning Reels, HR Concierge, Burnout Pulse, and Strategic Workforce & Total Rewards Equity."
+    },
+    {
+      "num": "13",
+      "eyebrow": "12 · ENTERPRISE PRODUCTION PROOF",
+      "title": "Production Benchmark Today: 400+ Live Agents · 74%+ Retention",
+      "subtitle": "Diversified Indian conglomerate deployment across HR, Retail, Banking & Enterprise Analytics",
+      "layout": "enterprise_proof",
+      "notes": "Ground the vision in reality: over 400 production agents live across an Indian enterprise with 74%+ ongoing monthly retention and 30% faster leadership decisions."
+    },
+    {
+      "num": "14",
+      "eyebrow": "13 · TRUST, FAIRNESS & INDIA DPDP COMPLIANCE",
+      "title": "Why CHROs, CFOs & Public Leaders Trust This System by Design",
+      "subtitle": "Bias safeguards, employee privacy, regional consent, and named human sign-off embedded into every workflow",
+      "layout": "governance_dpdp",
+      "heroImage": "assets/governance_dpdp.jpg",
+      "cards": [
+        {
+          "icon": "assets/gcp_icons/SecurityIdentity-512-color.png",
+          "color": "#1a73e8",
+          "title": "Skill-First Blind Evaluation",
+          "desc": "Candidate names, age, gender, and home pins are automatically hidden during early shortlisting with ongoing fairness checks."
+        },
+        {
+          "icon": "assets/icons/badge_shield.png",
+          "color": "#185abc",
+          "title": "India DPDP Act Aligned",
+          "desc": "Purpose-bound employee consent records, Indian data residency, and automatic deletion when retention windows close."
+        },
+        {
+          "icon": "assets/icons/pillar_ops.png",
+          "color": "#1e8e3e",
+          "title": "Privacy-Safe Well-Being Pulse",
+          "desc": "Burnout alerts aggregate strictly at team sizes of 10 or more so HR supports teams early without exposing individuals."
+        },
+        {
+          "icon": "assets/icons/badge_check.png",
+          "color": "#e37400",
+          "title": "Human Final Authority Always",
+          "desc": "Every offer letter, compensation adjustment, promotion, and disciplinary record requires an explicit human sign-off."
+        }
+      ],
+      "notes": "Reassure Legal, Risk, and CHROs in plain business terms: fairness, privacy, and human accountability come first — never black-box automated people decisions."
+    },
+    {
+      "num": "15",
+      "eyebrow": "14 · ORGANIZATIONAL AI READINESS",
+      "title": "No Workforce Left Behind: Unlocking Strategic Time at Every Tier",
+      "subtitle": "How ambient support lifts strategic capacity across CHROs, HRBPs, People Managers & Frontline Associates",
+      "layout": "workforce_readiness",
+      "chartImage": "assets/charts/workforce_readiness_chart.png",
+      "personas": [
+        {
+          "role": "Chief Human Resources Officer (CHRO)",
+          "lift": "32% -> 78% Strategic",
+          "color": "#5e35b1",
+          "icon": "assets/icons/pillar_workforce.png",
+          "action": "Scenarios skills, attrition & pay equity live instead of waiting weeks for spreadsheet packs."
+        },
+        {
+          "role": "HR Business Partner (HRBP)",
+          "lift": "24% -> 68% Coaching",
+          "color": "#4285f4",
+          "icon": "assets/icons/pillar_ops.png",
+          "action": "Trades ticket escalations for talent calibration, leader coaching & proactive care."
+        },
+        {
+          "role": "People & Hiring Managers",
+          "lift": "18% -> 56% Mentoring",
+          "color": "#1e8e3e",
+          "icon": "assets/icons/pillar_perform.png",
+          "action": "Eliminates panel scheduling ping-pong and speeds up structured hiring & growth reviews."
+        },
+        {
+          "role": "Frontline Associates",
+          "lift": "15% -> 48% Learning",
+          "color": "#e37400",
+          "icon": "assets/icons/pillar_develop.png",
+          "action": "Uses 3-minute regional Career Saathi reels & instant policy answers in daily work."
+        }
+      ],
+      "notes": "Point to every row on the chart: transformation succeeds because it unlocks meaningful time at every tier of the organization, from the boardroom down to regional branches."
+    },
+    {
+      "num": "16",
+      "eyebrow": "15 · FOUR ADOPTION PILLARS & 90-DAY CXO LAUNCH",
+      "title": "Four Proven Adoption Pillars & Your 90-Day Launch Plan",
+      "subtitle": "What separates stalled pilots from enterprise-wide HR transformation — start cleanly on Monday morning",
+      "layout": "adoption_close",
+      "heroImage": "assets/roadmap_launch.jpg",
+      "adoptionPillars": [
+        {
+          "num": "01",
+          "title": "Cross-Functional Governance",
+          "desc": "Align HR, Legal & IT upfront on privacy, fairness & policy rules.",
+          "color": "#4285f4",
+          "icon": "assets/gcp_icons/SecurityIdentity-512-color.png"
+        },
+        {
+          "num": "02",
+          "title": "Track Adoption Closely",
+          "desc": "Spot usage gaps by region or cohort and tailor enablement early.",
+          "color": "#ea4335",
+          "icon": "assets/gcp_icons/BusinessIntelligence-512-color.png"
+        },
+        {
+          "num": "03",
+          "title": "Redesign Process First",
+          "desc": "Simplify bloated approval chains before automating to multiply gains.",
+          "color": "#e37400",
+          "icon": "assets/icons/pillar_ops.png"
+        },
+        {
+          "num": "04",
+          "title": "Invest in Upskilling",
+          "desc": "Deliver role-based hands-on fluency for HR teams & people managers.",
+          "color": "#34a853",
+          "icon": "assets/icons/pillar_develop.png"
+        }
+      ],
+      "ctaBoxes": [
+        {
+          "num": "01",
+          "title": "Days 1–30 · Quick Win Pilot",
+          "desc": "Launch HR Policy Concierge & Day-1 Onboarding Buddy (~60% faster answers).",
+          "color": "#4285f4",
+          "icon": "assets/icons/badge_nocode.png"
+        },
+        {
+          "num": "02",
+          "title": "Days 31–60 · Frictionless Hiring",
+          "desc": "Activate Skill-First Blind Screening & <1 Hr Interview Scheduling.",
+          "color": "#34a853",
+          "icon": "assets/icons/pillar_perform.png"
+        },
+        {
+          "num": "03",
+          "title": "Days 61–90 · Career Saathi & Clarity",
+          "desc": "Scale 3-Min Career Saathi reels, Burnout Pulse & CHRO Workforce Radar.",
+          "color": "#5e35b1",
+          "icon": "assets/icons/pillar_workforce.png"
+        }
+      ],
+      "notes": "Bring together the 4 Enterprise Adoption Pillars with a decisive 90-day Monday Morning sequence: start narrow with verified policies in 30 days, unlock hiring velocity at 60 days, and compound internal mobility by Day 90."
+    }
   ]
 }
