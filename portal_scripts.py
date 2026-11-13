@@ -705,19 +705,93 @@ PORTAL_JS = r"""
             <div class="plain-explainer-title">${esc(String(ag.outcomeBadge || '').split('·')[0].trim())}</div>
             <p>Connects across <strong>${esc((ag.systems || []).join(', '))}</strong> while keeping every sensitive approval under human review (${esc(primaryPersona)}).</p>
           </div>
+          <div class="resilience-grid" role="region" aria-label="Operational Resilience and Service Level Contract">
+            <div class="resilience-card" style="border-left-color:#1a73e8;">
+              <div class="resilience-kicker">MODEL TIER &amp; LATENCY TARGET</div>
+              <div class="resilience-val">${isNoCode ? 'Gemini Flash · Sub-Second Grounded Response' : (isLowCode ? 'Gemini Flash + Connector Cache · < 2s Turnaround' : 'Gemini Pro + Google ADK · Deterministic Tool Routing')}</div>
+            </div>
+            <div class="resilience-card" style="border-left-color:#f9ab00;">
+              <div class="resilience-kicker">CONFIDENCE &amp; ESCALATION FALLBACK</div>
+              <div class="resilience-val">${esc(humanGate)}</div>
+            </div>
+            <div class="resilience-card" style="border-left-color:#1e8e3e;">
+              <div class="resilience-kicker">PRIVACY &amp; AUDIT RETENTION</div>
+              <div class="resilience-val">Model Armor + Cloud DLP Redaction · Immutable HR Audit Log</div>
+            </div>
+          </div>
         </div>
       `;
+    }
+
+    let activeTraceTimer = null;
+    let activeTraceStep = -1;
+
+    function applyTraceSimState(stepIdx, total) {
+      const rows = document.querySelectorAll('#agentTraceList .trace-step-row');
+      const stages = document.querySelectorAll('.hw-pipeline .hw-stage-card');
+      const statusEl = document.getElementById('traceSimStatus');
+      rows.forEach((row, idx) => {
+        row.classList.toggle('sim-active', idx === stepIdx);
+        row.classList.toggle('sim-done', stepIdx >= 0 && idx < stepIdx);
+      });
+      const stageMap = total > 0 && stepIdx >= 0 ? Math.min(3, Math.floor((stepIdx / total) * 4)) : -1;
+      stages.forEach((st, idx) => st.classList.toggle('sim-stage-active', idx === stageMap));
+      if (statusEl) {
+        statusEl.textContent = stepIdx < 0
+          ? 'Ready — click Run to trace'
+          : (stepIdx >= total - 1 ? `Completed (${total}/${total} stages)` : `Running Stage 0${stepIdx + 1} of 0${total}...`);
+      }
+    }
+
+    function resetAgentTraceSim() {
+      if (activeTraceTimer) { clearInterval(activeTraceTimer); activeTraceTimer = null; }
+      activeTraceStep = -1;
+      const rows = document.querySelectorAll('#agentTraceList .trace-step-row');
+      applyTraceSimState(-1, rows.length);
+    }
+
+    function stepAgentTraceSim() {
+      if (activeTraceTimer) { clearInterval(activeTraceTimer); activeTraceTimer = null; }
+      const rows = document.querySelectorAll('#agentTraceList .trace-step-row');
+      if (!rows.length) return;
+      activeTraceStep = (activeTraceStep + 1) % rows.length;
+      applyTraceSimState(activeTraceStep, rows.length);
+    }
+
+    function runAgentTraceSim() {
+      resetAgentTraceSim();
+      const rows = document.querySelectorAll('#agentTraceList .trace-step-row');
+      if (!rows.length) return;
+      activeTraceStep = 0;
+      applyTraceSimState(activeTraceStep, rows.length);
+      activeTraceTimer = setInterval(() => {
+        activeTraceStep += 1;
+        if (activeTraceStep >= rows.length) {
+          clearInterval(activeTraceTimer);
+          activeTraceTimer = null;
+          return;
+        }
+        applyTraceSimState(activeTraceStep, rows.length);
+      }, 900);
     }
 
     function renderTraceStepsHtml(traceText) {
       const lines = String(traceText || '').split('\n').map(l => l.trim()).filter(Boolean);
       if (!lines.length) return '';
       return `
-        <div class="trace-steps-list">
+        <div class="trace-sim-bar">
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <button type="button" class="trace-sim-btn primary" onclick="runAgentTraceSim()">&#9654; Run Step-by-Step</button>
+            <button type="button" class="trace-sim-btn" onclick="stepAgentTraceSim()">Next Step &rarr;</button>
+            <button type="button" class="trace-sim-btn" onclick="resetAgentTraceSim()">Reset</button>
+          </div>
+          <span id="traceSimStatus" style="font-size:11.5px; font-weight:700; color:var(--g-cobalt);">Ready — click Run to trace</span>
+        </div>
+        <div id="agentTraceList" class="trace-steps-list">
           ${lines.map((line, i) => {
             const cleanLine = line.replace(/^\d+[\.\)]\s*/, '');
             return `
-              <div class="trace-step-row">
+              <div class="trace-step-row" data-trace-idx="${i}">
                 <span class="trace-step-badge">0${i + 1}</span>
                 <span class="trace-step-text">${esc(cleanLine)}</span>
               </div>
@@ -728,6 +802,7 @@ PORTAL_JS = r"""
     }
 
     function openAgentPage(agentId, pushHash = true) {
+      resetAgentTraceSim();
       const ag = AGENTS[agentId];
       if (!ag) return;
       if (pushHash) history.pushState({ page: 'agent', id: agentId }, '', `#agent/${agentId}`);
@@ -1739,7 +1814,7 @@ PORTAL_JS = r"""
       if (currentSlideIdx >= slides.length) currentSlideIdx = 0;
       const sc = slides[currentSlideIdx] || slides[0];
       const isV2 = slideDeckVersion === 'v2' && KEYNOTE_SLIDES_V2.length > 0;
-      const pptxHref = isV2 ? 'CHRO_Agentic_Transformation_Keynote_v2.pptx?v=1' : 'CHRO_Agentic_Transformation_Keynote.pptx?v=4';
+      const pptxHref = isV2 ? 'CHRO_Agentic_Transformation_Keynote_v2.pptx?v=2' : 'CHRO_Agentic_Transformation_Keynote.pptx?v=5';
       const pptxName = isV2 ? 'CHRO_Agentic_Transformation_Keynote_v2.pptx' : 'CHRO_Agentic_Transformation_Keynote.pptx';
 
       const toolbar = `
@@ -1757,6 +1832,7 @@ PORTAL_JS = r"""
             </div>
             <button type="button" class="switch-pill ${slideViewMode === 'presenter' ? 'active' : ''}" onclick="setSlideViewMode('presenter')">🖥️ Presenter</button>
             <button type="button" class="switch-pill ${slideViewMode === 'grid' ? 'active' : ''}" onclick="setSlideViewMode('grid')">🗂️ All ${slides.length} Slides</button>
+            <button type="button" class="switch-pill" onclick="toggleSlideFullscreen()" title="Fullscreen Stage Mode (Press F)">⛶ Fullscreen</button>
             <button type="button" class="switch-pill" onclick="printAllSlidesPdf()">🖨️ Export PDF</button>
             ${!isV2 ? `<a href="https://docs.google.com/presentation/d/1PkW9mPtL3Tta4s5xVUgxiXTlWO2FdInVRp7Hnyng6qU/edit" target="_blank" rel="noopener" class="switch-pill" style="border-color:#4285f4; color:#185abc;">🎞️ Google Slides &nearr;</a>` : ''}
             <a href="${pptxHref}" download="${pptxName}" class="pptx-download-btn">📊 Download ${isV2 ? 'v2 ' : 'v1 '}.pptx</a>
@@ -1828,15 +1904,43 @@ PORTAL_JS = r"""
       renderMatrixPage();
     }
 
+    let matrixSearchQuery = '';
+
+    function setMatrixSearch(q) {
+      matrixSearchQuery = String(q || '');
+      const el = document.getElementById('matrixGridHost');
+      if (!el) return renderMatrixPage();
+      const allAgents = Object.values(AGENTS);
+      const qLower = matrixSearchQuery.trim().toLowerCase();
+      const filtered = allAgents.filter(a => {
+        if (currentMatrixFilter === 'NO_LOW' && a.buildTier === 'High-Code') return false;
+        if (currentMatrixFilter === 'HIGH' && a.buildTier !== 'High-Code') return false;
+        if (!qLower) return true;
+        const hay = [a.name, a.simpleName, a.pillarName, a.processName, a.outcomeBadge, ...(a.systems || []), ...(a.personasServed || [])].join(' ').toLowerCase();
+        return hay.includes(qLower);
+      });
+      el.innerHTML = filtered.length ? filtered.map(ag => `
+        <div class="matrix-cell" style="--cell-accent:${ag.pillarColor};" onclick="openAgentPage('${ag.id}', true)">
+          <div>
+            <div class="matrix-cell-top">
+              <span class="matrix-code" style="color:${ag.pillarColor};">${esc(ag.num)} &middot; ${esc(ag.code)}</span>
+              ${tierBadgeHtml(ag.buildTier)}
+            </div>
+            <div style="font-family:var(--font-display); font-size:17px; font-weight:800; color:var(--text-primary); margin-bottom:4px;">${esc(ag.name)}</div>
+            <div style="font-size:12px; font-weight:700; color:${ag.pillarColor}; margin-bottom:6px;">${esc(ag.pillarName)}</div>
+            <div style="font-size:12.5px; color:var(--text-muted);">${esc(ag.processName)}</div>
+          </div>
+          <div style="padding-top:8px; border-top:1px solid var(--border-subtle); font-size:11.5px; font-weight:700; color:var(--text-secondary);">
+            ${esc(ag.outcomeBadge)} &rarr;
+          </div>
+        </div>
+      `).join('') : '<div style="grid-column:1/-1; padding:28px; text-align:center; border-radius:14px; background:var(--bg-surface); border:1px solid var(--border-subtle); color:var(--text-muted);">No matching agents found. Try clearing the search filter.</div>';
+    }
+
     function renderMatrixPage() {
       const container = document.getElementById('matrixPageContent');
       if (!container) return;
       const allAgents = Object.values(AGENTS);
-      const filtered = allAgents.filter(a => {
-        if (currentMatrixFilter === 'NO_LOW') return a.buildTier === 'No-Code' || a.buildTier === 'Low-Code';
-        if (currentMatrixFilter === 'HIGH') return a.buildTier === 'High-Code';
-        return true;
-      });
 
       container.innerHTML = `
         <div class="back-bar">
@@ -1848,36 +1952,43 @@ PORTAL_JS = r"""
           </div>
         </div>
 
-        <div style="margin-bottom:22px;">
+        <div style="margin-bottom:16px;">
           <h1 style="font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:800; margin:0 0 6px;">Periodic Matrix of CHRO Office AI Agents (14 Elements)</h1>
           <p style="color:var(--text-muted); margin:0;">Color-coded across the 6 Human Resources Pillars (APQC 7.0 Aligned) and tagged by Gemini Enterprise Build Tier.</p>
         </div>
 
-        <div class="matrix-grid">
-          ${filtered.map(ag => `
-            <div class="matrix-cell" style="--cell-accent:${ag.pillarColor};" onclick="openAgentPage('${ag.id}', true)">
-              <div>
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                  <span style="font-family:var(--font-mono); font-size:12px; font-weight:800; color:${ag.pillarColor};">${esc(ag.num)} · ${esc(ag.code)}</span>
-                  ${tierBadgeHtml(ag.buildTier)}
-                </div>
-                <div style="font-family:var(--font-display); font-size:17px; font-weight:800; color:var(--text-primary); margin-bottom:4px;">${esc(ag.name)}</div>
-                <div style="font-size:12px; font-weight:700; color:${ag.pillarColor}; margin-bottom:6px;">${esc(ag.pillarName)}</div>
-                <div style="font-size:12.5px; color:var(--text-muted);">${esc(ag.processName)}</div>
-              </div>
-              <div style="padding-top:8px; border-top:1px solid var(--border-subtle); font-size:11.5px; font-weight:700; color:var(--text-secondary);">
-                ${esc(ag.outcomeBadge)} &rarr;
-              </div>
-            </div>
-          `).join('')}
+        <div class="matrix-search-bar">
+          <input type="search" class="matrix-search-input" value="${esc(matrixSearchQuery)}" oninput="setMatrixSearch(this.value)" placeholder="Search by agent name, HR function, system (e.g. Workday, ServiceNow), or persona..." aria-label="Search HR AI agents" />
         </div>
+
+        <div id="matrixGridHost" class="matrix-grid"></div>
       `;
+      setMatrixSearch(matrixSearchQuery);
     }
 
     let activeArchTierFilter = 'All';
 
     function setArchTierFilter(tier) {
       activeArchTierFilter = tier;
+      const box = document.getElementById('archStackVisualHost');
+      if (box) box.innerHTML = renderPlatformStackHtml(activeArchTierFilter);
+    }
+
+    let activeStackInspect = 'taskforce';
+
+    const STACK_INSPECTOR_DATA = {
+      taskforce: { title: 'Layer 1 · The Taskforce (Zero-UI Channels)', detail: 'Agents surface inside Google Chat, Gmail, Career Portal, Google Meet, and Workday/PeopleStrong sidebars via Workspace Add-ons & webhooks — zero new HR portals to adopt.' },
+      workbench: { title: 'Layer 2 · The Workbench (Dual Build Tier)', detail: 'HR policy owners author No-Code Studio agents in hours with plain OKF documents; Engineering deploys High-Code Google ADK + FastMCP agents in Python for multi-system writes and DLP masking.' },
+      context: { title: 'Layer 3 · The Context (Grounded Memory & MCP)', detail: 'Open Knowledge Format (OKF) markdown preserves clause IDs and citations; Vertex AI Search RAG blocks unsupported policy guessing; FastMCP provides schema-validated Read vs Write tools.' },
+      brains: { title: 'Layer 4 · The Brains (Smart Model Tiering)', detail: 'Gemini Flash serves ~80% of high-volume Q&A and parsing sub-second; Gemini Pro handles pay-equity regressions, rubric calibration, and multi-step orchestration.' },
+      armor: { title: 'Trust Control · Model Armor Guard', detail: 'Inline prompt-injection, jailbreak, and toxicity inspection on every inbound request and outbound response before reaching HR systems or employees.' },
+      dlp: { title: 'Trust Control · Cloud DLP Redaction', detail: 'Deterministic de-identification strips candidate names, gender, age, phone numbers, and PIN codes prior to LLM shortlisting to uphold Four-Fifths fairness.' },
+      kanon: { title: 'Trust Control · K-Anonymity Lock (N >= 10)', detail: 'Burnout and sentiment analytics strictly enforce cohort aggregation >= 10 employees; queries on smaller cohorts are deterministically suppressed.' },
+      hitl: { title: 'Trust Control · Human-in-the-Loop (HITL)', detail: 'Every offer letter, compensation adjustment, promotion, and disciplinary record requires an explicit named human approval click and immutable audit log.' }
+    };
+
+    function inspectStackItem(key) {
+      activeStackInspect = key;
       const box = document.getElementById('archStackVisualHost');
       if (box) box.innerHTML = renderPlatformStackHtml(activeArchTierFilter);
     }
@@ -1893,11 +2004,12 @@ PORTAL_JS = r"""
         'Low-Code': 'Use Low-Code Hybrid (1 Agent) when connecting structured outreach studios to public labor research and lightweight career-site Q&A widgets.',
         'High-Code': 'Use High-Code Google ADK + FastMCP (8 Agents) when an agent writes across multiple HR/IT systems, redacts Personal Identifiable Information (PII), or runs audit math.'
       };
+      const insp = STACK_INSPECTOR_DATA[activeStackInspect] || STACK_INSPECTOR_DATA.taskforce;
 
       return `
         <div class="stack-arch-layout">
           <div class="stack-layers-col">
-            <div class="stack-layer-box stack-layer-top">
+            <div class="stack-layer-box stack-layer-top clickable ${activeStackInspect === 'taskforce' ? 'active-inspector' : ''}" onclick="inspectStackItem('taskforce')">
               <div class="stack-layer-head">
                 <div class="stack-layer-title">1. THE TASKFORCE &mdash; Where HR &amp; Employees Work</div>
                 <span class="stack-layer-tag">6 HR Pillars &middot; 14 Agents</span>
@@ -1905,13 +2017,13 @@ PORTAL_JS = r"""
               <div class="stack-layer-desc">Embedded directly inside employee chat, Career Portal, PeopleStrong / Workday HCM, Google Meet, and ServiceNow HRSD so nobody learns another portal.</div>
             </div>
 
-            <div class="stack-layer-box stack-layer-workbench">
+            <div class="stack-layer-box stack-layer-workbench clickable ${activeStackInspect === 'workbench' ? 'active-inspector' : ''}" onclick="inspectStackItem('workbench')">
               <div class="stack-layer-head">
                 <div class="stack-layer-title">2. THE WORKBENCH &mdash; Select Build Complexity by Task</div>
                 <span class="stack-layer-tag">Hours (Studio) &harr; Multi-System (ADK)</span>
               </div>
               <div class="stack-layer-desc">${esc(tierGuide[filterTier] || tierGuide['All'])}</div>
-              <div class="stack-tier-tabs">
+              <div class="stack-tier-tabs" onclick="event.stopPropagation()">
                 ${[
                   { id: 'All', label: `All 14 Agents` },
                   { id: 'No-Code', label: `No-Code Studio (5)` },
@@ -1921,14 +2033,14 @@ PORTAL_JS = r"""
                   <button type="button" class="switch-pill ${filterTier === t.id ? 'active' : ''}" onclick="setArchTierFilter('${t.id}')">${esc(t.label)}</button>
                 `).join('')}
               </div>
-              <div class="stack-tier-agents">
+              <div class="stack-tier-agents" onclick="event.stopPropagation()">
                 ${filteredAgents.map(a => `
                   <button type="button" class="stack-agent-link" onclick="openAgentPage('${a.id}', true)">#${esc(a.num)} ${esc(a.simpleName || a.name)} &rarr;</button>
                 `).join('')}
               </div>
             </div>
 
-            <div class="stack-layer-box stack-layer-context">
+            <div class="stack-layer-box stack-layer-context clickable ${activeStackInspect === 'context' ? 'active-inspector' : ''}" onclick="inspectStackItem('context')">
               <div class="stack-layer-head">
                 <div class="stack-layer-title">3. THE CONTEXT &mdash; Grounded Memory &amp; Two-Way Tools</div>
                 <span class="stack-layer-tag">OKF + Vertex AI RAG + FastMCP</span>
@@ -1936,7 +2048,7 @@ PORTAL_JS = r"""
               <div class="stack-layer-desc">Combines Open Knowledge Format (OKF) clause-cited HR handbooks, Vertex AI Search RAG, BigQuery workforce tables, and FastMCP enterprise API connectors.</div>
             </div>
 
-            <div class="stack-layer-box stack-layer-brains">
+            <div class="stack-layer-box stack-layer-brains clickable ${activeStackInspect === 'brains' ? 'active-inspector' : ''}" onclick="inspectStackItem('brains')">
               <div class="stack-layer-head">
                 <div class="stack-layer-title">4. THE BRAINS &mdash; Smart Gemini Model Tiering</div>
                 <span class="stack-layer-tag">Cost &amp; Latency Engineered</span>
@@ -1947,28 +2059,32 @@ PORTAL_JS = r"""
 
           <div class="stack-shield-col">
             <div>
-              <div style="font-family:var(--font-mono); font-size:11px; font-weight:800; color:#b06000; letter-spacing:0.4px; margin-bottom:4px;">VERTICAL TRUST SHIELD</div>
+              <div style="font-family:var(--font-mono); font-size:11px; font-weight:800; color:#b06000; letter-spacing:0.4px; margin-bottom:4px;">VERTICAL TRUST SHIELD (CLICK TO INSPECT)</div>
               <div style="font-family:var(--font-display); font-size:16.5px; font-weight:800; color:var(--text-primary); margin-bottom:10px;">India DPDP &amp; Safety Built In</div>
               <div style="display:flex; flex-direction:column; gap:8px;">
-                <div class="stack-shield-item">
+                <div class="stack-shield-item clickable ${activeStackInspect === 'armor' ? 'active-inspector' : ''}" onclick="inspectStackItem('armor')">
                   <strong>Model Armor Guard</strong>
                   <span>Blocks prompt injection, toxicity, and unauthorized policy exceptions in real time.</span>
                 </div>
-                <div class="stack-shield-item">
+                <div class="stack-shield-item clickable ${activeStackInspect === 'dlp' ? 'active-inspector' : ''}" onclick="inspectStackItem('dlp')">
                   <strong>Cloud DLP Redaction</strong>
                   <span>Masks candidate names, colleges, phone numbers, and salary IDs before AI scoring.</span>
                 </div>
-                <div class="stack-shield-item">
+                <div class="stack-shield-item clickable ${activeStackInspect === 'kanon' ? 'active-inspector' : ''}" onclick="inspectStackItem('kanon')">
                   <strong>K-Anonymity Lock (N &ge; 10)</strong>
                   <span>Aggregates pulse burnout signals only at cohort level &mdash; never individual tracking.</span>
                 </div>
-                <div class="stack-shield-item">
+                <div class="stack-shield-item clickable ${activeStackInspect === 'hitl' ? 'active-inspector' : ''}" onclick="inspectStackItem('hitl')">
                   <strong>Human-in-the-Loop (HITL)</strong>
                   <span>Zero autonomous candidate rejections, salary edits, or disciplinary actions.</span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="stack-inspector-banner" role="region" aria-label="Selected Architecture Control Detail">
+          <div style="font-family:var(--font-mono); font-size:11px; font-weight:800; color:var(--g-cobalt); margin-bottom:3px;">${esc(insp.title)}</div>
+          <div style="font-size:13px; color:var(--text-primary); line-height:1.45;">${esc(insp.detail)}</div>
         </div>
       `;
     }
@@ -2233,11 +2349,24 @@ PORTAL_JS = r"""
       }
     });
 
+    function toggleSlideFullscreen() {
+      const frame = document.querySelector('#pageSlides .keynote-slide-frame');
+      if (!frame) return;
+      if (!document.fullscreenElement) {
+        if (frame.requestFullscreen) frame.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+      }
+    }
+
     document.addEventListener('keydown', (ev) => {
       const slidesPage = document.getElementById('pageSlides');
       if (!slidesPage || !slidesPage.classList.contains('active')) return;
+      const tag = (ev.target && ev.target.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
       if (ev.key === 'ArrowRight') stepSlide(1);
       if (ev.key === 'ArrowLeft') stepSlide(-1);
+      if (ev.key === 'f' || ev.key === 'F') toggleSlideFullscreen();
     });
 
     window.addEventListener('popstate', handleUrlHash);

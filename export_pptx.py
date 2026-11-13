@@ -711,7 +711,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
             for sidx, sh in enumerate(shields):
                 sy = 3.74 + sidx * 0.66
                 add_rect(slide, 10.30, sy, 2.20, 0.50, fill=C_WHITE, border=C_AMBER, border_pt=0.9)
-                add_textbox(slide, 10.36, sy + 0.05, 2.08, 0.40, sh, font_size=11.5, bold=True, color=C_INK, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, 10.36, sy + 0.05, 2.08, 0.40, sh, font_size=12, bold=True, color=C_INK, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
 
             set_notes(slide, base_notes)
 
@@ -748,8 +748,8 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 add_rect(slide, 7.12, cy, 5.56, 1.28, fill=C_SURFACE, border=C_BORDER)
                 add_rect(slide, 7.12, cy, 0.08, 1.28, fill=col_rgb, border=None, rounded=False)
                 add_picture_fit(slide, ROOT / c["icon"], 7.32, cy + 0.36, 0.54, 0.54)
-                add_textbox(slide, 7.98, cy + 0.16, 4.54, 0.32, c["title"], font_size=14, bold=True, color=C_INK, font_name=FONT_DISPLAY)
-                add_textbox(slide, 7.98, cy + 0.50, 4.54, 0.66, c["desc"], font_size=11.5, color=C_INK_2)
+                add_textbox(slide, 7.98, cy + 0.14, 4.54, 0.32, c["title"], font_size=14.5, bold=True, color=C_INK, font_name=FONT_DISPLAY)
+                add_textbox(slide, 7.98, cy + 0.48, 4.54, 0.68, c["desc"], font_size=12.2, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
 
             if sc.get("statBanner"):
                 add_rect(slide, 0.65, 6.14, 12.03, 0.70, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
@@ -768,8 +768,8 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 add_rect(slide, 7.02, cy, 5.66, 1.28, fill=C_SURFACE, border=C_BORDER)
                 add_rect(slide, 7.02, cy, 5.66, 0.08, fill=col_rgb, border=None, rounded=False)
                 add_picture_fit(slide, ROOT / pitem["icon"], 7.22, cy + 0.38, 0.52, 0.52)
-                add_textbox(slide, 7.88, cy + 0.20, 4.64, 0.32, pitem["title"], font_size=14, bold=True, color=C_INK, font_name=FONT_DISPLAY)
-                add_textbox(slide, 7.88, cy + 0.54, 4.64, 0.62, pitem["desc"], font_size=11.5, color=C_INK_2)
+                add_textbox(slide, 7.88, cy + 0.16, 4.64, 0.32, pitem["title"], font_size=14.5, bold=True, color=C_INK, font_name=FONT_DISPLAY)
+                add_textbox(slide, 7.88, cy + 0.50, 4.64, 0.66, pitem["desc"], font_size=12.2, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
 
             if sc.get("quote"):
                 add_rect(slide, 0.65, 6.14, 12.03, 0.70, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
@@ -866,7 +866,20 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                     personas = ag.get("personasServed", [])[:3]
                     add_bullets(slide, ax + 0.10, row_y + 0.62, ag_w - 0.20, row_h - 0.68, personas, font_size=9.8 if n_ag == 2 else 9.0, color=C_INK_2, bullet_prefix="👤 ", space_after_pt=3.0)
 
-            set_notes(slide, base_notes)
+            qa_notes = []
+            for pid in branch_ids:
+                p_obj = pillars_map[pid]
+                for aid in p_obj["agentIds"]:
+                    ag = agents[aid]
+                    hw = ag.get("howItWorks", {})
+                    qa_notes.append(
+                        f"- {ag.get('simpleName', ag['name'])} ({ag['buildTier']}): "
+                        f"Trigger: {hw.get('trigger', '')} | "
+                        f"Reads: {', '.join(hw.get('readsFrom', [])[:2])} | "
+                        f"Writes: {', '.join(hw.get('writesTo', [])[:2])} | "
+                        f"Human Gate: {hw.get('humanCheckpoint', ag.get('guardrails', ''))}"
+                    )
+            set_notes(slide, base_notes + "\n\nExecutive Q&A Agent Contracts:\n" + "\n".join(qa_notes))
 
         elif layout == "governance_dpdp":
             add_slide_chrome(slide, sc["eyebrow"], sc["title"], sc["subtitle"], sc["num"], C_COBALT, total, GCP / "SecurityIdentity-512-color.png")
