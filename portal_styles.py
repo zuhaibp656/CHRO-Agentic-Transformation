@@ -2234,13 +2234,13 @@ PORTAL_CSS = r"""
     }
     .mm-agent-node {
       border-radius: 10px;
-      padding: 5px 7px;
+      padding: 7px 9px;
       background: #ffffff;
       border: 1px solid #d2e3fc;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 4px;
+      gap: 5px;
       min-width: 0;
       overflow: hidden;
       cursor: pointer;
@@ -2253,17 +2253,17 @@ PORTAL_CSS = r"""
     .mm-persona-chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 3px;
+      gap: 4px;
     }
     .mm-persona-chip {
-      font-size: 8px;
+      font-size: 9.2px;
       font-weight: 700;
-      padding: 1.5px 5px;
+      padding: 2px 6px;
       border-radius: 999px;
       background: #f1f3f4;
       color: #3c4043;
       border: 1px solid #e0e3e7;
-      line-height: 1.15;
+      line-height: 1.18;
     }
 
     /* v2 Business Value & Pillars Layouts (Slides 05, 06, 07-09, 16) */
@@ -2274,23 +2274,24 @@ PORTAL_CSS = r"""
       margin-bottom: 10px;
     }
     .tp-lever-pill {
-      padding: 8px 10px;
+      padding: 9px 11px;
       border-radius: 10px;
       background: #f8f9fa;
       border: 1px solid #e8eaed;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      justify-content: center;
+      gap: 3px;
     }
     .tp-grid-4x2 {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
+      gap: 11px;
       flex: 1;
       min-height: 0;
     }
     .tp-card {
-      padding: 13px 14px;
+      padding: 14px 15px;
       border-radius: 12px;
       background: #ffffff;
       border: 1px solid #d2e3fc;
@@ -2302,63 +2303,97 @@ PORTAL_CSS = r"""
     .pf-grid-3x2 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 7px;
+      gap: 10px;
       flex: 1;
       min-height: 0;
     }
     .pf-card {
-      padding: 7px 9px;
-      border-radius: 10px;
+      padding: 10px 12px;
+      border-radius: 11px;
       background: #f8f9fa;
       border: 1px solid #d2e3fc;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 4px;
+      justify-content: center;
+      gap: 7px;
       cursor: pointer;
       min-width: 0;
     }
     .pf-fn-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 4px;
+      gap: 5px;
     }
     .pf-fn-pill {
-      padding: 3px 4px;
-      border-radius: 6px;
+      padding: 5px 6px;
+      border-radius: 7px;
       background: #ffffff;
-      border: 1px solid #e0e3e7;
-      font-size: 8.6px;
+      border: 1px solid #d2e3fc;
+      font-size: 9.8px;
       font-weight: 700;
-      color: #3c4043;
+      color: #202124;
       text-align: center;
-      line-height: 1.12;
+      line-height: 1.18;
     }
     .pv-pair-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: 14px;
       flex: 1;
       min-height: 0;
     }
     .pv-col-card {
-      padding: 9px 11px;
-      border-radius: 12px;
+      padding: 12px 14px;
+      border-radius: 13px;
       background: #ffffff;
       border: 1.5px solid #d2e3fc;
+      box-shadow: 0 2px 10px rgba(26, 115, 232, 0.05);
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 9px;
       min-width: 0;
+    }
+    .pv-stages-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      min-height: 0;
     }
     .pv-strip {
       flex: 1;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+    }
+    .pv-strip-kicker {
+      display: flex;
       align-items: center;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 9.8px;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .pv-strip-body {
+      font-size: 12.2px;
       color: #202124;
-      line-height: 1.24;
+      line-height: 1.36;
+      font-weight: 500;
+    }
+    @media (max-width: 1180px) {
+      .keynote-slide-frame { padding: 12px 16px 12px; }
+      .pv-pair-grid { gap: 10px; }
+      .pv-col-card { padding: 9px 11px; gap: 6px; }
+      .pv-stages-stack { gap: 5px; }
+      .pv-strip { padding: 6px 10px; gap: 2px; }
+      .pv-strip-kicker { font-size: 9px; }
+      .pv-strip-body { font-size: 11px; line-height: 1.26; }
     }
 """

@@ -387,14 +387,14 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
 
             # Right Contrast KPI Cards
             add_rect(slide, 9.42, 1.76, 3.26, 1.72, fill=C_RED_BG, border=C_RED, border_pt=1.2)
-            add_picture_fit(slide, ICONS / "badge_clock.png", 9.58, 1.94, 0.46, 0.46)
-            add_textbox(slide, 10.14, 1.96, 2.4, 0.42, "~75% ADMIN TAX", font_size=16, bold=True, color=C_RED, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
-            add_bullets(slide, 9.58, 2.48, 2.95, 0.92, [short_phrase(it, 6, keep_colon=True, keep_dash=True) for it in sc["leftItems"][:2]], font_size=11.5, color=C_INK, space_after_pt=5)
+            add_picture_fit(slide, ICONS / "badge_clock.png", 9.58, 1.90, 0.46, 0.46)
+            add_textbox(slide, 10.14, 1.92, 2.4, 0.42, "~75% ADMIN TAX", font_size=16, bold=True, color=C_RED, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
+            add_bullets(slide, 9.58, 2.42, 2.95, 1.00, [short_phrase(it, 10, keep_colon=True, keep_dash=True) for it in sc["leftItems"][:2]], font_size=11.8, color=C_INK, space_after_pt=5)
 
             add_rect(slide, 9.42, 3.66, 3.26, 1.72, fill=C_GREEN_BG, border=C_GREEN, border_pt=1.2)
-            add_picture_fit(slide, GCP / "Collaboration-512-color.png", 9.58, 3.84, 0.46, 0.46)
-            add_textbox(slide, 10.14, 3.86, 2.4, 0.42, "~25% STRATEGY", font_size=16, bold=True, color=C_GREEN, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
-            add_bullets(slide, 9.58, 4.38, 2.95, 0.92, [short_phrase(it, 6, keep_colon=True, keep_dash=True) for it in sc["rightItems"][:2]], font_size=11.5, color=C_INK, space_after_pt=5)
+            add_picture_fit(slide, GCP / "Collaboration-512-color.png", 9.58, 3.80, 0.46, 0.46)
+            add_textbox(slide, 10.14, 3.82, 2.4, 0.42, "~25% STRATEGY", font_size=16, bold=True, color=C_GREEN, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
+            add_bullets(slide, 9.58, 4.32, 2.95, 1.00, [short_phrase(it, 10, keep_colon=True, keep_dash=True) for it in sc["rightItems"][:2]], font_size=11.8, color=C_INK, space_after_pt=5)
 
             # Bottom Executive Callout Pill
             add_rect(slide, 0.65, 5.56, 12.03, 1.22, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
@@ -668,22 +668,22 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 mx = 0.65 + idx * 3.06
                 add_rect(slide, mx, 1.76, 2.86, 1.08, fill=C_ICE_BLUE if idx % 2 == 0 else C_GREEN_BG, border=C_BORDER_BLUE)
                 add_picture_fit(slide, kpi_icons[idx], mx + 0.16, 1.98, 0.54, 0.54)
-                add_textbox(slide, mx + 0.80, 1.84, 1.92, 0.48, m["value"], font_size=26, bold=True, color=C_COBALT, font_name=FONT_DISPLAY)
-                add_textbox(slide, mx + 0.80, 2.34, 1.92, 0.40, m["label"], font_size=10.5, bold=True, color=C_INK_2)
+                add_textbox(slide, mx + 0.80, 1.82, 1.92, 0.46, m["value"], font_size=26, bold=True, color=C_COBALT, font_name=FONT_DISPLAY)
+                add_textbox(slide, mx + 0.80, 2.30, 1.94, 0.46, m["label"], font_size=11.5, bold=True, color=C_INK_2)
 
             # Bottom Left Bar Chart
             add_rect(slide, 0.65, 3.02, 6.45, 3.74, fill=C_WHITE, border=C_BORDER)
             add_picture_fit(slide, CHARTS / "enterprise_proof_bars.png", 0.78, 3.12, 6.20, 3.52)
 
-            # Bottom Right 2x2 Micro-Agent Cards (No ellipsis truncation)
+            # Bottom Right 2x2 Micro-Agent Cards (Vertically balanced, no voids)
             for idx, la in enumerate(proof["liveHrAgents"]):
                 lx = 7.32 + (idx % 2) * 2.74
                 ly = 3.02 + (idx // 2) * 1.94
                 add_rect(slide, lx, ly, 2.60, 1.78, fill=C_SURFACE, border=C_BORDER)
                 add_rect(slide, lx, ly, 2.60, 0.08, fill=G_FOUR_COLORS[idx], border=None, rounded=False)
-                add_picture_fit(slide, ICONS / "badge_nocode.png", lx + 0.16, ly + 0.20, 0.36, 0.36)
-                add_textbox(slide, lx + 0.60, ly + 0.20, 1.88, 0.40, la["name"], font_size=13, bold=True, color=C_INK, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
-                add_textbox(slide, lx + 0.16, ly + 0.72, 2.28, 0.90, la.get("slideDesc", la["desc"]), font_size=11.5, color=C_INK_2)
+                add_picture_fit(slide, ICONS / "badge_nocode.png", lx + 0.16, ly + 0.24, 0.36, 0.36)
+                add_textbox(slide, lx + 0.60, ly + 0.22, 1.88, 0.40, la["name"], font_size=13.5, bold=True, color=C_INK, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, lx + 0.16, ly + 0.72, 2.28, 0.90, la.get("slideDesc", la["desc"]), font_size=12, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
 
             set_notes(slide, base_notes + "\n\nLearnings:\n- " + "\n- ".join(proof["architectureLessons"]))
 
@@ -857,14 +857,14 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                     add_rect(slide, ax, row_y, ag_w, 0.07, fill=t_col, border=None, rounded=False)
 
                     # Simple Agent Name + Tier Pill
-                    name_fs = 12 if n_ag == 2 else 10.5
+                    name_fs = 12.8 if n_ag == 2 else 11.2
                     add_textbox(slide, ax + 0.12, row_y + 0.14, ag_w - 0.92, 0.44, ag.get("simpleName", ag["name"]), font_size=name_fs, bold=True, color=C_INK, font_name=FONT_DISPLAY)
                     add_rect(slide, ax + ag_w - 0.80, row_y + 0.16, 0.68, 0.24, fill=t_bg, border=t_col, border_pt=0.6)
-                    add_textbox(slide, ax + ag_w - 0.80, row_y + 0.16, 0.68, 0.24, t_label, font_size=7.8, bold=True, color=t_col, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+                    add_textbox(slide, ax + ag_w - 0.80, row_y + 0.16, 0.68, 0.24, t_label, font_size=8.2, bold=True, color=t_col, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
 
                     # Clean Persona List Only (concise pills)
                     personas = ag.get("personasServed", [])[:3]
-                    add_bullets(slide, ax + 0.10, row_y + 0.62, ag_w - 0.20, row_h - 0.68, personas, font_size=9.2 if n_ag == 2 else 8.4, color=C_INK_2, bullet_prefix="👤 ", space_after_pt=2.5)
+                    add_bullets(slide, ax + 0.10, row_y + 0.62, ag_w - 0.20, row_h - 0.68, personas, font_size=9.8 if n_ag == 2 else 9.0, color=C_INK_2, bullet_prefix="👤 ", space_after_pt=3.0)
 
             set_notes(slide, base_notes)
 
@@ -879,9 +879,9 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 col_rgb = hex_rgb(c["color"])
                 add_rect(slide, cx, cy, 3.24, 2.42, fill=C_SURFACE, border=C_BORDER)
                 add_rect(slide, cx, cy, 3.24, 0.08, fill=col_rgb, border=None, rounded=False)
-                add_picture_fit(slide, ROOT / c["icon"], cx + 0.18, cy + 0.24, 0.48, 0.48)
-                add_textbox(slide, cx + 0.76, cy + 0.22, 2.34, 0.56, c["title"], font_size=13.5, bold=True, color=C_INK, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
-                add_textbox(slide, cx + 0.18, cy + 0.94, 2.88, 1.32, c["desc"], font_size=11.5, color=C_INK_2)
+                add_picture_fit(slide, ROOT / c["icon"], cx + 0.18, cy + 0.28, 0.50, 0.50)
+                add_textbox(slide, cx + 0.78, cy + 0.24, 2.32, 0.58, c["title"], font_size=14.5, bold=True, color=C_INK, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, cx + 0.18, cy + 0.94, 2.88, 1.28, c["desc"], font_size=12.5, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
             set_notes(slide, base_notes)
 
         elif layout == "workforce_readiness":
@@ -894,11 +894,11 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 col_rgb = hex_rgb(per["color"])
                 add_rect(slide, 8.02, py, 4.66, 1.14, fill=C_SURFACE, border=C_BORDER)
                 add_rect(slide, 8.02, py, 0.08, 1.14, fill=col_rgb, border=None, rounded=False)
-                add_picture_fit(slide, ROOT / per["icon"], 8.20, py + 0.34, 0.44, 0.44)
-                add_textbox(slide, 8.74, py + 0.12, 2.50, 0.38, per["role"], font_size=11, bold=True, color=C_INK, font_name=FONT_DISPLAY)
+                add_picture_fit(slide, ROOT / per["icon"], 8.20, py + 0.34, 0.46, 0.46)
+                add_textbox(slide, 8.76, py + 0.12, 2.46, 0.38, per["role"], font_size=12, bold=True, color=C_INK, font_name=FONT_DISPLAY)
                 add_rect(slide, 11.24, py + 0.14, 1.32, 0.28, fill=C_ICE_BLUE, border=col_rgb, border_pt=0.6)
-                add_textbox(slide, 11.24, py + 0.14, 1.32, 0.28, per["lift"], font_size=8.2, bold=True, color=col_rgb, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
-                add_textbox(slide, 8.74, py + 0.54, 3.80, 0.52, per["action"], font_size=10, color=C_INK_2)
+                add_textbox(slide, 11.24, py + 0.14, 1.32, 0.28, per["lift"], font_size=9.0, bold=True, color=col_rgb, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, 8.76, py + 0.50, 3.78, 0.56, per["action"], font_size=10.8, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
             set_notes(slide, base_notes)
 
         elif layout == "touchpoints_grid":
@@ -906,10 +906,10 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
             for idx, lv in enumerate(sc.get("levers", [])):
                 lx = 0.65 + idx * 3.06
                 lcol = hex_rgb(lv["color"])
-                add_rect(slide, lx, 1.74, 2.84, 0.72, fill=C_SURFACE, border=C_BORDER)
+                add_rect(slide, lx, 1.74, 2.84, 0.74, fill=C_SURFACE, border=C_BORDER)
                 add_rect(slide, lx, 1.74, 2.84, 0.07, fill=lcol, border=None, rounded=False)
-                add_textbox(slide, lx + 0.12, 1.84, 2.60, 0.26, lv["title"], font_size=11.5, bold=True, color=lcol, font_name=FONT_DISPLAY)
-                add_textbox(slide, lx + 0.12, 2.10, 2.60, 0.30, lv["desc"], font_size=9.5, color=C_INK_2)
+                add_textbox(slide, lx + 0.12, 1.84, 2.60, 0.26, lv["title"], font_size=12.2, bold=True, color=lcol, font_name=FONT_DISPLAY)
+                add_textbox(slide, lx + 0.12, 2.11, 2.60, 0.32, lv["desc"], font_size=10.4, color=C_INK_2)
 
             for idx, tp in enumerate(sc.get("touchpoints", [])):
                 row = idx // 4
@@ -920,15 +920,15 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 add_rect(slide, tx, ty, 2.84, 1.94, fill=C_WHITE, border=C_BORDER_BLUE)
                 add_rect(slide, tx, ty, 2.84, 0.08, fill=tcol, border=None, rounded=False)
                 add_picture_fit(slide, ROOT / tp["icon"], tx + 0.16, ty + 0.24, 0.46, 0.46)
-                add_textbox(slide, tx + 0.72, ty + 0.24, 1.96, 0.46, tp["title"], font_size=13, bold=True, color=C_INK, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
-                add_textbox(slide, tx + 0.16, ty + 0.84, 2.52, 0.96, tp["desc"], font_size=11, color=C_INK_2)
+                add_textbox(slide, tx + 0.72, ty + 0.22, 1.96, 0.50, tp["title"], font_size=13.5, bold=True, color=C_INK, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, tx + 0.16, ty + 0.80, 2.52, 1.00, tp["desc"], font_size=11.8, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
             set_notes(slide, base_notes)
 
         elif layout == "pillar_functions_map":
             add_slide_chrome(slide, sc["eyebrow"], sc["title"], sc["subtitle"], sc["num"], C_COBALT, total, ICONS / "pillar_workforce.png")
             add_rect(slide, 0.65, 1.72, 12.03, 0.48, fill=C_ICE_BLUE, border=C_BLUE, border_pt=1.25)
             add_picture_fit(slide, ICONS / "badge_sparkle.png", 0.84, 1.80, 0.32, 0.32)
-            add_textbox(slide, 1.24, 1.76, 11.2, 0.40, sc.get("banner", "OFFICE OF THE CHRO · 6 PILLARS · 25 BUSINESS FUNCTIONS"), font_size=12, bold=True, color=C_COBALT, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+            add_textbox(slide, 1.24, 1.76, 11.2, 0.40, sc.get("banner", "OFFICE OF THE CHRO · 6 PILLARS · 25 BUSINESS FUNCTIONS"), font_size=12.4, bold=True, color=C_COBALT, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
 
             for idx, item in enumerate(sc.get("pillarsData", [])):
                 p = pillars_map[item["pillarId"]]
@@ -941,11 +941,11 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 add_rect(slide, px, py, 3.88, 2.12, fill=C_SURFACE, border=C_BORDER_BLUE)
                 add_rect(slide, px, py, 3.88, 0.08, fill=p_rgb, border=None, rounded=False)
                 add_picture_fit(slide, p_icon, px + 0.16, py + 0.18, 0.44, 0.44)
-                add_textbox(slide, px + 0.68, py + 0.16, 3.04, 0.22, p["apqcBadge"], font_size=8.8, bold=True, color=p_rgb, font_name=FONT_DISPLAY)
-                add_textbox(slide, px + 0.68, py + 0.36, 3.04, 0.34, p.get("shortName", p["name"]), font_size=12.5, bold=True, color=C_INK, font_name=FONT_DISPLAY)
+                add_textbox(slide, px + 0.68, py + 0.15, 3.04, 0.22, p["apqcBadge"], font_size=9.2, bold=True, color=p_rgb, font_name=FONT_DISPLAY)
+                add_textbox(slide, px + 0.68, py + 0.36, 3.04, 0.34, p.get("shortName", p["name"]), font_size=13.2, bold=True, color=C_INK, font_name=FONT_DISPLAY)
 
                 add_rect(slide, px + 0.16, py + 0.76, 3.56, 0.34, fill=C_WHITE, border=p_rgb, border_pt=0.8)
-                add_textbox(slide, px + 0.22, py + 0.78, 3.44, 0.30, item["outcome"], font_size=11, bold=True, color=p_rgb, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, px + 0.22, py + 0.78, 3.44, 0.30, item["outcome"], font_size=11.4, bold=True, color=p_rgb, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
 
                 for f_idx, fn_lbl in enumerate(item.get("functions", [])[:4]):
                     fr = f_idx // 2
@@ -953,7 +953,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                     fx = px + 0.16 + fc * 1.81
                     fy = py + 1.20 + fr * 0.42
                     add_rect(slide, fx, fy, 1.75, 0.36, fill=C_WHITE, border=C_BORDER, border_pt=0.75)
-                    add_textbox(slide, fx + 0.05, fy + 0.03, 1.65, 0.30, fn_lbl, font_size=9.2, bold=True, color=C_INK_2, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+                    add_textbox(slide, fx + 0.05, fy + 0.03, 1.65, 0.30, fn_lbl, font_size=10.2, bold=True, color=C_INK_2, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
             set_notes(slide, base_notes)
 
         elif layout == "pillar_value_pair":
@@ -961,7 +961,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
             if sc.get("topBanner"):
                 add_rect(slide, 0.65, 1.72, 12.03, 0.50, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
                 add_picture_fit(slide, ICONS / "badge_sparkle.png", 0.82, 1.82, 0.30, 0.30)
-                add_textbox(slide, 1.20, 1.76, 11.30, 0.42, sc["topBanner"], font_size=11, bold=True, color=C_COBALT, valign=MSO_ANCHOR.MIDDLE)
+                add_textbox(slide, 1.20, 1.76, 11.30, 0.42, sc["topBanner"], font_size=12, bold=True, color=C_COBALT, valign=MSO_ANCHOR.MIDDLE)
 
             for idx, c in enumerate(sc.get("cards", [])):
                 cx = 0.65 + idx * 6.17
@@ -971,24 +971,26 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 ccol = hex_rgb(c["color"])
                 add_rect(slide, cx, cy, cw, ch, fill=C_WHITE, border=C_BORDER_BLUE, border_pt=1.35)
                 add_rect(slide, cx, cy, cw, 0.09, fill=ccol, border=None, rounded=False)
-                add_picture_fit(slide, ROOT / c["icon"], cx + 0.20, cy + 0.26, 0.54, 0.54)
-                add_textbox(slide, cx + 0.84, cy + 0.22, 3.25, 0.24, c["badge"], font_size=9, bold=True, color=ccol, font_name=FONT_DISPLAY)
-                add_textbox(slide, cx + 0.84, cy + 0.44, 3.25, 0.52, c["title"], font_size=13, bold=True, color=C_INK, font_name=FONT_DISPLAY)
+                add_picture_fit(slide, ROOT / c["icon"], cx + 0.20, cy + 0.24, 0.56, 0.56)
+                add_textbox(slide, cx + 0.84, cy + 0.20, 3.25, 0.24, c["badge"], font_size=9.5, bold=True, color=ccol, font_name=FONT_DISPLAY)
+                add_textbox(slide, cx + 0.84, cy + 0.43, 3.25, 0.54, c["title"], font_size=14, bold=True, color=C_INK, font_name=FONT_DISPLAY)
 
-                add_rect(slide, cx + 4.16, cy + 0.22, 1.50, 0.74, fill=C_SURFACE, border=ccol, border_pt=1.0)
-                add_textbox(slide, cx + 4.20, cy + 0.26, 1.42, 0.40, c["metric"], font_size=17, bold=True, color=ccol, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER)
-                add_textbox(slide, cx + 4.20, cy + 0.66, 1.42, 0.24, c["metricLbl"], font_size=7.2, bold=True, color=C_MUTED, align=PP_ALIGN.CENTER)
+                add_rect(slide, cx + 4.16, cy + 0.20, 1.50, 0.78, fill=C_SURFACE, border=ccol, border_pt=1.0)
+                add_textbox(slide, cx + 4.20, cy + 0.24, 1.42, 0.42, c["metric"], font_size=18.5, bold=True, color=ccol, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER)
+                add_textbox(slide, cx + 4.20, cy + 0.67, 1.42, 0.24, c["metricLbl"], font_size=7.8, bold=True, color=C_MUTED, align=PP_ALIGN.CENTER)
 
                 strips = [
-                    ("Today's Friction", c["problem"], C_RED_BG, C_RED),
-                    ("Solution", c["solution"], C_ICE_BLUE, ccol),
-                    ("Business Outcome", c["value"], C_GREEN_BG, C_GREEN),
+                    ("TODAY'S FRICTION", c["problem"], C_RED_BG, C_RED, ICONS / "badge_clock.png"),
+                    ("AI SOLUTION", c["solution"], C_ICE_BLUE, ccol, ICONS / "badge_sparkle.png"),
+                    ("BUSINESS OUTCOME", c["value"], C_GREEN_BG, C_GREEN, ICONS / "badge_check.png"),
                 ]
-                for s_idx, (st_lbl, st_txt, st_bg, st_col) in enumerate(strips):
+                for s_idx, (st_lbl, st_txt, st_bg, st_col, st_icon) in enumerate(strips):
                     sy = cy + 1.12 + s_idx * 1.08
                     add_rect(slide, cx + 0.20, sy, cw - 0.40, 0.96, fill=st_bg, border=st_col, border_pt=0.8)
-                    add_textbox(slide, cx + 0.32, sy + 0.08, cw - 0.64, 0.22, st_lbl.upper(), font_size=8.8, bold=True, color=st_col, font_name=FONT_DISPLAY)
-                    add_textbox(slide, cx + 0.32, sy + 0.30, cw - 0.64, 0.60, st_txt, font_size=10.8, color=C_INK)
+                    add_rect(slide, cx + 0.20, sy, 0.08, 0.96, fill=st_col, border=None, rounded=False)
+                    add_picture_fit(slide, st_icon, cx + 0.36, sy + 0.10, 0.22, 0.22)
+                    add_textbox(slide, cx + 0.64, sy + 0.09, cw - 0.96, 0.24, st_lbl, font_size=9.5, bold=True, color=st_col, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
+                    add_textbox(slide, cx + 0.36, sy + 0.35, cw - 0.68, 0.56, st_txt, font_size=11.6, color=C_INK, valign=MSO_ANCHOR.MIDDLE)
             set_notes(slide, base_notes)
 
         elif layout == "adoption_close":
@@ -997,7 +999,7 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
             add_rect(slide, 0.65, 0.42, 5.4, 0.32, fill=C_ICE_BLUE, border=C_BORDER_BLUE)
             add_textbox(slide, 0.78, 0.44, 5.14, 0.28, sc["eyebrow"], font_size=9.5, bold=True, color=C_COBALT, font_name=FONT_DISPLAY, valign=MSO_ANCHOR.MIDDLE)
             add_textbox(slide, 0.65, 0.82, 7.60, 0.72, sc["title"], font_size=23, bold=True, color=C_INK, font_name=FONT_DISPLAY)
-            add_textbox(slide, 0.65, 1.56, 7.50, 0.46, sc["subtitle"], font_size=12, color=C_MUTED)
+            add_textbox(slide, 0.65, 1.56, 7.50, 0.46, sc["subtitle"], font_size=12.5, color=C_MUTED)
 
             for idx, ap in enumerate(sc.get("adoptionPillars", [])):
                 ax = 0.65 + (idx % 2) * 3.84
@@ -1005,9 +1007,9 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 acol = hex_rgb(ap["color"])
                 add_rect(slide, ax, ay, 3.68, 0.98, fill=C_SURFACE, border=C_BORDER)
                 add_rect(slide, ax, ay, 3.68, 0.07, fill=acol, border=None, rounded=False)
-                add_picture_fit(slide, ROOT / ap["icon"], ax + 0.14, ay + 0.24, 0.42, 0.42)
-                add_textbox(slide, ax + 0.64, ay + 0.16, 2.92, 0.24, f"{ap['num']} · {ap['title']}", font_size=11, bold=True, color=acol, font_name=FONT_DISPLAY)
-                add_textbox(slide, ax + 0.64, ay + 0.42, 2.92, 0.48, ap["desc"], font_size=9.5, color=C_INK_2)
+                add_picture_fit(slide, ROOT / ap["icon"], ax + 0.14, ay + 0.24, 0.44, 0.44)
+                add_textbox(slide, ax + 0.64, ay + 0.15, 2.92, 0.24, f"{ap['num']} · {ap['title']}", font_size=11.8, bold=True, color=acol, font_name=FONT_DISPLAY)
+                add_textbox(slide, ax + 0.64, ay + 0.42, 2.92, 0.50, ap["desc"], font_size=10.4, color=C_INK_2, valign=MSO_ANCHOR.MIDDLE)
 
             for idx, st in enumerate(sc.get("ctaBoxes", [])):
                 sy = 4.48 + idx * 0.80
@@ -1015,8 +1017,8 @@ def build_single_deck(cat: dict, slides_cfg: list[dict], out_path: pathlib.Path,
                 add_rect(slide, 0.65, sy, 7.52, 0.68, fill=C_WHITE, border=scol, border_pt=1.25)
                 add_circle(slide, 0.80, sy + 0.14, 0.40, scol)
                 add_textbox(slide, 0.80, sy + 0.14, 0.40, 0.40, st["num"], font_size=11.5, bold=True, color=C_WHITE, font_name=FONT_DISPLAY, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
-                add_textbox(slide, 1.32, sy + 0.08, 5.45, 0.24, st["title"], font_size=11.5, bold=True, color=scol, font_name=FONT_DISPLAY)
-                add_textbox(slide, 1.32, sy + 0.34, 5.45, 0.28, st["desc"], font_size=10, color=C_INK_2)
+                add_textbox(slide, 1.32, sy + 0.07, 5.45, 0.25, st["title"], font_size=12, bold=True, color=scol, font_name=FONT_DISPLAY)
+                add_textbox(slide, 1.32, sy + 0.34, 5.45, 0.28, st["desc"], font_size=10.6, color=C_INK_2)
                 add_picture_fit(slide, ROOT / st["icon"], 6.95, sy + 0.14, 0.40, 0.40)
 
             roadmap_img = ROOT / sc.get("heroImage", "assets/roadmap_launch.jpg")
